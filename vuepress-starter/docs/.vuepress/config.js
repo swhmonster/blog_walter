@@ -3,7 +3,7 @@ module.exports = {
     description: 'Just playing around',
     host: '192.168.162.101',
     port: 8888,
-    repo: 'https://swhmonster.github.io/',
+    repo: 'https://swhmonster.github.io/blog_walter/',
     docsDir: 'docs',
     docsBranch: 'master',
     themeConfig: {
