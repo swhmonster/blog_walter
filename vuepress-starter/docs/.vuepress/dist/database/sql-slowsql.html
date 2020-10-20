@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>关于in和exists的使用 | Walter&#39;s WebSite</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.290e9ffc.css" as="style"><link rel="preload" href="/assets/js/app.45451309.js" as="script"><link rel="preload" href="/assets/js/2.1dea61bb.js" as="script"><link rel="preload" href="/assets/js/15.28f553c1.js" as="script"><link rel="prefetch" href="/assets/js/10.55988f9e.js"><link rel="prefetch" href="/assets/js/11.50eecae0.js"><link rel="prefetch" href="/assets/js/12.1ba264b7.js"><link rel="prefetch" href="/assets/js/13.432c14b7.js"><link rel="prefetch" href="/assets/js/14.271185e0.js"><link rel="prefetch" href="/assets/js/16.5a3c1ded.js"><link rel="prefetch" href="/assets/js/17.a0933db9.js"><link rel="prefetch" href="/assets/js/18.16d922b7.js"><link rel="prefetch" href="/assets/js/19.4d6b1856.js"><link rel="prefetch" href="/assets/js/20.c63d9e0d.js"><link rel="prefetch" href="/assets/js/21.d446d582.js"><link rel="prefetch" href="/assets/js/22.5fe2b4b5.js"><link rel="prefetch" href="/assets/js/23.c4be3267.js"><link rel="prefetch" href="/assets/js/24.df5ef704.js"><link rel="prefetch" href="/assets/js/25.8a364f9b.js"><link rel="prefetch" href="/assets/js/26.045cbb65.js"><link rel="prefetch" href="/assets/js/27.5c0aff17.js"><link rel="prefetch" href="/assets/js/28.1746698c.js"><link rel="prefetch" href="/assets/js/29.07aaf395.js"><link rel="prefetch" href="/assets/js/3.de8a278e.js"><link rel="prefetch" href="/assets/js/30.7ab86aaa.js"><link rel="prefetch" href="/assets/js/31.ba92df9b.js"><link rel="prefetch" href="/assets/js/32.d33dacb1.js"><link rel="prefetch" href="/assets/js/33.42eb891d.js"><link rel="prefetch" href="/assets/js/34.64601a1c.js"><link rel="prefetch" href="/assets/js/35.73fbdaf5.js"><link rel="prefetch" href="/assets/js/36.b53cc075.js"><link rel="prefetch" href="/assets/js/37.1da6adff.js"><link rel="prefetch" href="/assets/js/38.c7f75653.js"><link rel="prefetch" href="/assets/js/39.ee962bc3.js"><link rel="prefetch" href="/assets/js/4.d9a8c970.js"><link rel="prefetch" href="/assets/js/40.f3c9bf7f.js"><link rel="prefetch" href="/assets/js/41.a59e10bd.js"><link rel="prefetch" href="/assets/js/42.638e947f.js"><link rel="prefetch" href="/assets/js/43.12ee33d7.js"><link rel="prefetch" href="/assets/js/44.4dbf7442.js"><link rel="prefetch" href="/assets/js/45.ba202e01.js"><link rel="prefetch" href="/assets/js/46.747d27f4.js"><link rel="prefetch" href="/assets/js/47.bb59009c.js"><link rel="prefetch" href="/assets/js/48.b626d5f2.js"><link rel="prefetch" href="/assets/js/49.6a4b8026.js"><link rel="prefetch" href="/assets/js/5.c7642102.js"><link rel="prefetch" href="/assets/js/50.dfac67e4.js"><link rel="prefetch" href="/assets/js/51.b92c9af0.js"><link rel="prefetch" href="/assets/js/6.f3638dc1.js"><link rel="prefetch" href="/assets/js/7.c2eecb60.js"><link rel="prefetch" href="/assets/js/8.2d63a893.js"><link rel="prefetch" href="/assets/js/9.852949f4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.290e9ffc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Walter's WebSite</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="https://github.com/swhmonster" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN Blog
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="https://github.com/swhmonster" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN Blog
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/java/" class="sidebar-heading clickable open"><span>Java</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/java/jstack.html" class="sidebar-link">jstack线程分析</a></li><li><a href="/java/java-debug.html" class="sidebar-link">java调试体系</a></li><li><a href="/java/io.html" class="sidebar-link">java io 模型</a></li><li><a href="/java/java-synchronized1.html" class="sidebar-link">Java多线程编程核心技术之同步锁（1）</a></li><li><a href="/java/java-synchronized2.html" class="sidebar-link">Java多线程编程核心技术之同步锁（2）</a></li><li><a href="/java/java-jconsole.html" class="sidebar-link">jconsole远程监控</a></li><li><a href="/java/swagger-annotation.html" class="sidebar-link">swagger注释@API详细说明</a></li><li><a href="/java/spring-ioc.html" class="sidebar-link">Spring依赖注入方式，为什么Spring4.0提倡使用构造函数注入方式？</a></li><li><a href="/java/spring-desingpartern.html" class="sidebar-link">详解设计模式在 Spring 中的应用</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/python/" class="sidebar-heading clickable"><span>Python</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/javadeep/" class="sidebar-heading clickable"><span>深入理解JVM</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/database/" class="sidebar-heading clickable router-link-active"><span>数据库</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/middleware/" class="sidebar-heading clickable"><span>中间件</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/operatingsystem/" class="sidebar-heading clickable"><span>操作系统</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/webinfo/" class="sidebar-heading clickable"><span>前端开发</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/ide/" class="sidebar-heading clickable"><span>IDE开发工具</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/codemanagement/" class="sidebar-heading clickable"><span>代码管理</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/sercurity/" class="sidebar-heading clickable"><span>信息安全</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/others/" class="sidebar-heading clickable"><span>其他</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="关于in和exists的使用"><a href="#关于in和exists的使用" class="header-anchor">#</a> 关于in和exists的使用</h3> <p>1.当父查询结果集小于子查询结果集则选择exists，如果父查询结果集大于子查询结果集选择in。（可尝试等价改写）
+in和exists都有子查询优化，提升子查询，有时候这两的执行计划一样。需要注意的是如果子查询包含了父查询里面的条件，in不会被优化。
+2.in里面的值一般不超过100个
+3.单表postgresql的in和个数关系不大，都可以走索引。
+4.当有连表并且有in的个数很多，count的时候需要解析这些值很慢，所以可以封装成any valuse的形式来求count，而分页还是使用in。此例主要是in和any(values)的等价改写
+any values：c_bh=any(values('53'),('530001'),('530002'),...)</p> <p>postgresql在查询的时候会自动做表连接。将两张表做hash join操作：
+1.EXPLAIN SELECT * FROM X WHERE x_num IN(SELECT y_num FROM y);<br>
+2.                              QUERY PLAN<br>
+3.----------------------------------------------------------------------<br>
+4. Hash Join  (cost=23.25..49.88 rows=350 width=86)<br>
+5.   Hash Cond: (x.x_num = y.y_num)<br>
+6.   -&gt;  Seq Scan on x  (cost=0.00..17.00 rows=700 width=86)<br>
+7.   -&gt;  Hash  (cost=20.75..20.75 rows=200 width=4)<br>
+8.         -&gt;  HashAggregate  (cost=18.75..20.75 rows=200 width=4)<br>
+-&gt;  Seq Scan on y  (cost=0.00..17.00 rows=700 width=4)</p> <h4 id="关于not-in和not-exists的使用"><a href="#关于not-in和not-exists的使用" class="header-anchor">#</a> 关于not in和not exists的使用</h4> <p>1.建议使用not exists，不使用not in
+2.not in不能提升子查询
+3.当not in中包含null值时，无结果集</p> <h3 id="like条件无索引"><a href="#like条件无索引" class="header-anchor">#</a> like条件无索引</h3> <p>1.前，后模糊匹配，都需要建立索引，防止大量的全表扫描。
+2.全模糊匹配程序上可以控制输入的字符个数，防止全表扫描，返回大量数据。</p> <h3 id="对join-left-join的使用-将条件放到on和where后面的区别问题"><a href="#对join-left-join的使用-将条件放到on和where后面的区别问题" class="header-anchor">#</a> 对join，left join的使用,将条件放到on和where后面的区别问题</h3> <p>postgresql中left join中将条件放入 on和where的区别。
+1.on是肯定会返回左表的数据，所以在on里面的条件都会返回，如果想要过滤数据则需要在where中加条件
+2.由于 inner join是两表都有的，所以，返回的结果是和where条件一样的。
+示例：
+select * form tab1 left join tab2 on (tab1.size = tab2.size) where tab2.name=’AAA’
+select * form tab1 left join tab2 on (tab1.size = tab2.size and tab2.name=’AAA’)</p> <h3 id="滥用索引"><a href="#滥用索引" class="header-anchor">#</a> 滥用索引</h3> <h6 id="索引过多"><a href="#索引过多" class="header-anchor">#</a> 索引过多：</h6> <p>一个表10-20个索引，一个表的索引建议不超过6个。</p> <h6 id="重复索引"><a href="#重复索引" class="header-anchor">#</a> 重复索引：</h6> <p>重复索引，占用空间，字段一样、字段顺序一样，命名不一样</p> <h6 id="滥用组合索引"><a href="#滥用组合索引" class="header-anchor">#</a> 滥用组合索引：</h6> <p>一个组合索引7-8个字段。建议组合字段的个数不超过3个。</p> <h3 id="inser使用"><a href="#inser使用" class="header-anchor">#</a> inser使用</h3> <h6 id="_1-多条insert数据-建议修改为insert-values形式"><a href="#_1-多条insert数据-建议修改为insert-values形式" class="header-anchor">#</a> 1.多条insert数据，建议修改为insert values形式；</h6> <h6 id="_2-批量插入的时候values里面的参数个数不能超过32767"><a href="#_2-批量插入的时候values里面的参数个数不能超过32767" class="header-anchor">#</a> 2.批量插入的时候values里面的参数个数不能超过32767：</h6> <p>批量插入的时候values里面的参数个数不能超过32767，可以设置300-500个提交一次。
+程序报错：
+Caused by: java.io.IOException: Tried to send an out-of-range integer as a 2-byte value: 43800
+pg的jdbc driver对prepared Statement的参数 set的时候，client端的一个发送大小限制在2-byte。
+相当于所有的values里面的字段总和不能超过32767，开发环境的数据要少点所以没复现。</p> <h3 id="删除重复数据"><a href="#删除重复数据" class="header-anchor">#</a> 删除重复数据</h3> <p>1.常规删除方法
+explain analyse delete from deltest a where a.ctid &lt;&gt; (select min(t.ctid) from deltest t where a.id=t.id);
+2.group by删除方法
+explain analyse delete from deltest a where a.ctid not in (select min(ctid) from deltest group by id);
+3.row_number删除方法
+explain analyze delete from deltest a where a.ctid = any(array (select ctid from (select row_number() over (partition by id), ctid from deltest) t where t.row_number &gt; 1));
+根据某个字段分组删除重复数据，只保留日期最大的一条，建议使用窗口函数效率更高</p> <h3 id="连表更新"><a href="#连表更新" class="header-anchor">#</a> 连表更新</h3> <p>（1）update db_zxzhld_bak.t_zhld_zbajxx set d_larq =
+(select larq from db_zxzhld_bak.cacheTable where db_zxzhld_bak.t_zhld_zbajxx.c_ajbh = db_zxzhld_bak.cacheTable.c_ajbh) where c_zblx in ('2001','2002');
+更新757726条数据耗时3h。
+（2）update db_zxzhld_bak.t_zhld_zbajxx t1 set d_larq = t.larq from db_zxzhld_bak.cacheTable t where t.c_ajbh = t1.c_ajbh AND t1.c_zblx in ('2001','2002');
+修改过后的sql耗时6.5s
+第一个sql查询其实是一个循环查询，特别耗时，类似于:
+select c_bh,(select d_larq from t2) as larq from t1 ,嵌套循环。</p> <h3 id="nulls-last-和null-first"><a href="#nulls-last-和null-first" class="header-anchor">#</a> nulls last,和null first</h3> <p>默认情况下，执行器认为Null值要大于所有值，所以，简单的如 dt_qzsj desc降序排序会把所有的null排在最前面，dt_qzsj asc会将null排在最后面。
+某些情况下使用dt_qzsj desc需要将null值放到最后，如下：
+explain analyze
+SELECT
+qzsq.c_id sqId,
+...
+FROM
+ywst.t_qzsq qzsq
+LEFT JOIN ywst.t_qzst_ws ws ON qzsq.c_id_ws = ws.c_id
+LEFT JOIN ywst.t_qzst_aj aj ON qzsq.c_id_aj = aj.c_id
+WHERE
+qzsq.n_qzzt = 4
+ORDER BY dt_qzsj DESC  LIMIT 10 OFFSET 0
+创建了索引create index i_t_qzsq_dt_qzsj on ywst.t_qzsq(dt_qzsj desc last);
+虽然创建了索引，但是并没有走索引，需要在sql中也加入nulls last才行，正确的写法：ORDER BY dt_qzsj DESC nulls last   LIMIT 10 OFFSET 0</p> <h3 id="有关日期的查询"><a href="#有关日期的查询" class="header-anchor">#</a> 有关日期的查询</h3> <h6 id="获取月份"><a href="#获取月份" class="header-anchor">#</a> 获取月份</h6> <p>select EXTRACT(YEAR FROM ((CURRENT_DATE-1)::date))::VARCHAR||
+CASE WHEN EXTRACT(MONTH FROM (CURRENT_DATE-1)::date)&lt;10 then '0'||(EXTRACT(MONTH FROM(CURRENT_DATE-1)::date))::VARCHAR else (EXTRACT(MONTH FROM(CURRENT_DATE-1)::date))::VARCHAR end;
+该条sql如此复杂，只是为了获取当前月份，月份可以用下面的to_char获取
+select to_char(current_date,'YYYYMM');
+注：另外该sql还有大小写问题，建议关键字全小写。</p> <h6 id="对字段使用函数"><a href="#对字段使用函数" class="header-anchor">#</a> 对字段使用函数</h6> <p>to_char(cw.d_cjsj, 'yyyy-MM') &gt;= to_char((now() - INTERVAL '1 years' + INTERVAL '1 months'),'yyyy-MM')
+该条sql
+修改后：cw.d_cjsj &gt;= '2017-08-01 00:00:00'
+对字段使用to_char后，不能使用默认索引。</p> <h6 id="对字段使用函数-2"><a href="#对字段使用函数-2" class="header-anchor">#</a> 对字段使用函数</h6> <p>to_char(dt_tskssj, 'yyyy-MM') = to_char(now(), 'yyyy-MM')
+修改后：
+dt_tskssj&gt;='2018-08-01 00:00:00.000' and dt_tskssj &lt; '2018-08-31 24:00:00.000'
+同实例2，该sql可以直接传入日期查询。</p> <h6 id="使用like获取当月数据"><a href="#使用like获取当月数据" class="header-anchor">#</a> 使用like获取当月数据</h6> <p>explain analyze
+select count(*) from t_wj where to_char(d_crsj,'yyyymmdd') like '%201803%';--768ms
+Aggregate (cost=26658.85..26658.86 rows=1 width=0)
+-&gt;  Index Only Scan using t_wj_i_crsj on t_wj     (cost=0.42..26658.33 rows=205 width=0)
+Filter: (to_char(d_crsj, 'yyyymmdd'::text) ~~ '%201803%'::text)
+explain analyze
+select count(*) from t_wj where d_crsj&gt;'20180301' and d_crsj &lt; '20180401'; --0.069ms
+Aggregate (cost=1002.18..1002.19 rows=1 width=0)
+-&gt; Index Only Scan using t_wj_i_crsj on t_wj (cost=0.42..990.34 rows=4738 width=0)
+Index Cond: ((d_crsj &gt;= '2018-03-01 00:00:00'::timestamp without time zone) AND (d_crsj &lt; '2018-04-01 00:00:00'::timestamp without time zone))</p> <h6 id="字段顺序不规范"><a href="#字段顺序不规范" class="header-anchor">#</a> 字段顺序不规范</h6> <p>1.不规范写法
+select *from db_yzgl.t_zfxx where '2018-06-17 11:07:22.694' &lt;= dt_create_time
+2.正常写法
+select *from db_yzgl.t_zfxx where dt_create_time&gt;'2018-06-17 11:07:22.694'
+两种写法其实效果一样，但是如果是涉及到字段的计算或者对字段使用了函数，则会影响使用索引。</p> <h3 id="count"><a href="#count" class="header-anchor">#</a> count</h3> <h6 id="建议使用count"><a href="#建议使用count" class="header-anchor">#</a> 建议使用count(*)</h6> <p>平时写count()语句时，括弧里面写的是什么？ count(*)？count(1)？count(主键)? 有对比过他们的效率，看过执行计划吗？
+针对上面疑问，楼主做了实验，并得出以下结论：
+1、postgresql执行计划：count(*)、count(1)是选取了一个整型索引字段进行查询的。
+2、sybase执行计划：count(*)、count(1)、count(主键)是选取了一个整型索引字段进行查询的。
+3、postgresql执行效率：count(*)&gt;=count(1)&gt;=count(整型索引字段)&gt;count(字符索引字段)&gt;count(字符主键)&gt;count(整型非索引字段)
+4、sybase执行效率：count(*)=count(1)=count(整型主键)&gt;count(整型索引字段)&gt;count(字符索引字段)&gt;count(整型非索引字段)
+5、postgresql与sybase的count() 括号里面都是是判断是否为空的，空则不参与计算
+6、非特殊场景查询，统一要求使用count(*)</p> <h6 id="查询大量的数据分页-要求count"><a href="#查询大量的数据分页-要求count" class="header-anchor">#</a> 查询大量的数据分页，要求count(*)</h6> <p>查询几百万的数据用以分页，求count，造成查询缓慢，耗费资源。</p> <h3 id="对表设计不熟悉"><a href="#对表设计不熟悉" class="header-anchor">#</a> 对表设计不熟悉</h3> <p>优化前：
+SELECT
+COUNT (DISTINCT cwjb.c_bh) cwsl
+FROM
+db_sacw.t_aj_ajjbxx ajjb,
+db_sacw.t_aj_ajfbxx ajfb,
+db_sacw.t_cw_cwjbxx cwjb,
+db_sacw.t_cw_cwfbxx cwfb
+WHERE
+ajjb.c_bh = cwjb.c_ajbh
+AND ajjb.c_bh = ajfb.c_ajbh
+AND cwjb.c_bh = cwfb.c_cwbh
+修改后sql：
+select count(*) from db_sacw.t_cw_cwjbxx cwjb;
+此例主要说明在写sql的过程中最好了解表的设计，表间关系，原本可以直接从一个表里面获得的数据，经过大量的连表查询耗时几十秒。</p> <h3 id="频繁的查询"><a href="#频繁的查询" class="header-anchor">#</a> 频繁的查询</h3> <p>序号 : 1
+最长运行时间 : 44ms
+执行次数 : 358186
+平均执行时间 : 1ms
+最早运行日期 : 2019-01-15 00:08:35.999
+最晚运行日期 : 2019-01-15 21:28:31.0
+PSQL内容 :<br>
+select c_bmid from db_uim.t_ywgy_qx_rysj where c_corpid is null and c_ryid=? and c_sysid=?
+除了参数不一样，在短时间内，对一张表大量的执行同一条sql。</p> <h3 id="null问题"><a href="#null问题" class="header-anchor">#</a> =null问题</h3> <p>null只能使用is null和is not null来判断</p> <h3 id="order-by使用索引问题"><a href="#order-by使用索引问题" class="header-anchor">#</a> order by使用索引问题</h3> <p>如果order by要用上索引，那么必须order by的写法要与创建索引时指定的顺序一致。
+例如select * from tbl where a=? order by a,b desc nulls last;</p> <h3 id="数据加压问题"><a href="#数据加压问题" class="header-anchor">#</a> 数据加压问题</h3> <p>加压数据分布不均，如时间，类型等不均。造成查询缓慢。</p> <h3 id="长事务问题"><a href="#长事务问题" class="header-anchor">#</a> 长事务问题</h3> <p>长事务导致数据库缓慢，select * from pg_stat_activity ;
+可以设置数据库参数：idle_in_transaction_session_timeout为60</p> <h3 id="sqlfx分析出大量的慢sql均为同一条sql仅参数不同"><a href="#sqlfx分析出大量的慢sql均为同一条sql仅参数不同" class="header-anchor">#</a> sqlfx分析出大量的慢sql均为同一条sql仅参数不同</h3> <p>原因是没有升级log4jdbc,导致没有统计psql</p> <h3 id="表缺少主键和逻辑外键索引"><a href="#表缺少主键和逻辑外键索引" class="header-anchor">#</a> 表缺少主键和逻辑外键索引</h3> <p>表必须有主键，逻辑外键必须添加索引。避免全表扫描，嵌套循环</p> <h3 id="定时任务"><a href="#定时任务" class="header-anchor">#</a> 定时任务</h3> <p>多个开发环境同时执行定时任务，慢sql更加慢的问题。建议只开一个，其他都关闭。</p> <h3 id="使用exists替换distinct"><a href="#使用exists替换distinct" class="header-anchor">#</a> 使用exists替换distinct</h3> <p>and c_ajbh  in (select distinct c_ajbh from db_zxzhld.t_zhld_zbajxx where n_dbzt = 1 and c_zblx = '1003' and c_gy = '2550' )
+改写为：
+and exists (select  c_ajbh from db_zxzhld.t_zhld_zbajxx where n_dbzt = 1 and c_zblx = '1003' and c_gy = '2550' )
+一旦满足条件则立刻返回。所以使用exists的时候子查询可以直接去掉distinct。从执行计划来看使用exists可以消除分组，提高效率。</p> <h3 id="count-distinct-xx-改写"><a href="#count-distinct-xx-改写" class="header-anchor">#</a> count(distinct xx)改写</h3> <p>Select count(distinct c_ajbh) from t_aj
+改写后：
+Select count(*) from (select distinct c_ajbh from t_aj where ...)t2</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.45451309.js" defer></script><script src="/assets/js/2.1dea61bb.js" defer></script><script src="/assets/js/15.28f553c1.js" defer></script>
+  </body>
+</html>

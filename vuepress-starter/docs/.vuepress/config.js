@@ -19,10 +19,14 @@ module.exports = {
             sidebarDepth: 0,
             children: [
                 {title: 'jstack线程分析', path: '/java/jstack'},
+                {title: 'java调试体系', path: '/java/java-debug'},
+                {title: 'java io 模型', path: '/java/io'},
+                {title: 'Java多线程编程核心技术之同步锁（1）', path: '/java/java-synchronized1'},
+                {title: 'Java多线程编程核心技术之同步锁（2）', path: '/java/java-synchronized2'},
+                {title: 'jconsole远程监控', path: '/java/java-jconsole'},
                 {title: 'swagger注释@API详细说明', path: '/java/swagger-annotation'},
                 {title: 'Spring依赖注入方式，为什么Spring4.0提倡使用构造函数注入方式？', path: '/java/spring-ioc'},
-                {title: '详解设计模式在 Spring 中的应用', path: '/java/spring-desingpartern'},
-                {title: 'java io 模型', path: '/java/io'}
+                {title: '详解设计模式在 Spring 中的应用', path: '/java/spring-desingpartern'}
             ]
         }, {
             title: 'Python',
@@ -108,6 +112,14 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {title: 'java代码混淆之allator集成', path: '/sercurity/allatori'}
+            ]
+        }, {
+            title: '其他',
+            path: '/others/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: [
+                {title: 'diy装机心得', path: '/others/computer-diy'}
             ]
         }]
     }
