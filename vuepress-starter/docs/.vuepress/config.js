@@ -103,7 +103,11 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: 'GitLab-CI-CD介绍和使用', path: '/codemanagement/gitlab-cdci'}
+                {title: 'GitLab-CI-CD介绍和使用', path: '/codemanagement/gitlab-cdci'},
+                {title: 'git——常用命令', path: '/codemanagement/git-command'},
+                {title: 'git——git fetch与git pull', path: '/codemanagement/git-fetchpulldiff'},
+                {title: 'git——git fetch与git pull', path: '/codemanagement/git-fetchpulldiff'},
+                {title: 'maven配置详解', path: '/codemanagement/maven-settings'}
             ]
         }, {
             title: '信息安全',
