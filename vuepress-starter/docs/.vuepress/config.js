@@ -108,7 +108,6 @@ module.exports = {
                 {title: 'GitLab-CI-CD介绍和使用', path: '/documents/codemanagement/gitlab-cdci'},
                 {title: 'git——常用命令', path: '/documents/codemanagement/git-command'},
                 {title: 'git——git fetch与git pull', path: '/documents/codemanagement/git-fetchpulldiff'},
-                {title: 'git——git fetch与git pull', path: '/documents/codemanagement/git-fetchpulldiff'},
                 {title: 'maven配置详解', path: '/documents/codemanagement/maven-settings'}
             ]
         }, {
