@@ -21,6 +21,7 @@ module.exports = {
             children: [
                 {title: 'jstack线程分析', path: '/documents/java/jstack'},
                 {title: 'java调试体系', path: '/documents/java/java-debug'},
+                {title: 'HashMap的设计与优化', path: '/documents/java/java-hashmap'},
                 {title: 'java io 模型', path: '/documents/java/io'},
                 {title: 'Java多线程编程核心技术之同步锁（1）', path: '/documents/java/java-synchronized1'},
                 {title: 'Java多线程编程核心技术之同步锁（2）', path: '/documents/java/java-synchronized2'},
