@@ -71,7 +71,7 @@
 为了能够让浏览器快速的计算节点的位置和大小我们应该遵循CSS的声明顺序：
 
 - 显隐属性：display || visibility(如果display:none，浏览器就不会去计算大小和位置了)
-- 定位属性：position、top、left、bottom、right、z-index、float、clear(这些属性影响了节点的位置，越早去些，浏览器越早去计算)
+- 定位属性：position、top、left、bottom、right、z-index、float、clear(这些属性影响了节点的位置，越早去写，浏览器越早去计算)
 - 盒模型：width、height、padding、margin、border(这些属性影响了节点的大小，越早写的化，浏览器可以越早去计算)
 - 排版：line-height、text-align、font等
 - 视觉：color、background-color等

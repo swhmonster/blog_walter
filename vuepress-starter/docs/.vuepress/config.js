@@ -7,7 +7,7 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'master',
     themeConfig: {
-        lastUpdated: 'Last Updated',
+        // lastUpdated: 'Last Updated',
         nav: [
             {text: 'Home', link: '/'},
             {text: 'Documents', link: '/documents/'},
