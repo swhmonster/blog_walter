@@ -19,16 +19,17 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 0,
             children: [
-                {title: 'jstack线程分析', path: '/documents/java/jstack'},
-                {title: 'java调试体系', path: '/documents/java/java-debug'},
-                {title: 'HashMap的设计与优化', path: '/documents/java/java-hashmap'},
-                {title: 'java io 模型', path: '/documents/java/io'},
                 {title: 'Java多线程编程核心技术之同步锁（1）', path: '/documents/java/java-synchronized1'},
                 {title: 'Java多线程编程核心技术之同步锁（2）', path: '/documents/java/java-synchronized2'},
+                {title: 'Spring——Spring IOC的bean加载', path: '/documents/java/spring-iocfindbeans'},
+                {title: 'Spring——Spring依赖注入方式，为什么Spring4.0提倡使用构造函数注入方式？', path: '/documents/java/spring-ioc'},
+                {title: 'Spring——详解设计模式在 Spring 中的应用', path: '/documents/java/spring-desingpartern'},
+                {title: 'HashMap的设计与优化', path: '/documents/java/java-hashmap'},
+                {title: 'jstack线程分析', path: '/documents/java/jstack'},
+                {title: 'java调试体系', path: '/documents/java/java-debug'},
+                {title: 'java io 模型', path: '/documents/java/io'},
                 {title: 'jconsole远程监控', path: '/documents/java/java-jconsole'},
-                {title: 'swagger注释@API详细说明', path: '/documents/java/swagger-annotation'},
-                {title: 'Spring依赖注入方式，为什么Spring4.0提倡使用构造函数注入方式？', path: '/documents/java/spring-ioc'},
-                {title: '详解设计模式在 Spring 中的应用', path: '/documents/java/spring-desingpartern'}
+                {title: 'swagger注释@API详细说明', path: '/documents/java/swagger-annotation'}
             ]
         }, {
             title: 'Python',
@@ -111,11 +112,13 @@ module.exports = {
                 {title: 'maven配置详解', path: '/documents/codemanagement/maven-settings'}
             ]
         }, {
-            title: '信息安全',
+            title: '信息安全及算法',
             path: '/documents/sercurity/',
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: '国密算法SM3设计原理', path: '/documents/sercurity/sm-sm3'},
+                {title: '国密算法SM4设计原理', path: '/documents/sercurity/sm-sm4'},
                 {title: 'java代码混淆之allator集成', path: '/documents/sercurity/allatori'}
             ]
         }, {
