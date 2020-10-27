@@ -34,6 +34,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           REMOTE_PORT: ${{ secrets.PORT }}
-          REMOTE_PASSWORD: ${{ secrets.USERNAME }}
-          SOURCE: "/vuepress-starter/docs/.vuepress/dist/"
+          SOURCE: "vuepress-starter/docs/.vuepress/dist/"
           TARGET: "/home/blog_walter"
