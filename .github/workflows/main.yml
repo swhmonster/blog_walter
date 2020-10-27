@@ -30,7 +30,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY:  ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rltgoDzvO"
+          ARGS: "-avz --delete"
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           REMOTE_PORT: ${{ secrets.PORT }}
