@@ -30,4 +30,4 @@ jobs:
           echo "=============== 开始部署任务-DEVELOP  ==============="
           sshpass -p swhSWH8! ssh -o StrictHostKeychecking=no root@49.234.97.199
           echo "=============== 将程序包包部署到远程服务器上  ==============="
-          sshpass -p swhSWH8! scp -o StrictHostKeychecking=no ../*/dist/* root@49.234.97.199:/home/blog_walter
+          sshpass -p swhSWH8! scp -o StrictHostKeychecking=no ../*/dist/ root@49.234.97.199:/home/blog_walter
