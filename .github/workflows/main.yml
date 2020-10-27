@@ -30,16 +30,9 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.0.8
         env:
           ARGS: "-avz --delete"
-          REMOTE_HOST: 49.234.97.199
-          REMOTE_USER: root
-          REMOTE_PORT: 22
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          REMOTE_PORT: ${{ secrets.PORT }}
+          REMOTE_PASSWORD: ${{ secrets.USERNAME }}
           SOURCE: "dist/"
-          TARGET: "/home/blog_walter/"
-
-#       - name: Run a multi-line script
-#         run: |
-#           echo "=============== 开始部署任务-DEVELOP  ==============="
-#           sshpass -p *** ssh -o StrictHostKeychecking=no root@49.234.97.199
-#           echo "=============== 将程序包包部署到远程服务器上  ==============="
-#           sshpass -p *** scp -o StrictHostKeychecking=no ./vuepress-starter/docs/.vuepress/dist/ root@49.234.97.199:/home/blog_walter
-          
+          TARGET: "/home/"
