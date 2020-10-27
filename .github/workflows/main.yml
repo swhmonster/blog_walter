@@ -5,8 +5,8 @@ name: CI
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  push:
-    branches: master
+#   push:
+#     branches: master
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,7 +28,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "=============== 开始部署任务-DEVELOP  ==============="
-          sshpass -p swhSWH8! ssh -o StrictHostKeychecking=no root@49.234.97.199
+          sshpass -p *** ssh -o StrictHostKeychecking=no root@49.234.97.199
           echo "=============== 将程序包包部署到远程服务器上  ==============="
-          sshpass -p swhSWH8! scp -o StrictHostKeychecking=no ./vuepress-starter/docs/.vuepress/dist/ root@49.234.97.199:/home/blog_walter
+          sshpass -p *** scp -o StrictHostKeychecking=no ./vuepress-starter/docs/.vuepress/dist/ root@49.234.97.199:/home/blog_walter
           
