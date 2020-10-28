@@ -88,9 +88,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: '了解浏览器背后的运行机制', path: '/documents/webinfo/inner-browser'},
-                {title: '前端导出Excel支持自定义单元格格式', path: '/documents/webinfo/export-excel'}
-
+                {title: '了解浏览器背后的运行机制', path: '/documents/webinfo/inner-browser'}
             ]
         }, {
             title: 'IDE开发工具',
