@@ -75,6 +75,14 @@ module.exports = {
                 {title: 'rocketmq集群', path: '/documents/middleware/rocketmq-cluster'}
             ]
         }, {
+            title: '分布式',
+            path: '/documents/distributedsystem/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: [
+                {title: 'zookeeper', path: '/documents/distributedsystem/zookeeper'}
+            ]
+        }, {
             title: '操作系统',
             path: '/documents/operatingsystem/',
             collapsable: true,
