@@ -58,6 +58,33 @@
         - 顺序节点可以是持久的，也可以是临时的
         - 当一个新Znode被创建为一个顺序节点，zk通过将10位的序列号附加到原始名称来设置Znode路径
 #### 原语——定义在Znode上的一组操作
+- 在zookeeper中提供了9种基本操作：
+    - create:创建一个Znode节点，父节点必须存在
+    - delete:删除一个Znode节点，下面不能有子节点
+    - exists:判断一个Znode是否存在，存在时返回元数据
+    - getACL:获取Znode的ACL（访问控制列表）
+    - setACL:设置Znode的ACL（访问控制列表）
+    - getChildren:获取Znode的所有子节点的列表
+    - getData:获取子节点的相关数据
+    - setData:设置子节点的相关数据
+    - sync:使client当前连着的zookeeper服务器和zookeeper的leader节点同步一下数据
+#### zookeeper的访问权限控制
+- zookeeper的访问权限控制，使用ACL（Access Control List）模式来实现：
+    - ACL权限控制，使用“schema:permission”来标识，主要涵盖上方面：
+        - 权限模式：鉴权策略，包括world、IP、auth、digest四种
+        - 授权对象：权限赋予的用户或者一个实体（授权对象）
+        - 权限：CDRWA(create,delete,read,write,admin)（权限类型）
+>zookeeper的权限控制是基于每一个Znode节点的，需要对每个节点设置权限
 
+>每个Znode支持设置多种权限控制方案和多个权限
+
+>子节点不会继承父节点权限，客户端无权访问某节点，但可能可以访问它的子节点
 #### 通知——Watcher机制，用于对分布式应用发送消息
+- zookeeper可以为所有读操作设置watch，这些读操作包括：exists()、getChildren()及getData()
+- watch事件是一次性的触发器，当watch对象状态发生改变时，将会触发此对象所对应的watch事件
+- watch事件将被异步地发送给客户端，并且zookeeper为watch机制提供了有序的一致性保证。理论上客户端接收watch事件的时间要快于其看到watch对象状态变化的时间。
+- zookeeper所管理的watch可以分为两类：
+    - 数据watch（data watches）:getData和exists负责设置数据watch
+    - 孩子watch（child watches）:getChildren负责设置孩子watch
 ## zookeeper日常使用
+
