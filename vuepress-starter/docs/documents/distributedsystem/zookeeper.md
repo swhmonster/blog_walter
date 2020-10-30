@@ -87,4 +87,36 @@
     - 数据watch（data watches）:getData和exists负责设置数据watch
     - 孩子watch（child watches）:getChildren负责设置孩子watch
 ## zookeeper日常使用
-
+### 文件目录结构
+- bin:
+    - 一些主要的运行命令
+- conf:
+    - 存放配置文件，其中需要修改的是zoo.cfg，运行zk之前必须配置.cfg。文件中有一个默认的zoo——sample.cfg文件。
+- contrib:
+    - 附加的一些功能
+- dist-maven:
+    - mvn编译后的目录
+- docs:
+    - 文档
+- lib:
+    - 需要依赖的jar包
+- recipes:
+    - 案例demo的代码
+- src:
+    - 源码
+### 配置参数
+- tickTime:Client-Server通信心跳时间
+    - zookeeper服务器之间或客户端与服务器之间维持心跳的时间间隔，也就是每个tickTime时间就会发送一个心跳。单位毫秒，默认2000毫秒
+- initLimit:Leader-Follower初始通信时限
+    - 集群中的follower服务器（F）与leader服务器（L）之间初始连接能容忍的最多心跳数（tickTime的数量）
+- syncLimit:Leader-Follower同步通信时限
+    - 进群中follower服务器与leader服务器之间的请求和响应最多能容忍的心跳数
+- dataDir:数据文件目录
+    - 该属性对应的目录是用来存放myid信息跟一些版本，内存数据快照日志，跟服务器唯一的ID信息等
+- clientPort:客户端连接端口
+- maxClientCnxns:允许连接的客户端数据
+    - 0位不限制，通过IP来区分不同客户端
+- dataDir:存放事务日志的路径
+- autopurge.snapRetainCount:自动清理保留快照日志的文件数量
+- autopurge.purgeInterval:自动清理使劲间隔，单位小时
+### 集群配置
