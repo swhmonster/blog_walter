@@ -120,3 +120,37 @@
 - autopurge.snapRetainCount:自动清理保留快照日志的文件数量
 - autopurge.purgeInterval:自动清理使劲间隔，单位小时
 ### 集群配置
+- 集群配置格式：service.N=YYYY:A:B
+    - N：代表服务器编号（也就是myid里的值）
+    - YYYY：代表服务器地址
+    - A：代表Follow跟Leader通信的端口，简称服务端内部通信端口（默认2888）
+    - B：代表选举端口（默认3888）
+- Observer模式配置：service.id=host:port:port:observer
+### 高可用
+- 设计
+    - zookeeper本身的设计是强一致性的，重点在于数据的同步和一致，而并非是数据高可用性的
+- 高可用
+    - zookeeper系统中只要集群中存在超过一半的节点能正常工作，那么整个集群就能正常对外服务（这里的节点指非observer节点）
+- zookeeper选主过程速度很慢
+    - zookeeper选主过程通常耗时30~120s，期间由于没有master，所以整个集群是不可用的。对于网络里偶尔出现的，比如半秒一秒的网络隔离，zookeeper会由于选主过程把不可用的回见放大几十倍。
+- 容灾
+    - zookeeper的高可用在部署上是很有考量的，zookeeper集群在部署上可以做到机房容灾（3机房），但是做不到异地容灾（异地之间网络比较复杂，容易出现集群重新选主，导致整个集群不可用，而选主时间又很长）。另外，为了提升集群的扩展性和稳定性，可以引入observer节点，提升读性能，保护leader和follow节点。
+### 双机房集群部署
+- 双机房集群部署推荐
+    - 机房A：
+        - leader
+        - follower
+        - follower
+    - 机房B：
+        - observer
+        - observer
+        - observer
+### 监控命令
+>zookeeper3.4.6以后，支持某些特性的四字命令字母与其交互。这些大多是查询命令，用来获取zookeeper的当前状态以及相关信息。用户在客户端通过teInet或nc向zookeeper提-交相应的命令。
+
+|命令|示例|描述|
+|---|---|---|
+|conf|echo conf \| nc localhost 2181|（New in 3.3.0）输出相关服务配置的详细信息。比如端口、zk数据及日志配置路径、最大连接数、session超时时间、serverId等|
+|cons|echo cons \| nc localhost 2181|（New in 3.3.0）列出所有连接到这台服务器的客户端连接/会话的详细信息。包括“接收/发送”的包数量、session id、操作延迟、最后的操作执行信息。|
+|srvr|echo srvr \| nc localhost 2181|（New in 3.3.0）输出服务器的详细信息。zk版本、接收/发送包数量、连接数、模式（leader/follower）、节点总数。|
+|stat|echo stat \| nc localhost 2181|输出服务器的详细信息：接收/发送包数量、连接数、模式（leader/follower）、节点总数、延迟。所有客户端的列表|
