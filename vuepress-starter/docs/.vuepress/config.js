@@ -80,7 +80,8 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: 'zookeeper', path: '/documents/distributedsystem/zookeeper'}
+                {title: 'zookeeper', path: '/documents/distributedsystem/zookeeper'},
+                {title: 'zookeeper——分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'}
             ]
         }, {
             title: '操作系统',
