@@ -21,6 +21,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 0,
             children: [
+                {title: '阿里巴巴Java开发手册终极版v1.3.0', path: '/documents/java/alibaba-javadevelop-final-v1.3.0'},
                 {title: 'Java多线程编程核心技术之同步锁（1）', path: '/documents/java/java-synchronized1'},
                 {title: 'Java多线程编程核心技术之同步锁（2）', path: '/documents/java/java-synchronized2'},
                 {title: 'Spring——Spring IOC的bean加载', path: '/documents/java/spring-iocfindbeans'},

@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "vuepress": "^1.7.1"
+  },
+  "dependencies": {
+    "yarn": "^1.22.10"
   }
 }
