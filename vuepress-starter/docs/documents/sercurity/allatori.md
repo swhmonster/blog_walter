@@ -87,7 +87,7 @@
 </details>
 
 ### step 3 配置allatori.xml
->具体配置标签解释，参见allatori官网：http://www.allatori.com/doc.html
+>具体配置标签解释，参见allatori官网：<http://www.allatori.com/doc.html>
 <details><summary>allatori.xml配置</summary>
 
 ```xml

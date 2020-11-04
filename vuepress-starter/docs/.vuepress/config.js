@@ -22,16 +22,17 @@ module.exports = {
             sidebarDepth: 0,
             children: [
                 {title: '阿里巴巴Java开发手册终极版v1.3.0', path: '/documents/java/alibaba-javadevelop-final-v1.3.0'},
-                {title: 'Java多线程编程核心技术之同步锁（1）', path: '/documents/java/java-synchronized1'},
-                {title: 'Java多线程编程核心技术之同步锁（2）', path: '/documents/java/java-synchronized2'},
+                {title: 'Java多线程编程核心技术之同步锁1', path: '/documents/java/java-synchronized1'},
+                {title: 'Java多线程编程核心技术之同步锁2', path: '/documents/java/java-synchronized2'},
                 {title: 'Spring——Spring IOC的bean加载', path: '/documents/java/spring-iocfindbeans'},
                 {title: 'Spring——Spring依赖注入方式，为什么Spring4.0提倡使用构造函数注入方式？', path: '/documents/java/spring-ioc'},
-                {title: 'Spring——详解设计模式在 Spring 中的应用', path: '/documents/java/spring-desingpartern'},
+                {title: 'Spring——详解设计模式在Spring中的应用', path: '/documents/java/spring-desingpartern'},
+                {title: 'jdk——jstack线程分析', path: '/documents/java/jstack'},
+                {title: 'jdk——jconsole远程监控', path: '/documents/java/java-jconsole'},
+                {title: '面向对象设计模式', path: '/documents/java/designparttern'},
                 {title: 'HashMap的设计与优化', path: '/documents/java/java-hashmap'},
-                {title: 'jstack线程分析', path: '/documents/java/jstack'},
                 {title: 'java调试体系', path: '/documents/java/java-debug'},
-                {title: 'java io 模型', path: '/documents/java/io'},
-                {title: 'jconsole远程监控', path: '/documents/java/java-jconsole'},
+                {title: 'java io模型', path: '/documents/java/io'},
                 {title: 'swagger注释@API详细说明', path: '/documents/java/swagger-annotation'}
             ]
         }, {
