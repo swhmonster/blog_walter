@@ -6,6 +6,14 @@ module.exports = {
     repo: 'https://swhmonster.github.io/blog_walter/',
     docsDir: 'docs',
     docsBranch: 'master',
+    plugins: [
+        [
+            '@vuepress/google-analytics',
+            {
+                'ga': 'G-53QBN9NB6C' // G-53QBN9NB6C UA-00000000-0
+            }
+        ]
+    ],
     themeConfig: {
         // lastUpdated: 'Last Updated',
         nav: [
@@ -100,7 +108,8 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: '了解浏览器背后的运行机制', path: '/documents/webinfo/inner-browser'}
+                {title: '了解浏览器背后的运行机制', path: '/documents/webinfo/inner-browser'},
+                {title: '前端页面性能优化', path: '/documents/webinfo/frontend-optimization'}
             ]
         }, {
             title: 'IDE开发工具',
