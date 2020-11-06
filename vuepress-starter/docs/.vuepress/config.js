@@ -6,6 +6,18 @@ module.exports = {
     repo: 'https://swhmonster.github.io/blog_walter/',
     docsDir: 'docs',
     docsBranch: 'master',
+    head:[
+        ['script',{},
+            `
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?565a7b05ee2b4d75932f0afb2c903ed8";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            `]
+    ],
     plugins: [
         [
             '@vuepress/google-analytics',
