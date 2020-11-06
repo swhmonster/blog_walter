@@ -6,8 +6,9 @@ module.exports = {
     repo: 'https://swhmonster.github.io/blog_walter/',
     docsDir: 'docs',
     docsBranch: 'master',
-    head:[
-        ['script',{},
+    head: [
+        ['link', {rel: 'icon', href: '/itlogo.png'}],
+        ['script', {},
             `
             var _hmt = _hmt || [];
             (function() {
@@ -129,7 +130,10 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: 'IntelliJ IDEA——代码规范相关插件配置Sonar Lint,Check Style, Find Bugs', path: '/documents/ide/idea-plugins'},
+                {
+                    title: 'IntelliJ IDEA——代码规范相关插件配置Sonar Lint,Check Style, Find Bugs',
+                    path: '/documents/ide/idea-plugins'
+                },
                 {title: 'IntelliJ IDEA——配置注释模板', path: '/documents/ide/idea-templates'},
                 {title: 'IntelliJ IDEA——配置远程调试', path: '/documents/ide/idea-remotedebug'},
                 {title: 'IntelliJ IDEA——插件之java内存分析工具(JProfiler)', path: '/documents/ide/idea-jprofiler'},
