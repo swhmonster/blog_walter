@@ -48,6 +48,7 @@ module.exports = {
                 {title: 'Spring——Spring IOC的bean加载', path: '/documents/java/spring-iocfindbeans'},
                 {title: 'Spring——Spring依赖注入方式，为什么Spring4.0提倡使用构造函数注入方式？', path: '/documents/java/spring-ioc'},
                 {title: 'Spring——详解设计模式在Spring中的应用', path: '/documents/java/spring-desingpartern'},
+                {title: 'Spring Boot——Spring Boot启动流程简析', path: '/documents/java/springboot-start'},
                 {title: 'jdk——jstack线程分析', path: '/documents/java/jstack'},
                 {title: 'jdk——jconsole远程监控', path: '/documents/java/java-jconsole'},
                 {title: '面向对象设计模式', path: '/documents/java/designparttern'},
