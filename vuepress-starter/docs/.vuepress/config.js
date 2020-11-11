@@ -106,7 +106,8 @@ module.exports = {
             children: [
                 {title: 'zookeeper——基础入门', path: '/documents/distributedsystem/zookeeper'},
                 {title: 'zookeeper——分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
-                {title: 'Apache——Flink分布式流数据流引擎', path: '/documents/distributedsystem/apache-flink'}
+                {title: 'Apache——Flink分布式流数据流引擎', path: '/documents/distributedsystem/apache-flink'},
+                {title: 'Apache——Flink之Checkpoints和Savepoints简介', path: '/documents/distributedsystem/apache-flink-checksavepoint'}
             ]
         }, {
             title: '操作系统',
