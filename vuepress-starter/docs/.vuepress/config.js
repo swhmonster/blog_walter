@@ -124,7 +124,8 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {title: '了解浏览器背后的运行机制', path: '/documents/webinfo/inner-browser'},
-                {title: '前端页面性能优化', path: '/documents/webinfo/frontend-optimization'}
+                {title: '前端页面性能优化', path: '/documents/webinfo/frontend-optimization'},
+                {title: 'Vue-devtools的安装与使用', path: '/documents/webinfo/vue-devtools'}
             ]
         }, {
             title: 'IDE开发工具',
