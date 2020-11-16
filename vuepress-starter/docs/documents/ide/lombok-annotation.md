@@ -4,15 +4,15 @@
 
 - Lombok注解官网地址：
 
-    http://jnb.ociweb.com/jnb/jnbJan2010.html#annotations
+    <http://jnb.ociweb.com/jnb/jnbJan2010.html#annotations>
 
 - Lombok API 地址：
 
-    https://projectlombok.org/api/overview-summary.html
+    <https://projectlombok.org/api/overview-summary.html>
 
 - Lombok插件的安装（IntelliJ IDEA），参见我的csdn博客：
 
-    https://blog.csdn.net/Soul_Programmer_Swh/article/details/84346408
+    <https://blog.csdn.net/Soul_Programmer_Swh/article/details/84346408>
 
 ## Lombok注解：
 ```java
