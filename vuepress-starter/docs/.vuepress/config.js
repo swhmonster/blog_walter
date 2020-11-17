@@ -51,7 +51,6 @@ module.exports = {
                 {title: 'Spring Boot——Spring Boot启动流程简析', path: '/documents/java/springboot-start'},
                 {title: 'jdk——jstack线程分析', path: '/documents/java/jstack'},
                 {title: 'jdk——jconsole远程监控', path: '/documents/java/java-jconsole'},
-                {title: '面向对象设计模式', path: '/documents/java/designparttern'},
                 {title: 'HashMap的设计与优化', path: '/documents/java/java-hashmap'},
                 {title: 'java调试体系', path: '/documents/java/java-debug'},
                 {title: 'java io模型', path: '/documents/java/io'},
@@ -110,6 +109,15 @@ module.exports = {
                 {title: 'zookeeper——分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
                 {title: 'Apache——Flink分布式流数据流引擎', path: '/documents/distributedsystem/apache-flink'},
                 {title: 'Apache——Flink之Checkpoints和Savepoints简介', path: '/documents/distributedsystem/apache-flink-checksavepoint'}
+            ]
+        },{
+            title: '架构设计',
+            path: '/documents/architecturedesign/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: [
+                {title: '面向对象设计模式', path: '/documents/architecturedesign/designparttern'},
+                {title: '幂等设计', path: '/documents/architecturedesign/idempotentdesign'}
             ]
         }, {
             title: '操作系统',
