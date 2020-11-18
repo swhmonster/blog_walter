@@ -175,11 +175,13 @@ module.exports = {
                 {title: 'java代码混淆之allator集成', path: '/documents/sercurity/allatori'}
             ]
         }, {
-            title: '其他',
+            title: '常见问题分析解决及其他',
             path: '/documents/others/',
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: '跨域问题分析及解决', path: '/documents/others/crossdomain'},
+                {title: '常见js报错问题', path: '/documents/others/crossdomain'},
                 {title: 'diy装机心得', path: '/documents/others/computer-diy'}
             ]
         }]
