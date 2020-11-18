@@ -181,7 +181,7 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {title: '跨域问题分析及解决', path: '/documents/others/crossdomain'},
-                {title: '常见js报错问题', path: '/documents/others/crossdomain'},
+                {title: '常见js报错问题', path: '/documents/others/web-jsproblem'},
                 {title: 'diy装机心得', path: '/documents/others/computer-diy'}
             ]
         }]
