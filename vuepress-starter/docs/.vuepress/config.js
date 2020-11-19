@@ -43,17 +43,18 @@ module.exports = {
             sidebarDepth: 0,
             children: [
                 {title: '阿里巴巴Java开发手册终极版v1.3.0', path: '/documents/java/alibaba-javadevelop-final-v1.3.0'},
-                {title: 'Java多线程编程核心技术之同步锁1', path: '/documents/java/java-synchronized1'},
-                {title: 'Java多线程编程核心技术之同步锁2', path: '/documents/java/java-synchronized2'},
-                {title: 'Spring——Spring IOC的bean加载', path: '/documents/java/spring-iocfindbeans'},
-                {title: 'Spring——Spring依赖注入方式，为什么Spring4.0提倡使用构造函数注入方式？', path: '/documents/java/spring-ioc'},
-                {title: 'Spring——详解设计模式在Spring中的应用', path: '/documents/java/spring-desingpartern'},
-                {title: 'Spring Boot——Spring Boot启动流程简析', path: '/documents/java/springboot-start'},
-                {title: 'jdk——jstack线程分析', path: '/documents/java/jstack'},
-                {title: 'jdk——jconsole远程监控', path: '/documents/java/java-jconsole'},
-                {title: 'HashMap的设计与优化', path: '/documents/java/java-hashmap'},
-                {title: 'java调试体系', path: '/documents/java/java-debug'},
-                {title: 'java io模型', path: '/documents/java/io'},
+                {title: 'Spring-IOC的bean加载', path: '/documents/java/spring-iocfindbeans'},
+                {title: 'Spring-为什么Spring4.0提倡使用构造函数注入方式？', path: '/documents/java/spring-ioc'},
+                {title: 'Spring-设计模式在Spring中的应用', path: '/documents/java/spring-desingpartern'},
+                {title: 'Spring Boot启动流程简析', path: '/documents/java/springboot-start'},
+                {title: 'java-多线程编程核心技术之同步锁1', path: '/documents/java/java-synchronized1'},
+                {title: 'java-多线程编程核心技术之同步锁2', path: '/documents/java/java-synchronized2'},
+                {title: 'java-jstack线程分析', path: '/documents/java/jstack'},
+                {title: 'java-jconsole远程监控', path: '/documents/java/java-jconsole'},
+                {title: 'java-HashMap的设计与优化', path: '/documents/java/java-hashmap'},
+                {title: 'java-调试体系', path: '/documents/java/java-debug'},
+                {title: 'java-io模型', path: '/documents/java/io'},
+                {title: 'java-jdk8 hashmap加入了红黑树', path: '/documents/java/java-jdk8hashmap'},
                 {title: 'swagger注释@API详细说明', path: '/documents/java/swagger-annotation'}
             ]
         }, {
@@ -87,9 +88,9 @@ module.exports = {
             children: [
                 {title: '常用Sybase命令', path: '/documents/database/sybase-command'},
                 {title: '主流数据库兼容性验证', path: '/documents/database/database-compatibility'},
-                {title: 'postgresql——执行计划查看方式与计划分析', path: '/documents/database/postgresql-executionplan'},
-                {title: 'postgresql——posgresql底层对查询类语句的处理', path: '/documents/database/postgresql-underlying1'},
-                {title: 'postgresql——底层对查询类语句的处理（优化），以及执行计划生成策略', path: '/documents/database/postgresql-underlying2'}
+                {title: 'postgresql-执行计划查看方式与计划分析', path: '/documents/database/postgresql-executionplan'},
+                {title: 'postgresql-posgresql底层对查询类语句的处理', path: '/documents/database/postgresql-underlying1'},
+                {title: 'postgresql-底层对查询类语句的处理（优化），以及执行计划生成策略', path: '/documents/database/postgresql-underlying2'}
             ]
         }, {
             title: '中间件',
@@ -105,10 +106,10 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: 'zookeeper——基础入门', path: '/documents/distributedsystem/zookeeper'},
-                {title: 'zookeeper——分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
-                {title: 'Apache——Flink分布式流数据流引擎', path: '/documents/distributedsystem/apache-flink'},
-                {title: 'Apache——Flink之Checkpoints和Savepoints简介', path: '/documents/distributedsystem/apache-flink-checksavepoint'}
+                {title: 'zookeeper-基础入门', path: '/documents/distributedsystem/zookeeper'},
+                {title: 'zookeeper-分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
+                {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/distributedsystem/apache-flink'},
+                {title: 'Apache-Flink之Checkpoints和Savepoints简介', path: '/documents/distributedsystem/apache-flink-checksavepoint'}
             ]
         },{
             title: '架构设计',
@@ -144,13 +145,13 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {
-                    title: 'IntelliJ IDEA——代码规范相关插件配置Sonar Lint,Check Style, Find Bugs',
+                    title: 'IntelliJ IDEA-代码规范相关插件配置Sonar Lint,Check Style, Find Bugs',
                     path: '/documents/ide/idea-plugins'
                 },
-                {title: 'IntelliJ IDEA——配置注释模板', path: '/documents/ide/idea-templates'},
-                {title: 'IntelliJ IDEA——配置远程调试', path: '/documents/ide/idea-remotedebug'},
-                {title: 'IntelliJ IDEA——插件之java内存分析工具(JProfiler)', path: '/documents/ide/idea-jprofiler'},
-                {title: 'Lombok——注解', path: '/documents/ide/lombok-annotation'}
+                {title: 'IntelliJ IDEA-配置注释模板', path: '/documents/ide/idea-templates'},
+                {title: 'IntelliJ IDEA-配置远程调试', path: '/documents/ide/idea-remotedebug'},
+                {title: 'IntelliJ IDEA-插件之java内存分析工具(JProfiler)', path: '/documents/ide/idea-jprofiler'},
+                {title: 'Lombok-注解', path: '/documents/ide/lombok-annotation'}
             ]
         }, {
             title: '代码管理',
@@ -159,9 +160,9 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {title: 'GitLab-CI-CD介绍和使用', path: '/documents/codemanagement/gitlab-cdci'},
-                {title: 'git——常用命令', path: '/documents/codemanagement/git-command'},
-                {title: 'git——git fetch与git pull', path: '/documents/codemanagement/git-fetchpulldiff'},
-                {title: 'git——日常使用笔记', path: '/documents/codemanagement/git-notes'},
+                {title: 'git-常用命令', path: '/documents/codemanagement/git-command'},
+                {title: 'git-git fetch与git pull', path: '/documents/codemanagement/git-fetchpulldiff'},
+                {title: 'git-日常使用笔记', path: '/documents/codemanagement/git-notes'},
                 {title: 'maven配置详解', path: '/documents/codemanagement/maven-settings'}
             ]
         }, {
