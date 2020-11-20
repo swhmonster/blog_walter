@@ -56,6 +56,7 @@ module.exports = {
                 {title: 'java-io模型', path: '/documents/java/io'},
                 {title: 'java-jdk8 hashmap加入了红黑树', path: '/documents/java/java-jdk8hashmap'},
                 {title: 'java-jdk9 新特性', path: '/documents/java/java-java9'},
+                {title: 'java-jdk11 新特性', path: '/documents/java/java-java11'},
                 {title: 'swagger注释@API详细说明', path: '/documents/java/swagger-annotation'}
             ]
         }, {
