@@ -108,6 +108,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: '注册中心-主流注册中心', path: '/documents/distributedsystem/registrycompare'},
                 {title: 'zookeeper-基础入门', path: '/documents/distributedsystem/zookeeper'},
                 {title: 'zookeeper-分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
                 {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/distributedsystem/apache-flink'},
