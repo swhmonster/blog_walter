@@ -166,7 +166,8 @@ module.exports = {
                 {title: 'git-常用命令', path: '/documents/codemanagement/git-command'},
                 {title: 'git-git fetch与git pull', path: '/documents/codemanagement/git-fetchpulldiff'},
                 {title: 'git-日常使用笔记', path: '/documents/codemanagement/git-notes'},
-                {title: 'maven配置详解', path: '/documents/codemanagement/maven-settings'}
+                {title: 'maven配置详解', path: '/documents/codemanagement/maven-settings'},
+                {title: 'Gradle Getting Started', path: '/documents/codemanagement/gradle-gettingstarted'}
             ]
         }, {
             title: '信息安全及算法',
@@ -186,6 +187,7 @@ module.exports = {
             children: [
                 {title: '跨域问题分析及解决', path: '/documents/others/crossdomain'},
                 {title: '常见js报错问题', path: '/documents/others/web-jsproblem'},
+                {title: 'Beyond Compare 4 破解方式', path: '/documents/others/beyondcompare4crak'},
                 {title: 'diy装机心得', path: '/documents/others/computer-diy'}
             ]
         }]
