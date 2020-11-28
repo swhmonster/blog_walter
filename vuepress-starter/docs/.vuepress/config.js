@@ -175,6 +175,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: '加解密算法及国密介绍', path: '/documents/sercurity/encryption-introduction'},
                 {title: '国密算法SM3设计原理', path: '/documents/sercurity/sm-sm3'},
                 {title: '国密算法SM4设计原理', path: '/documents/sercurity/sm-sm4'},
                 {title: 'java代码混淆之allator集成', path: '/documents/sercurity/allatori'}
