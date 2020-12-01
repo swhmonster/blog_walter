@@ -17,6 +17,9 @@
         - 官方网站：<https://nacos.io/zh-cn/index.html>
         - GitHub：<https://github.com/alibaba/nacos>
         >可基于Spring Cloud 2.0+
+- 微服务框架
+    - Dubbo (RPC)
+    - Spring Cloud (HTTP)
 - 分布式流数据流引擎
     - Apache Flink
         - 官方网站：<https://flink.apache.org/>
