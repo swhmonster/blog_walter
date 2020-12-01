@@ -41,7 +41,7 @@ mysql> DESCRIBE City;
 | Population | int(11)  | NO   |     | 0       |                |
 +------------+----------+------+-----+---------+----------------+
 ```
-### 获取执行计划信息
+## 获取执行计划信息
 输出示例：
 ```
 mysql> EXPLAIN ANALYZE SELECT * FROM t1 JOIN t2 ON (t1.c1 = t2.c2)\G
