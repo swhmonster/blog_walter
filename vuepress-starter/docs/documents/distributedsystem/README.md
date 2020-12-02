@@ -5,6 +5,11 @@
     - 业务支撑
     - 中间件
     - 负载均衡
+- 微服务框架
+    - Dubbo (RPC)
+        >传输层将Mina和Netty抽象成了一个接口，默认情况下使用Netty
+    - Spring Cloud (HTTP)
+    - Netty
 - 注册中心
     >选用方式，可参看文档[《主流注册中心》](./registrycompare.md)
     - Spring Cloud Eureka
@@ -17,13 +22,5 @@
         - 官方网站：<https://nacos.io/zh-cn/index.html>
         - GitHub：<https://github.com/alibaba/nacos>
         >可基于Spring Cloud 2.0+
-- 微服务框架
-    - Dubbo (RPC)
-      >传输层将Mina和Netty抽象成了一个接口，默认情况下使用Netty
-    - Spring Cloud (HTTP)
-    - Netty
-- 分布式流数据流引擎
-    - Apache Flink
-        - 官方网站：<https://flink.apache.org/>
-        - GitHub：<https://github.com/apache/flink>
->针对中间件相关内容参看“中间件”栏目
+- 中间件
+    >针对中间件相关内容参看“中间件”栏目

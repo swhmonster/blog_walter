@@ -6,4 +6,7 @@
 Netty就是一个满足高性能、高并发的网络通信框架。Netty底层是采用Reactor线程模型来设计和实现的，先来看Netty服务端API的通信步骤，其序列图如下图所示:
 
 ![An image](../../asserts/img/netty1.png)
+
+Netty客户端API的通信步骤:
+
 ![An image](../../asserts/img/netty2.png)

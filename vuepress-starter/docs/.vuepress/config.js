@@ -103,7 +103,11 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: 'rocketmq集群', path: '/documents/middleware/rocketmq-cluster'}
+                {title: '主流消息中间件对比', path: '/documents/middleware/middlewarecompare'},
+                {title: 'rocketmq集群', path: '/documents/middleware/rocketmq-cluster'},
+                {title: 'rabbitmq集群', path: '/documents/middleware/rabbitmq-cluster'},
+                {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/middleware/apache-flink'},
+                {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/middleware/apache-flink-checksavepoint'}
             ]
         }, {
             title: '分布式',
@@ -114,8 +118,6 @@ module.exports = {
                 {title: '注册中心-主流注册中心', path: '/documents/distributedsystem/registrycompare'},
                 {title: 'zookeeper-基础入门', path: '/documents/distributedsystem/zookeeper'},
                 {title: 'zookeeper-分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
-                {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/distributedsystem/apache-flink'},
-                {title: 'Apache-Flink之Checkpoints和Savepoints简介', path: '/documents/distributedsystem/apache-flink-checksavepoint'},
                 {title: 'Netty-高性能之道', path: '/documents/distributedsystem/netty-highperformance'}
             ]
         },{
