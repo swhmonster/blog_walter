@@ -19,7 +19,9 @@
         >可基于Spring Cloud 2.0+
 - 微服务框架
     - Dubbo (RPC)
+      >传输层将Mina和Netty抽象成了一个接口，默认情况下使用Netty
     - Spring Cloud (HTTP)
+    - Netty
 - 分布式流数据流引擎
     - Apache Flink
         - 官方网站：<https://flink.apache.org/>
