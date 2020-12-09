@@ -107,7 +107,7 @@ module.exports = {
                 {title: 'rocketmq集群', path: '/documents/middleware/rocketmq-cluster'},
                 {title: 'rabbitmq集群', path: '/documents/middleware/rabbitmq-cluster'},
                 {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/middleware/apache-flink'},
-                {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/middleware/apache-flink-checksavepoint'}
+                {title: 'Apache-Flink之Checkpoints和Savepoints', path: '/documents/middleware/apache-flink-checksavepoint'}
             ]
         }, {
             title: '分布式',
