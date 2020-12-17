@@ -119,7 +119,8 @@ module.exports = {
                 {title: '注册中心-主流注册中心', path: '/documents/distributedsystem/registrycompare'},
                 {title: 'zookeeper-基础入门', path: '/documents/distributedsystem/zookeeper'},
                 {title: 'zookeeper-分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
-                {title: 'Netty-高性能之道', path: '/documents/distributedsystem/netty-highperformance'}
+                {title: 'Netty-高性能之道', path: '/documents/distributedsystem/netty-highperformance'},
+                {title: 'Netty-解决JDK空轮询Bug', path: '/documents/distributedsystem/netty-dealjdkepoll'}
             ]
         },{
             title: '架构设计',
