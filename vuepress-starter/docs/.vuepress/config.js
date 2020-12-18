@@ -96,6 +96,7 @@ module.exports = {
                 {title: 'PostgreSQL-plsql底层对查询类语句的处理', path: '/documents/database/postgresql-underlying1'},
                 {title: 'PostgreSQL-底层对查询类语句的处理（优化），以及执行计划生成策略', path: '/documents/database/postgresql-underlying2'},
                 {title: 'MySQL-ExpLain Statement', path: '/documents/database/mysql-explainstatement'},
+                {title: 'MySQL-Lock', path: '/documents/database/mysql-lock'},
                 {title: 'Oracle-ExpLain Statement', path: '/documents/database/oracle-explainstatement'}
             ]
         }, {
