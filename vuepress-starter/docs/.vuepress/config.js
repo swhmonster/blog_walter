@@ -55,6 +55,7 @@ module.exports = {
                 {title: 'java-HashMap的设计与优化', path: '/documents/java/java-hashmap'},
                 {title: 'java-调试体系', path: '/documents/java/java-debug'},
                 {title: 'java-io模型', path: '/documents/java/io'},
+                {title: 'java-G1参数介绍和调优', path: '/documents/java/java-g1gc'},
                 {title: 'java-jdk8 hashmap加入了红黑树', path: '/documents/java/java-jdk8hashmap'},
                 {title: 'java-jdk8 lambda表达式原理', path: '/documents/java/java-lambdaprinciple'},
                 {title: 'java-jdk9 新特性', path: '/documents/java/java-java9'},
