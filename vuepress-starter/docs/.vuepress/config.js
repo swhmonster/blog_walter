@@ -130,6 +130,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: '领域驱动设计', path: '/documents/architecturedesign/domain-driven-design'},
                 {title: '面向对象设计模式', path: '/documents/architecturedesign/designparttern'},
                 {title: '幂等设计', path: '/documents/architecturedesign/idempotentdesign'}
             ]
