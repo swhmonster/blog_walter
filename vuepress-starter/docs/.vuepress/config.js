@@ -48,7 +48,7 @@ module.exports = {
                 {title: 'Spring-设计模式在Spring中的应用', path: '/documents/java/spring-desingpartern'},
                 {title: 'Spring Boot启动流程简析', path: '/documents/java/springboot-start'},
                 {title: 'java-多线程编程核心技术之同步锁1', path: '/documents/java/java-synchronized1'},
-                {title: 'java-多线程编程核心技术之同步锁1', path: '/documents/java/java-synchronized1'},
+                {title: 'java-多线程编程核心技术之同步锁2', path: '/documents/java/java-synchronized2'},
                 {title: 'java-JVM调优参数(GC相关)', path: '/documents/java/java-jvmgcparams'},
                 {title: 'java-jstack线程分析', path: '/documents/java/jstack'},
                 {title: 'java-jconsole远程监控', path: '/documents/java/java-jconsole'},
