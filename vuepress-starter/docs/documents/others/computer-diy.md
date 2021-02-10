@@ -4,7 +4,7 @@
 ### 鲁大师扫描清单：
 >电脑型号	X64 兼容 台式电脑  (扫描时间：2020年06月15日)
 操作系统	Windows 10 专业版 64位 ( DirectX 12 )
-	
+![An image](../../asserts/img/diy1.png)
 1. 处理器	英特尔 Core i7-9700 @ 3.00GHz 八核
 2. 主板	华硕 TUF B365M-PLUS GAMING ( 300 Series 芯片组 Family (B365) )
 3. 内存	32 GB ( 金士顿 DDR4 2666MHz )
