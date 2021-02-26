@@ -19,3 +19,9 @@
         - spring进阶
     - dubbo (rpc)
         >参见官方网站<http://dubbo.apache.org/>
+        - 传输层netty
+            - netty的nio，区别于java的nio(解决了空轮询问题)
+            - reactor线程模型
+            - 零拷贝
+            - 内存池（复用缓冲区）
+        - 提供高性能序列化工具支持：Kryo和FST
