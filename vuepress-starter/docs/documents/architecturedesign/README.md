@@ -6,3 +6,19 @@
 - 数据库设计
 - 分布式架构设计
     >结合个人开发经验总结
+    - Spring Cloud 系列 
+        - 注册中心：eureka（AP型，高可用、分区容错）
+        - 网关：gateway
+        - 数据链路：zipkin
+        - UI交互层：vue
+        - 核心代码框架：spring boot
+        - 中间件
+        - 数据库
+    - Dubbo 系列 
+        - 注册中心：zookeeper（CP型，一致性、分区容错）
+        - 网关：nginx + lua
+        - 数据链路：zipkin
+        - UI交互层：vue
+        - 核心代码框架：spring boot
+        - 中间件
+        - 数据库
