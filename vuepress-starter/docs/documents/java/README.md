@@ -25,3 +25,15 @@
             - 零拷贝
             - 内存池（复用缓冲区）
         - 提供高性能序列化工具支持：Kryo和FST
+- 日常开发、问题排查工具
+    - Java自带工具
+        - jConsole
+        - jVisualvm
+        - jStack
+    - JProfiler/Eclipse Memory Analyzer
+        - 内存分析工具
+        - JProfiler功能更强大一些，可集成idea
+    - Arthas
+        - Arthas 是Alibaba开源的Java诊断工具，深受开发者喜爱。
+    - Brup Suite
+        - 抓包工具
