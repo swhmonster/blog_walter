@@ -119,6 +119,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: 'Nginx配置详解', path: '/documents/distributedsystem/nginxconf'},
                 {title: '注册中心-主流注册中心', path: '/documents/distributedsystem/registrycompare'},
                 {title: 'zookeeper-基础入门', path: '/documents/distributedsystem/zookeeper'},
                 {title: 'zookeeper-分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
