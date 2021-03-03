@@ -1,4 +1,12 @@
 # 代码管理相关
-- git
-- maven
-- gradle
+- 代码管理
+    - git
+    - svn
+- 包管理
+    - maven
+    - gradle
+- 持续集成
+    - gitlab ci/cd
+    - jenkeins
+- 代码质量
+    - sonarQube
