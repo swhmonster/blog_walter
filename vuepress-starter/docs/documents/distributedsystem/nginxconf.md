@@ -1,4 +1,4 @@
-# Nginx配置详解
+# Nginx 配置详解
 ```
                                                                                     #全局块
 #user  nobody;

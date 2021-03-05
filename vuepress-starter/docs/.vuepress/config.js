@@ -108,8 +108,8 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {title: '主流消息中间件对比', path: '/documents/middleware/middlewarecompare'},
-                {title: 'rocketmq集群', path: '/documents/middleware/rocketmq-cluster'},
-                {title: 'rabbitmq集群', path: '/documents/middleware/rabbitmq-cluster'},
+                {title: 'rocketmq 集群', path: '/documents/middleware/rocketmq-cluster'},
+                {title: 'rabbitmq 集群', path: '/documents/middleware/rabbitmq-cluster'},
                 {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/middleware/apache-flink'},
                 {title: 'Apache-Flink之Checkpoints和Savepoints', path: '/documents/middleware/apache-flink-checksavepoint'}
             ]
@@ -119,7 +119,8 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: 'Nginx配置详解', path: '/documents/distributedsystem/nginxconf'},
+                {title: 'Nginx 配置详解', path: '/documents/distributedsystem/nginxconf'},
+                {title: 'Nginx 缓存机制', path: '/documents/distributedsystem/nginx-cache'},
                 {title: '注册中心-主流注册中心', path: '/documents/distributedsystem/registrycompare'},
                 {title: 'zookeeper-基础入门', path: '/documents/distributedsystem/zookeeper'},
                 {title: 'zookeeper-分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
