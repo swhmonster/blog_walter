@@ -61,7 +61,8 @@ module.exports = {
                 {title: 'java-jdk9 新特性', path: '/documents/java/java-java9'},
                 {title: 'java-jdk11 新特性', path: '/documents/java/java-java11'},
                 {title: 'mybatis-常用工具类', path: '/documents/java/mybatis-commontools'},
-                {title: 'swagger注释@API详细说明', path: '/documents/java/swagger-annotation'}
+                {title: 'swagger注释@API详细说明', path: '/documents/java/swagger-annotation'},
+                {title: 'dubbo-api-docs', path: '/documents/java/dubbo-api-docs'}
             ]
         }, {
             title: 'Python',
