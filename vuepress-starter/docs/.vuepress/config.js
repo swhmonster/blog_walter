@@ -215,6 +215,15 @@ module.exports = {
                 {title: 'Beyond Compare 4 破解方式', path: '/documents/others/beyondcompare4crak'},
                 {title: 'diy装机心得', path: '/documents/others/computer-diy'}
             ]
+        },
+            {
+            title: '管理路线',
+            path: '/documents/management/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: [
+                {title: 'Objectives and KeyResults', path: '/documents/management/okr'},
+            ]
         }]
     }
 }
