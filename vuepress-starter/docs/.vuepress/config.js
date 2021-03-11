@@ -217,7 +217,7 @@ module.exports = {
             ]
         },
             {
-            title: '管理路线',
+            title: '管理相关',
             path: '/documents/management/',
             collapsable: true,
             sidebarDepth: 1,
