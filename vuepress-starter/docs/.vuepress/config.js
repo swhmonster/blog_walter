@@ -35,6 +35,7 @@ module.exports = {
             {text: 'Contact', link: '/contact/'},
             {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
             {text: 'CSDN Blog', link: 'https://google.com', target: '_blank'},
+            {text: 'Donation打赏', link: '/donation/'}
         ],
         sidebar: [{
             title: 'Java',
@@ -112,7 +113,10 @@ module.exports = {
                 {title: 'rocketmq 集群', path: '/documents/middleware/rocketmq-cluster'},
                 {title: 'rabbitmq 集群', path: '/documents/middleware/rabbitmq-cluster'},
                 {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/middleware/apache-flink'},
-                {title: 'Apache-Flink之Checkpoints和Savepoints', path: '/documents/middleware/apache-flink-checksavepoint'}
+                {
+                    title: 'Apache-Flink之Checkpoints和Savepoints',
+                    path: '/documents/middleware/apache-flink-checksavepoint'
+                }
             ]
         }, {
             title: '分布式',
@@ -133,10 +137,8 @@ module.exports = {
             path: '/documents/bigdata/',
             collapsable: true,
             sidebarDepth: 1,
-            children: [
-
-            ]
-        },{
+            children: []
+        }, {
             title: '架构设计',
             path: '/documents/architecturedesign/',
             collapsable: true,
@@ -217,13 +219,13 @@ module.exports = {
             ]
         },
             {
-            title: '管理相关',
-            path: '/documents/management/',
-            collapsable: true,
-            sidebarDepth: 1,
-            children: [
-                {title: 'Objectives and KeyResults', path: '/documents/management/okr'},
-            ]
-        }]
+                title: '管理相关',
+                path: '/documents/management/',
+                collapsable: true,
+                sidebarDepth: 1,
+                children: [
+                    {title: 'Objectives and KeyResults', path: '/documents/management/okr'},
+                ]
+            }]
     }
 }
