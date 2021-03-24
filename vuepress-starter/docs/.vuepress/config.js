@@ -125,6 +125,7 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {title: 'Nginx 配置详解', path: '/documents/distributedsystem/nginxconf'},
+                {title: 'Nginx 事件驱动模型', path: '/documents/distributedsystem/nginx-eventdriven'},
                 {title: 'Nginx 缓存机制', path: '/documents/distributedsystem/nginx-cache'},
                 {title: '注册中心-主流注册中心', path: '/documents/distributedsystem/registrycompare'},
                 {title: 'zookeeper-基础入门', path: '/documents/distributedsystem/zookeeper'},
