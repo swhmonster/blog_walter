@@ -74,7 +74,8 @@ module.exports = {
                 {title: 'Python多环境配置管理', path: '/documents/python/python-multisettings'},
                 {title: 'Tips for Effective Python', path: '/documents/python/python-TipsforEffectivePython'},
                 {title: 'PEP8风格代码规范指南', path: '/documents/python/python-pep8style'},
-                {title: '打包python项目，发布到pypi', path: '/documents/python/python-delpoy'}
+                {title: '打包python项目，发布到pypi', path: '/documents/python/python-delpoy'},
+                {title: 'smtplib带附件邮件发送(python2)', path: '/documents/python/python-emailsend'}
             ]
         }, {
             title: '深入理解JVM',
