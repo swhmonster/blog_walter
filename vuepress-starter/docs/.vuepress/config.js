@@ -132,7 +132,8 @@ module.exports = {
                 {title: 'zookeeper-基础入门', path: '/documents/distributedsystem/zookeeper'},
                 {title: 'zookeeper-分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
                 {title: 'Netty-高性能之道', path: '/documents/distributedsystem/netty-highperformance'},
-                {title: 'Netty-解决JDK空轮询Bug', path: '/documents/distributedsystem/netty-dealjdkepoll'}
+                {title: 'Netty-解决JDK空轮询Bug', path: '/documents/distributedsystem/netty-dealjdkepoll'},
+                {title: 'HDFS-数据存储', path: '/documents/distributedsystem/hdfs-storage'}
             ]
         }, {
             title: '大数据',
