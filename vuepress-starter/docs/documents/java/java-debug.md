@@ -23,15 +23,19 @@ JPDA的调试过程有几个重要的概念：调试者、被调试者、通信�
 >本文不针对开发工具，如IDEA、MyElipse等，远程调试做解释
 
 JDB是基于文本和命令行的调试工具。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190917204143215.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvdWxfUHJvZ3JhbW1lcl9Td2g=,size_16,color_FFFFFF,t_70)(1)修改java启动脚本，把远程调试端口打开
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190917204143215.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvdWxfUHJvZ3JhbW1lcl9Td2g=,size_16,color_FFFFFF,t_70)
+1. 修改java启动脚本，把远程调试端口打开
 JAVA_OPTS="$JAVA_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n"
-(2)程序运行起来
-(3)attach jdb到程序上，在程序所在机器上运行 下面的脚本
+2. 程序运行起来
+3. attach jdb到程序上，在程序所在机器上运行 下面的脚本
+```
   $JAVA_HOME/bin/jdb -attach 127.0.0.1:8000
-(4)指定断点，运行
+```
+4. 指定断点，运行
 
 
 ### JDB调试-常用命令
+```
 run [类 [参数]] - 开始执行应用程序的主类
 stop in <类 ID>.<方法>[(参数类型,...)]      - 在方法中设置断点
 stop at <类 ID>:<行> - 在行中设置断点
@@ -52,6 +56,7 @@ cont - 从断点处继续执行
 dump –查看对象信息
 list [line number|method] - 输出源代码
 use（或 sourcepath） [源文件路径] - 显示或更改源路径
+```
 
 
 
