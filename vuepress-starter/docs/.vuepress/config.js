@@ -113,6 +113,7 @@ module.exports = {
                 {title: '主流消息中间件对比', path: '/documents/middleware/middlewarecompare'},
                 {title: 'rocketmq 集群', path: '/documents/middleware/rocketmq-cluster'},
                 {title: 'rabbitmq 集群', path: '/documents/middleware/rabbitmq-cluster'},
+                {title: 'kafka总结', path: '/documents/middleware/kafka'},
                 {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/middleware/apache-flink'},
                 {
                     title: 'Apache-Flink之Checkpoints和Savepoints',
