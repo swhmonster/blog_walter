@@ -83,6 +83,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: '深入理解Java虚拟机(学习笔记)', path: '/documents/javadeep/java-jvmsummary'},
                 {title: '深入理解JVM(1)', path: '/documents/javadeep/java-jvm1'},
                 {title: '深入理解JVM(2)', path: '/documents/javadeep/java-jvm2'},
                 {title: '深入理解JVM(3)', path: '/documents/javadeep/java-jvm3'},
