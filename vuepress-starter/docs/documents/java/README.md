@@ -27,14 +27,25 @@
         - 提供高性能序列化工具支持：Kryo和FST
 - 日常开发、问题排查工具
     - Java自带工具
-        - jConsole
-        - jVisualvm
-        - jStack
+        - 可视化工具
+            - JHSDB：基于服务性代理的调试工具
+            - JConsole：Java 监视与管理控制平台
+            - VisualVm：多合故障处理工具
+            - Java Mission Control：可持续在线监控工具
+        - 命令行工具
+            - jps：虚拟机进程状况工具
+            - jstat:虚拟机统计信息监视工具
+            - jinfo:Java 配置信息工具
+            - jmap:Java 内存映像工具
+            - jhat:Java 虚拟机堆转储快照分析工具
+            - jstack:Java 堆栈跟踪工具
+            - jstack
     - JProfiler/Eclipse Memory Analyzer
         - 内存分析工具
         - JProfiler功能更强大一些，可集成idea
     - Arthas
         - Arthas 是Alibaba开源的Java诊断工具，深受开发者喜爱。
         - Arthas 用户文档：<https://arthas.gitee.io/index.html>
+        - IDEA 插件，方便命令生成，推荐
     - Brup Suite
         - 抓包工具
