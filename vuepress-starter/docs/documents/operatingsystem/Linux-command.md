@@ -275,6 +275,7 @@ tail -f /var/log/messages 实时查看被添加到一个文件中的内容
 cat file1 file2 ... | command <> file1_in.txt_or_file1_out.txt general syntax for text manipulation using PIPE, STDIN and STDOUT 
 cat file1 | command( sed, grep, awk, grep, etc...) > result.txt 合并一个文件的详细说明文本，并将简介写入一个新文件中 
 cat file1 | command( sed, grep, awk, grep, etc...) >> result.txt 合并一个文件的详细说明文本，并将简介写入一个已有的文件中 
+grep -o 'KeyWord' xxx.log | wc -l 统计关键字KeyWord出现的次数
 grep Aug /var/log/messages 在文件 '/var/log/messages'中查找关键词"Aug" 
 grep ^Aug /var/log/messages 在文件 '/var/log/messages'中查找以"Aug"开始的词汇 
 grep [0-9] /var/log/messages 选择 '/var/log/messages' 文件中所有包含数字的行 
