@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: Welcome to Walter's Secret Garden!
+heroText: Welcome to Walter's Programmer Career !
 tagline: If I have seen further it is by standing on the shoulder of Giants.
 actionText: Learn more →
 actionLink: /documents/
