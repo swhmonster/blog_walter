@@ -25,7 +25,9 @@ module.exports = {
             {
                 'ga': 'G-53QBN9NB6C' // G-53QBN9NB6C UA-00000000-0
             }
-        ]
+        ],
+        '@vuepress/back-to-top',
+        '@vuepress/nprogress'
     ],
     themeConfig: {
         // lastUpdated: 'Last Updated',

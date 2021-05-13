@@ -8,7 +8,9 @@
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-google-analytics": "^1.7.1",
+    "@vuepress/plugin-nprogress": "^1.8.2",
     "vuepress": "^1.7.1"
   },
   "dependencies": {
