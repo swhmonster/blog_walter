@@ -27,7 +27,11 @@ module.exports = {
             }
         ],
         '@vuepress/back-to-top',
-        '@vuepress/nprogress'
+        '@vuepress/nprogress',
+        '@org/foo', // 等价于 @org/markdown-it-foo，如果对应的包存在
+        ['markdown-it-bar', {
+            // 提供你的选项
+        }]
     ],
     themeConfig: {
         // lastUpdated: 'Last Updated',
@@ -36,8 +40,8 @@ module.exports = {
             {text: 'Documents', link: '/documents/'},
             {text: 'Contact', link: '/contact/'},
             {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
-            {text: 'CSDN Blog', link: 'https://google.com', target: '_blank'}/*,
-            {text: 'Donation打赏', link: '/donation/'}*/
+            {text: 'CSDN Blog', link: 'https://google.com', target: '_blank'},
+            {text: 'Donation打赏', link: '/donation/'}
         ],
         sidebar: [{
             title: 'Java',
