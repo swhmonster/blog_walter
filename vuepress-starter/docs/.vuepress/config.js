@@ -28,13 +28,10 @@ module.exports = {
         ],
         '@vuepress/back-to-top',
         '@vuepress/nprogress',
-        '@org/foo', // 等价于 @org/markdown-it-foo，如果对应的包存在
-        ['markdown-it-bar', {
-            // 提供你的选项
-        }]
+        '@vuepress/last-updated'
     ],
     themeConfig: {
-        // lastUpdated: 'Last Updated',
+        lastUpdated: 'Last Updated',
         nav: [
             {text: 'Home', link: '/'},
             {text: 'Documents', link: '/documents/'},
