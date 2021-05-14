@@ -5,6 +5,7 @@
 - 包管理
     - maven
     - gradle
+    - npm/yarn
 - 持续集成
     - gitlab ci/cd
     - jenkeins
