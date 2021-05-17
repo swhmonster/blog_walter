@@ -34,12 +34,11 @@
             - Java Mission Control：可持续在线监控工具
         - 命令行工具
             - jps：虚拟机进程状况工具
-            - jstat:虚拟机统计信息监视工具
-            - jinfo:Java 配置信息工具
-            - jmap:Java 内存映像工具
-            - jhat:Java 虚拟机堆转储快照分析工具
-            - jstack:Java 堆栈跟踪工具
-            - jstack
+            - jstat：虚拟机统计信息监视工具
+            - jinfo：Java 配置信息工具
+            - jmap：Java 内存映像工具
+            - jhat：Java 虚拟机堆转储快照分析工具
+            - jstack：Java 堆栈跟踪工具
     - JProfiler/Eclipse Memory Analyzer
         - 内存分析工具
         - JProfiler功能更强大一些，可集成idea
