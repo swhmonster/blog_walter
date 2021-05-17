@@ -28,7 +28,8 @@ module.exports = {
         ],
         '@vuepress/back-to-top',
         '@vuepress/nprogress',
-        '@vuepress/last-updated'
+        '@vuepress/last-updated',
+        '@vuepress/plugin-search'
     ],
     themeConfig: {
         lastUpdated: 'Last Updated',
