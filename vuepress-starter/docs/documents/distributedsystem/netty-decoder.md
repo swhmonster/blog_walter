@@ -1,0 +1,17 @@
+# Netty 分隔符和定长解码器的应用
+TCP以流的方式进行数据传输，上层的应用协议为了对消息进行区分，往往采用如下4种方式。
+1. 消息长度固定，累计读取到长度总和为定长LEN的报文后，就认为读取到了一个完整的消息；将计数器置位，重新开始读取下一个数据报；
+2. 将回车换行符作为消息结束符，例如FTP协议，这种方式在文本协议中应用比较广泛；
+3. 将特殊的分隔符作为消息的结束标志，回车换行符就是一种特殊的结束分隔符；
+5. 通过在消息头中定义长度字段来标识消息的总长度。
+
+# DelimiterBasedFrameDecoder（基于分隔符）
+通过对DelimiterBasedFrameDecoder的使用，我们可以自动完成以分隔符作为码流结束标识的消息的解码。
+>开发过程中DelimiterBasedFrameDecoder会自动解码，channelRead (ChannelHandlerContext ctx , Object msg)，msg自动过滤掉分隔符直接是数据体
+
+# FixedLengthFrameDecoder（固定长度解码器）
+FixedLengthFrameDecoder是固定长度解码器，它能够按照指定的长度对消息进行自动解码
+
+# 总结
+- DelimiterBasedFrameDecoder用于对使用分隔符结尾的消息进行自动解码，FixedLengthFrameDecoder用于对固定长度的消息进行自动解码。有了上述两种解码器，再结合其他的解码器，如字符串解码器等，可以轻松地完成对很多消息的自动解码，而且不再需要考虑TCP粘包/拆包导致的读半包问题，极大地提升了开发效率。
+- 应用DelimiterBasedFrameDecoder和FixedLengthFrameDecoder进行开发非常简单，在绝大数情况下，只要将DelimiterBasedFrameDecoder或FixedLengthFrameDecoder添加到对应ChannelPipeline的起始位即可。

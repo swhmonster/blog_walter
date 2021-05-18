@@ -139,6 +139,8 @@ module.exports = {
                 {title: 'zookeeper-分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
                 {title: 'Netty-高性能之道', path: '/documents/distributedsystem/netty-highperformance'},
                 {title: 'Netty-解决JDK空轮询Bug', path: '/documents/distributedsystem/netty-dealjdkepoll'},
+                {title: 'Netty-粘包与拆包', path: '/documents/distributedsystem/netty-stickypackage'},
+                {title: 'Netty-分隔符和定长解码器的应用', path: '/documents/distributedsystem/netty-decoder'},
                 {title: 'HDFS-数据存储', path: '/documents/distributedsystem/hdfs-storage'}
             ]
         }, {
