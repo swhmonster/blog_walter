@@ -237,6 +237,7 @@ module.exports = {
                 sidebarDepth: 1,
                 children: [
                     {title: 'Objectives and KeyResults', path: '/documents/management/okr'},
+                    {title: '敏捷开发', path: '/documents/management/agiledevelopment.md'}
                 ]
             }]
     }
