@@ -38,7 +38,7 @@ module.exports = {
             {text: 'Documents', link: '/documents/'},
             {text: 'Contact', link: '/contact/'},
             {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
-            {text: 'CSDN Blog', link: 'https://google.com', target: '_blank'},
+            {text: 'CSDN Blog', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
             {text: 'Donation打赏', link: '/donation/'}
         ],
         sidebar: [{
