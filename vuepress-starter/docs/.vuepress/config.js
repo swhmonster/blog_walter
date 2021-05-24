@@ -38,7 +38,9 @@ module.exports = {
                 options:{
                     el:'#vuepress-plugin-comment',
                     appId:'SnvVUUBEcptKHBzHaPukN3K8-9Nh9j0Va',
-                    appKey:'hm5yvGtHSKdChqTy6x96LthP'
+                    appKey:'hm5yvGtHSKdChqTy6x96LthP',
+                    // 解决切换页面，评论未刷新问题
+                    path:'<%- frontmatter.to.path %>'
                 }
             }
         ]
