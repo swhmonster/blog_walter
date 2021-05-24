@@ -40,7 +40,8 @@ module.exports = {
                     appId:'SnvVUUBEcptKHBzHaPukN3K8-9Nh9j0Va',
                     appKey:'hm5yvGtHSKdChqTy6x96LthP',
                     // 解决切换页面，评论未刷新问题
-                    path:'<%- frontmatter.to.path %>'
+                    // path:'<%- frontmatter.to.path %>'
+                    path:'<%- frontmatter.to.path ?frontmatter.to.path : window.location.pathname %>'
                 }
             }
         ]
