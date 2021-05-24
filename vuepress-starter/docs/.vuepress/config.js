@@ -29,7 +29,19 @@ module.exports = {
         '@vuepress/back-to-top',
         '@vuepress/nprogress',
         '@vuepress/last-updated',
-        '@vuepress/plugin-search'
+        '@vuepress/plugin-search',
+        // 评论插件learncloud-valine
+        [
+            'vuepress-plugin-comment',
+            {
+                choosen:'valine',
+                options:{
+                    el:'#vuepress-plugin-comment',
+                    appId:'SnvVUUBEcptKHBzHaPukN3K8-9Nh9j0Va',
+                    appKey:'hm5yvGtHSKdChqTy6x96LthP'
+                }
+            }
+        ]
     ],
     themeConfig: {
         lastUpdated: 'Last Updated',
@@ -39,7 +51,8 @@ module.exports = {
             {text: 'Contact', link: '/contact/'},
             {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
             {text: 'CSDN Blog', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
-            {text: 'Donation打赏', link: '/donation/'}
+            {text: 'Donation 打赏', link: '/donation/'},
+            {text: 'Leave a message 留言', link: '/leavemsg/'}
         ],
         sidebar: [{
             title: 'Java',

@@ -14,3 +14,7 @@ On our tourism.
 ![An image](../asserts/img/doudou-3.jpg)
 Try first-time swimming.
 ![An image](../asserts/img/doudou-4.jpg)
+2 years old
+![An image](../asserts/img/doudou-5.jpg)
+location: 杭州·湘湖度假区
+![An image](../asserts/img/doudou-6.jpg)
