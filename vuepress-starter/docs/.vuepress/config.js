@@ -52,6 +52,7 @@ module.exports = {
             {text: 'Home', link: '/'},
             {text: 'Documents', link: '/documents/'},
             {text: 'Contact', link: '/contact/'},
+            {text: 'Downloads', link: 'https://www.waltersun.cn/subsys/', target: '_blank'},
             {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
             {text: 'CSDN Blog', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
             {text: 'Donation 打赏', link: '/donation/'},
