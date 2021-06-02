@@ -10,7 +10,7 @@ When he was little.
 ![An image](../asserts/img/doudou-1.jpg)
 2 months old.
 ![An image](../asserts/img/doudou-2.jpg)
-On our tourism.
+location: 湖州·德清·莫干山
 ![An image](../asserts/img/doudou-3.jpg)
 Try first-time swimming.
 ![An image](../asserts/img/doudou-4.jpg)

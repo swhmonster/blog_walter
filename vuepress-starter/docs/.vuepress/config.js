@@ -34,14 +34,14 @@ module.exports = {
         [
             'vuepress-plugin-comment',
             {
-                choosen:'valine',
-                options:{
-                    el:'#vuepress-plugin-comment',
-                    appId:'SnvVUUBEcptKHBzHaPukN3K8-9Nh9j0Va',
-                    appKey:'hm5yvGtHSKdChqTy6x96LthP',
+                choosen: 'valine',
+                options: {
+                    el: '#vuepress-plugin-comment',
+                    appId: 'SnvVUUBEcptKHBzHaPukN3K8-9Nh9j0Va',
+                    appKey: 'hm5yvGtHSKdChqTy6x96LthP',
                     // 解决切换页面，评论未刷新问题
                     // path:'<%- frontmatter.to.path %>'
-                    path:'<%- frontmatter.to.path ?frontmatter.to.path : window.location.pathname %>'
+                    path: '<%- frontmatter.to.path ?frontmatter.to.path : window.location.pathname %>'
                 }
             }
         ]
@@ -59,10 +59,16 @@ module.exports = {
             {text: 'Leave a message 留言', link: '/leavemsg/'}
         ],
         sidebar: [{
+            title: '前沿技术',
+            path: '/documents/thoughtworks/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: []
+        }, {
             title: 'Java',
             path: '/documents/java/',
             collapsable: true,
-            sidebarDepth: 0,
+            sidebarDepth: 1,
             children: [
                 {title: '阿里巴巴Java开发手册终极版v1.3.0', path: '/documents/java/alibaba-javadevelop-final-v1.3.0'},
                 {title: 'Spring-IOC的bean加载', path: '/documents/java/spring-iocfindbeans'},
