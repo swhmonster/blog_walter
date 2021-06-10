@@ -247,6 +247,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: 'Windows远程桌面——网络唤醒配置', path: '/documents/others/wakeonline'},
                 {title: '跨域问题分析及解决', path: '/documents/others/crossdomain'},
                 {title: '常见js报错问题', path: '/documents/others/web-jsproblem'},
                 {title: 'Beyond Compare 4 破解方式', path: '/documents/others/beyondcompare4crak'},
