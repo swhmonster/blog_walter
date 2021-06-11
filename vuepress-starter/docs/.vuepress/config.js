@@ -47,6 +47,8 @@ module.exports = {
         ]
     ],
     themeConfig: {
+        logo: '/logo.png',
+        smoothScroll: true,
         lastUpdated: 'Last Updated',
         nav: [
             {text: 'Home', link: '/'},
