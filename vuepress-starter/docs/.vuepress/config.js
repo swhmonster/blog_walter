@@ -255,16 +255,21 @@ module.exports = {
                 {title: 'Beyond Compare 4 破解方式', path: '/documents/others/beyondcompare4crak'},
                 {title: 'diy装机心得', path: '/documents/others/computer-diy'}
             ]
-        },
-            {
-                title: '管理相关',
-                path: '/documents/management/',
-                collapsable: true,
-                sidebarDepth: 1,
-                children: [
-                    {title: 'Objectives and KeyResults', path: '/documents/management/okr'},
-                    {title: '敏捷开发', path: '/documents/management/agiledevelopment.md'}
-                ]
-            }]
+        }, {
+            title: '管理相关',
+            path: '/documents/management/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: [
+                {title: 'Objectives and KeyResults', path: '/documents/management/okr'},
+                {title: '敏捷开发', path: '/documents/management/agiledevelopment.md'}
+            ]
+        }, {
+            title: '阅读推荐',
+            path: '/documents/recommended/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: []
+        }]
     }
 }
