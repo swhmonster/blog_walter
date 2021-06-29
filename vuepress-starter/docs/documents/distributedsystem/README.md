@@ -1,11 +1,4 @@
 # 分布式系统 
-- 大致涉及
-    - 容器化技术：kubernetes、docker
-    - 服务治理
-    - 网关、总链路（日志采集等）
-    - 业务支撑
-    - 中间件
-    - 负载均衡
 - 微服务框架
     - Dubbo (RPC)
         >传输层将Mina和Netty抽象成了一个接口，默认情况下使用Netty
@@ -23,8 +16,7 @@
         - 官方网站：<https://nacos.io/zh-cn/index.html>
         - GitHub：<https://github.com/alibaba/nacos>
         >可基于Spring Cloud 2.0+
-- 中间件
-    >针对中间件相关内容参看“中间件”栏目
+- 中间件:[参看中间件栏目](../middleware/README.md)
 - 网关
     - 网关分类
         - 流量网关
@@ -35,3 +27,9 @@
       - Go:Janus、fagongzi、Grpc-Gateway；
       - .NET:Ocelot；
       - Node.js:Express Gateway、MicroGateway。
+- 容器化技术
+    - kubernetes
+    - docker
+- 分布式事务
+    - Seata：开源的分布式事务解决方案
+        - 官网地址：<http://seata.io/zh-cn/docs/overview/what-is-seata.html>
