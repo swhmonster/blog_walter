@@ -167,7 +167,8 @@ module.exports = {
                 {title: 'Netty-粘包与拆包', path: '/documents/distributedsystem/netty-stickypackage'},
                 {title: 'Netty-分隔符和定长解码器的应用', path: '/documents/distributedsystem/netty-decoder'},
                 {title: 'Netty-编解码技术', path: '/documents/distributedsystem/netty-serialization'},
-                {title: 'HDFS-数据存储', path: '/documents/distributedsystem/hdfs-storage'}
+                {title: 'HDFS-数据存储', path: '/documents/distributedsystem/hdfs-storage'},
+                {title: '分布式事务', path: '/documents/distributedsystem/distributedtransaction'}
             ]
         }, {
             title: '大数据',
