@@ -1,8 +1,9 @@
-# 分布式系统 
+# 分布式系统
+>推荐阅读架构类书目：《凤凰架构：构建可靠的大型分布式系统》周志明
 - 微服务框架
     - Dubbo (RPC)
         >传输层将Mina和Netty抽象成了一个接口，默认情况下使用Netty
-    - Spring Cloud (HTTP)
+    - Spring Cloud (REST)
     - Netty
 - 注册中心
     >选用方式，可参看文档[《主流注册中心》](./registrycompare.md)
