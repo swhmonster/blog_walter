@@ -28,9 +28,13 @@
       - Go:Janus、fagongzi、Grpc-Gateway；
       - .NET:Ocelot；
       - Node.js:Express Gateway、MicroGateway。
+- 服务熔断与降级
+    - Hystrix：
+        - GitHub：<https://github.com/Netflix/Hystrix>
 - 容器化技术
     - kubernetes
     - docker
 - 分布式事务
     - Seata：开源的分布式事务解决方案
         - 官网地址：<http://seata.io/zh-cn/docs/overview/what-is-seata.html>
+        - GitHub：<https://github.com/seata/seata>
