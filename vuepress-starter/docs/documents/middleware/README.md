@@ -11,8 +11,8 @@
   - Kafka
 - 分布式数据
   - Apache Flink 分布式流数据流引擎（推荐）
-    - 官方网站：<https://flink.apache.org/>
-    - GitHub：<https://github.com/apache/flink>
+    - [官方网站](https://flink.apache.org/)
+    - [GitHub](<https://github.com/apache/flink)
   - Spark 专为大规模数据处理而设计的快速通用的计算引擎
 - 流程引擎
   - Activiti

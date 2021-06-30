@@ -58,7 +58,8 @@ module.exports = {
             {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
             {text: 'CSDN Blog', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
             {text: 'Donation 打赏', link: '/donation/'},
-            {text: 'Leave a message 留言', link: '/leavemsg/'}
+            {text: 'Message 留言', link: '/leavemsg/'},
+            {text: 'Giving公益', link: '/leavemsg/'}
         ],
         sidebar: [{
             title: '前沿技术',

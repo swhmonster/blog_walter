@@ -8,14 +8,14 @@
 - 注册中心
     >选用方式，可参看文档[《主流注册中心》](./registrycompare.md)
     - Spring Cloud Eureka
-        - 官方网站：<https://spring.io/projects/spring-cloud>
-        - GitHub：<https://github.com/spring-cloud/>
+        - [官方网站](https://spring.io/projects/spring-cloud)
+        - [GitHub](https://github.com/spring-cloud/)
     - Zookeeper
-        - 官方网站：<https://zookeeper.apache.org/>
-        - GitHub：<https://github.com/apache/zookeeper>
+        - [官方网站](https://zookeeper.apache.org/)
+        - [GitHub](https://github.com/apache/zookeeper)
     - Nacos（from alibaba）
-        - 官方网站：<https://nacos.io/zh-cn/index.html>
-        - GitHub：<https://github.com/alibaba/nacos>
+        - [官方网站](https://nacos.io/zh-cn/index.html)
+        - [GitHub](https://github.com/alibaba/nacos)
         >可基于Spring Cloud 2.0+
 - 中间件:[参看中间件栏目](../middleware/README.md)
 - 网关
@@ -30,11 +30,11 @@
       - Node.js:Express Gateway、MicroGateway。
 - 服务熔断与降级
     - Hystrix：
-        - GitHub：<https://github.com/Netflix/Hystrix>
+        - [GitHub](https://github.com/Netflix/Hystrix)
 - 容器化技术
     - kubernetes
     - docker
 - 分布式事务
     - Seata：开源的分布式事务解决方案
-        - 官网地址：<http://seata.io/zh-cn/docs/overview/what-is-seata.html>
-        - GitHub：<https://github.com/seata/seata>
+        - [官网地址](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
+        - [GitHub](https://github.com/seata/seata)

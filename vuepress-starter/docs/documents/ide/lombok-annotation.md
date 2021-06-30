@@ -2,18 +2,15 @@
 ## Lombok的作用：
 >本人认为lombok的作用就是减少编码中的重复编码，简化编码，开发过程中通过注解就可以代替Get()、Set()方法的书写，虽然这两种方法可以一键生成，体现不出编码简化的效果，从log、synchronized等对应的注解来看，简化编码的效果显而易见。在lombok使用时，需要根据具体的业务逻辑进行判断如何使用。
 
-- Lombok注解官网地址：
+- Lombok注解：
 
-    <http://jnb.ociweb.com/jnb/jnbJan2010.html#annotations>
+    [官网地址](http://jnb.ociweb.com/jnb/jnbJan2010.html#annotations)
 
 - Lombok API 地址：
 
     <https://projectlombok.org/api/overview-summary.html>
 
-- Lombok插件的安装（IntelliJ IDEA），参见我的csdn博客：
-
-    <https://blog.csdn.net/Soul_Programmer_Swh/article/details/84346408>
-
+- Lombok插件的安装（IntelliJ IDEA），参见我的[csdn博客](https://blog.csdn.net/Soul_Programmer_Swh/article/details/84346408)
 ## Lombok注解：
 ```java
 @Setter
