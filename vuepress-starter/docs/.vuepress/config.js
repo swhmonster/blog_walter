@@ -170,7 +170,10 @@ module.exports = {
                 {title: 'Netty-编解码技术', path: '/documents/distributedsystem/netty-serialization'},
                 {title: 'HDFS-数据存储', path: '/documents/distributedsystem/hdfs-storage'},
                 {title: '分布式事务', path: '/documents/distributedsystem/distributedtransaction'},
-                {title: '客户端缓存', path: '/documents/distributedsystem/clientcache'}
+                {title: '透明多级分流系统-客户端缓存', path: '/documents/distributedsystem/tmds-clientcache'},
+                {title: '透明多级分流系统-域名解析', path: '/documents/distributedsystem/tmds-dns'},
+                {title: '透明多级分流系统-传输链路', path: '/documents/distributedsystem/tmds-transmissionlink'},
+                {title: '透明多级分流系统-内容分发网络', path: '/documents/distributedsystem/tmds-contentdeliverynetwork'}
             ]
         }, {
             title: '大数据',
