@@ -59,7 +59,7 @@ module.exports = {
             {text: 'CSDN Blog', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
             {text: 'Donation 打赏', link: '/donation/'},
             {text: 'Message 留言', link: '/leavemsg/'},
-            {text: 'Giving公益', link: '/leavemsg/'}
+            {text: 'Giving 公益', link: '/publicwelfare/'}
         ],
         sidebar: [{
             title: '前沿技术',
