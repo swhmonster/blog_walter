@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: Welcome to Walter's Programmer Career !
+heroText: Keep Programmimg ! Keep Curious !
 tagline: If I have seen further it is by standing on the shoulder of Giants.
 actionText: 支持一下（Donation） →
 actionLink: /donation/
