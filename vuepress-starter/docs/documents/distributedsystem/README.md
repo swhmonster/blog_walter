@@ -1,5 +1,5 @@
 # 分布式系统
->推荐阅读架构类书目：《凤凰架构：构建可靠的大型分布式系统》周志明
+>推荐阅读架构类书目：《凤凰架构：构建可靠的大型分布式系统》周志明，[网页博客](https://icyfenix.cn/)
 - 透明多级分流系统(Transparent Multilevel Diversion System)
 - 微服务框架
     - Dubbo (RPC)
