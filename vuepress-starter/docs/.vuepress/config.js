@@ -249,7 +249,8 @@ module.exports = {
                 {title: '加解密算法及国密介绍', path: '/documents/sercurity/encryption-introduction'},
                 {title: '国密算法SM3设计原理', path: '/documents/sercurity/sm-sm3'},
                 {title: '国密算法SM4设计原理', path: '/documents/sercurity/sm-sm4'},
-                {title: 'java代码混淆之allator集成', path: '/documents/sercurity/allatori'}
+                {title: '分布式理论基础-Paxos算法', path: '/documents/sercurity/paxos'},
+                {title: 'java代码混淆-allator集成', path: '/documents/sercurity/allatori'}
             ]
         }, {
             title: '常见问题分析解决及其他',
