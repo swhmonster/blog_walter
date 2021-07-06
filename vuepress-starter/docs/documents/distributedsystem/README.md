@@ -6,6 +6,7 @@
     - Dubbo (RPC)
         >传输层将Mina和Netty抽象成了一个接口，默认情况下使用Netty
     - Spring Cloud (REST)
+    - Spring Cloud Alibaba 
     - Netty
 - 注册中心
     >选用方式，可参看文档[《主流注册中心》](./registrycompare.md)
