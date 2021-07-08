@@ -74,6 +74,7 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {title: '阿里巴巴Java开发手册终极版v1.3.0', path: '/documents/java/alibaba-javadevelop-final-v1.3.0'},
+                {title: 'Spring-Spring Boot 的价值', path: '/documents/java/spring-TheValueOfSpringBoot'},
                 {title: 'Spring-IOC的bean加载', path: '/documents/java/spring-iocfindbeans'},
                 {title: 'Spring-为什么Spring4.0提倡使用构造函数注入方式？', path: '/documents/java/spring-ioc'},
                 {title: 'Spring-设计模式在Spring中的应用', path: '/documents/java/spring-desingpartern'},

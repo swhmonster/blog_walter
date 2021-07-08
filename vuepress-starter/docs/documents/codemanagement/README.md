@@ -3,8 +3,10 @@
     - git
     - svn
 - 包管理
-    - maven
+    - jfrog：全语言二进制包管理加速落地DevOps
+    - nexus
     - gradle
+    - maven
     - npm/yarn
 - 持续集成
     - gitlab ci/cd
