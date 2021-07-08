@@ -41,3 +41,24 @@
     - Seata：开源的分布式事务解决方案
         - [官网地址](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
         - [GitHub](https://github.com/seata/seata)
+- 分布式服务可观测性
+    - 3个研究方向
+        - 事务日志
+        - 链路追踪
+        - 聚合度量
+    - 技术栈/技术选型
+        - 日志和度量方面
+            - Elastic Stask 技术栈：相关文章参考[大数据栏目](../bigdata/README.md)
+                - ElasticSearch 管理数据
+                - Logstash 读取不同来源的日志数据（有被Fluentd取代的趋势，ELK->EFK）
+                - Kibana 可视化读取到的数据
+        - 链路追踪方面
+            - 云端监控服务商
+                - Datadog的一系列商业方案
+            - 云计算厂商产品 
+                - AWS X-RAY
+                - Google Stackdriver Trace
+            - 开源的优秀产品
+                - SkyWalking
+                - Zipkin
+                - Jaeger

@@ -184,7 +184,10 @@ module.exports = {
             path: '/documents/bigdata/',
             collapsable: true,
             sidebarDepth: 1,
-            children: []
+            children: [
+                {title: 'Elastic Stack', path: '/documents/bigdata/elasticstask'},
+                {title: 'Elastic Stack', path: '/documents/bigdata/elasticsearch'}
+            ]
         }, {
             title: '架构设计',
             path: '/documents/architecturedesign/',
