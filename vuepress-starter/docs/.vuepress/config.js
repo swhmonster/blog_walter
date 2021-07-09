@@ -186,7 +186,7 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {title: 'Elastic Stack', path: '/documents/bigdata/elasticstask'},
-                {title: 'Elastic Stack', path: '/documents/bigdata/elasticsearch'}
+                {title: 'Elasticsearch', path: '/documents/bigdata/elasticsearch'}
             ]
         }, {
             title: '架构设计',

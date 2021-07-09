@@ -3,11 +3,11 @@
 - 透明多级分流系统(Transparent Multilevel Diversion System)
 - 分布式理论基础-Paxos算法：[参见Paxos](../sercurity/paxos.md)
 - 微服务框架
-    - Dubbo (RPC)
-        >传输层将Mina和Netty抽象成了一个接口，默认情况下使用Netty
     - Spring Cloud (REST)
-    - Spring Cloud Alibaba 
-    - Netty
+    - Spring Cloud Alibaba
+        - Dubbo (RPC)
+        >传输层将Mina和Netty抽象成了一个接口，默认情况下使用Netty
+        - Netty
 - 注册中心
     >选用方式，可参看文档[《主流注册中心》](./registrycompare.md)
     - Spring Cloud Eureka
@@ -39,7 +39,7 @@
     - docker
 - 分布式事务
     - Seata：开源的分布式事务解决方案
-        - [官网地址](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
+        - [官方网站](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
         - [GitHub](https://github.com/seata/seata)
 - 分布式服务可观测性
     - 3个研究方向
@@ -52,6 +52,8 @@
                 - ElasticSearch 管理数据
                 - Logstash 读取不同来源的日志数据（有被Fluentd取代的趋势，ELK->EFK）
                 - Kibana 可视化读取到的数据
+                - [官方网站](https://www.elastic.co/)
+                - [GitHub](https://github.com/elastic)
         - 链路追踪方面
             - 云端监控服务商
                 - Datadog的一系列商业方案
