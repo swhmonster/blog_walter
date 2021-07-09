@@ -109,6 +109,12 @@ module.exports = {
                 {title: 'smtplib带附件邮件发送(python2)', path: '/documents/python/python-emailsend'}
             ]
         }, {
+            title: 'Go',
+            path: '/documents/go/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: []
+        }, {
             title: '深入理解JVM',
             path: '/documents/javadeep/',
             collapsable: true,
