@@ -49,9 +49,10 @@
     - 技术栈/技术选型
         - 日志和度量方面
             - Elastic Stask 技术栈：相关文章参考[大数据栏目](../bigdata/README.md)
-                - ElasticSearch 管理数据
-                - Logstash 读取不同来源的日志数据（有被Fluentd取代的趋势，ELK->EFK）
-                - Kibana 可视化读取到的数据
+                - ElasticSearch：管理、检索数据
+                - Logstash：动态数据收集管道，拥有可扩展的插件生态系统。
+                - Beats：一个面向轻量型采集器的平台，这些采集器可从边缘机器发送数据
+                - Kibana：可视化读数据
                 - [官方网站](https://www.elastic.co/)
                 - [GitHub](https://github.com/elastic)
         - 链路追踪方面
