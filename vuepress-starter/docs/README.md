@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: Keep Programmimg ! Keep Curious !
+heroText: Talk is cheap. Show me the code.
 tagline: If I have seen further it is by standing on the shoulder of Giants.
 actionText: 支持一下（Donation） →
 actionLink: /donation/
