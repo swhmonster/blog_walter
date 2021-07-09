@@ -41,7 +41,7 @@
     - Seata：开源的分布式事务解决方案
         - [官方网站](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
         - [GitHub](https://github.com/seata/seata)
-- 分布式服务可观测性
+- 分布式可观测性
     - 3个研究方向
         - 事务日志
         - 链路追踪

@@ -171,6 +171,7 @@ module.exports = {
                 {title: 'Netty-编解码技术', path: '/documents/distributedsystem/netty-serialization'},
                 {title: 'HDFS-数据存储', path: '/documents/distributedsystem/hdfs-storage'},
                 {title: '分布式事务', path: '/documents/distributedsystem/distributedtransaction'},
+                {title: '分布式可观测性', path: '/documents/distributedsystem/observability'},
                 {title: '流量治理', path: '/documents/distributedsystem/trafficmanagement'},
                 {title: '透明多级分流系统-客户端缓存', path: '/documents/distributedsystem/tmds-clientcache'},
                 {title: '透明多级分流系统-域名解析', path: '/documents/distributedsystem/tmds-dns'},
