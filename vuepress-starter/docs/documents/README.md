@@ -12,7 +12,7 @@ This is my hometown.
 ![An image](../asserts/img/doudou-2.jpg)
 #### location: 湖州·德清·莫干山
 ![An image](../asserts/img/doudou-3.jpg)
-#### ry first-time swimming.
+#### The first-time swimming.
 ![An image](../asserts/img/doudou-4.jpg)
 #### 2 years old
 ![An image](../asserts/img/doudou-5.jpg)
