@@ -265,11 +265,12 @@ module.exports = {
                 {title: 'java代码混淆-allator集成', path: '/documents/sercurity/allatori'}
             ]
         }, {
-            title: '常见问题分析解决及其他',
+            title: '问题分析解决及其他',
             path: '/documents/others/',
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: 'JProfiler分析dump文件（.hprof）', path: '/documents/others/jprofiler-analysis'},
                 {title: 'Windows远程桌面——网络唤醒配置', path: '/documents/others/wakeonline'},
                 {title: '跨域问题分析及解决', path: '/documents/others/crossdomain'},
                 {title: '常见js报错问题', path: '/documents/others/web-jsproblem'},
