@@ -34,7 +34,7 @@
 - 服务熔断与降级
     - Hystrix：
         - [GitHub](https://github.com/Netflix/Hystrix)
-- 容器化技术
+- 容器化技术：相关文章参见[容器化技术栏目](../container/README.md)
     - kubernetes
     - docker
 - 分布式事务

@@ -187,6 +187,14 @@ module.exports = {
                 {title: '透明多级分流系统-服务端缓存', path: '/documents/distributedsystem/tmds-serversidecaching'}
             ]
         }, {
+            title: '容器化技术',
+            path: '/documents/container/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: [
+                {title: 'Docker-使用Dockerfile创建镜像', path: '/documents/container/dockerfile'}
+            ]
+        }, {
             title: '大数据',
             path: '/documents/bigdata/',
             collapsable: true,
