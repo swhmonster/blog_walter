@@ -82,6 +82,7 @@ module.exports = {
                 {title: 'java-多线程编程核心技术之同步锁1', path: '/documents/java/java-synchronized1'},
                 {title: 'java-多线程编程核心技术之同步锁2', path: '/documents/java/java-synchronized2'},
                 {title: 'java-JVM调优参数(GC相关)', path: '/documents/java/java-jvmgcparams'},
+                {title: 'java-基础故障处理工具', path: '/documents/java/java-jdkcmdtool'},
                 {title: 'java-jstack线程分析', path: '/documents/java/jstack'},
                 {title: 'java-jconsole远程监控', path: '/documents/java/java-jconsole'},
                 {title: 'java-HashMap的设计与优化', path: '/documents/java/java-hashmap'},

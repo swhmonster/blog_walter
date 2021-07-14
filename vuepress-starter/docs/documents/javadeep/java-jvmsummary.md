@@ -416,29 +416,29 @@
 JDK开发团队选择采用Java语言本身来实现这些故障处理工具是有特别用意的：当应用程序部署到生产环境后，无论是人工物理接触到服务器还是远程Telnet到服务器上都可能会受到限制。借助这些工具类库里面的接口和实现代码，开发者可以选择直接在应用程序中提供功能强大的监控分析功能[插图]。
 
 
-- **基础故障处理工具**
-- **jps**：虚拟机进程状况工具
-- JDK的很多小工具的名字都参考了UNIX命令的命名方式，jps（JVM Process Status Tool）是其中的典型。除了名字像UNIX的ps命令之外，它的功能也和ps命令类似：可以列出正在运行的虚拟机进程，并显示虚拟机执行主类（Main Class，main()函数所在的类）名称以及这些进程的本地虚拟机唯一ID（LVMID，Local Virtual Machine Identifier）。虽然功能比较单一，但它绝对是使用频率最高的JDK命令行工具，因为其他的JDK工具大多需要输入它查询到的LVMID来确定要监控的是哪一个虚拟机进程。对于本地虚拟机进程来说，LVMID与操作系统的进程ID（PID，Process Identifier）是一致的，使用Windows的任务管理器或者UNIX的ps命令也可以查询到虚拟机进程的LVMID，但如果同时启动了多个虚拟机进程，无法根据进程名称定位时，那就必须依赖jps命令显示主类的功能才能区分了。
-- jps命令格式：
-jps [options] [hostid]
-- jps执行样例：
+- **基础故障处理工具**
+- **jps**：虚拟机进程状况工具
+- JDK的很多小工具的名字都参考了UNIX命令的命名方式，jps（JVM Process Status Tool）是其中的典型。除了名字像UNIX的ps命令之外，它的功能也和ps命令类似：可以列出正在运行的虚拟机进程，并显示虚拟机执行主类（Main Class，main()函数所在的类）名称以及这些进程的本地虚拟机唯一ID（LVMID，Local Virtual Machine Identifier）。虽然功能比较单一，但它绝对是使用频率最高的JDK命令行工具，因为其他的JDK工具大多需要输入它查询到的LVMID来确定要监控的是哪一个虚拟机进程。对于本地虚拟机进程来说，LVMID与操作系统的进程ID（PID，Process Identifier）是一致的，使用Windows的任务管理器或者UNIX的ps命令也可以查询到虚拟机进程的LVMID，但如果同时启动了多个虚拟机进程，无法根据进程名称定位时，那就必须依赖jps命令显示主类的功能才能区分了。
+- jps命令格式：
+jps [options] [hostid]
+- jps执行样例：
 ![58a0fedc712c40e3d8518140e283d6d2.png](en-resource://database/4021:1)
 
-- jps还可以通过RMI协议查询开启了RMI服务的远程虚拟机进程状态，参数hostid为RMI注册表中注册的主机名。jps的其他常用选项见表4-1。
-| 选项 | 作用 |
-| :---: | --- |
-| -q | 只输出LIMITED，省略主类名称 |
-| -m | 输出虚拟机启动时传递给主类main()函数的参数 |
-| -l | 输出主类的全名，如果进程执行的是Jar包，则输出Jar路径 |
-| -v | 输出虚拟机启动时的JVM参数 |
-- **jstat**:虚拟机统计信息监视工具
-- jstat（JVM Statistics Monitoring Tool）是用于监视虚拟机各种运行状态信息的命令行工具。它可以显示本地或者远程[插图]虚拟机进程中的类加载、内存、垃圾收集、即时编译等运行时数据，在没有GUI图形界面、只提供了纯文本控制台环境的服务器上，它将是运行期定位虚拟机性能问题的常用工具。
-- jstat命令格式为：
-jstat [ option vmid [ interval[s/ms] [count] ] ]
-- 对于命令格式中的VMID与LVMID需要特别说明一下：如果是本地虚拟机进程，VMID与LVMID是一致的；如果是远程虚拟机进程，那VMID的格式应当是：
-[protocol:][//]lvmid[ @hostname[:port]/servername ]
-- 参数interval和count代表查询间隔和次数，如果省略这2个参数，说明只查询一次。假设需要每250毫秒查询一次进程2764垃圾收集状况，一共查询20次，那命令应当是：
-jstat -gc 2746 250 20
+- jps还可以通过RMI协议查询开启了RMI服务的远程虚拟机进程状态，参数hostid为RMI注册表中注册的主机名。jps的其他常用选项见表4-1。
+| 选项 | 作用 |
+| :---: | --- |
+| -q | 只输出LIMITED，省略主类名称 |
+| -m | 输出虚拟机启动时传递给主类main()函数的参数 |
+| -l | 输出主类的全名，如果进程执行的是Jar包，则输出Jar路径 |
+| -v | 输出虚拟机启动时的JVM参数 |
+- **jstat**:虚拟机统计信息监视工具
+- jstat（JVM Statistics Monitoring Tool）是用于监视虚拟机各种运行状态信息的命令行工具。它可以显示本地或者远程[插图]虚拟机进程中的类加载、内存、垃圾收集、即时编译等运行时数据，在没有GUI图形界面、只提供了纯文本控制台环境的服务器上，它将是运行期定位虚拟机性能问题的常用工具。
+- jstat命令格式为：
+jstat [ option vmid [ interval[s/ms] [count] ] ]
+- 对于命令格式中的VMID与LVMID需要特别说明一下：如果是本地虚拟机进程，VMID与LVMID是一致的；如果是远程虚拟机进程，那VMID的格式应当是：
+[protocol:][//]lvmid[ @hostname[:port]/servername ]
+- 参数interval和count代表查询间隔和次数，如果省略这2个参数，说明只查询一次。假设需要每250毫秒查询一次进程2764垃圾收集状况，一共查询20次，那命令应当是：
+jstat -gc 2746 250 20
 - 代码清单4-1 jstat执行样例
 ![422e8b1a4caf9b485cdf41a008d92347.png](en-resource://database/4046:0)
 
