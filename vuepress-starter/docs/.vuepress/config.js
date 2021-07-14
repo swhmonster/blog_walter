@@ -192,6 +192,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: 'Docker-基础使用及持续开发', path: '/documents/container/docker-baseuse'},
                 {title: 'Docker-使用Dockerfile创建镜像', path: '/documents/container/dockerfile'}
             ]
         }, {
