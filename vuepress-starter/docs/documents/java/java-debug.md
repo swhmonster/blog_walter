@@ -28,7 +28,7 @@ JDB是基于文本和命令行的调试工具。
 JAVA_OPTS="$JAVA_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n"
 2. 程序运行起来
 3. attach jdb到程序上，在程序所在机器上运行 下面的脚本
-```
+```shell
   $JAVA_HOME/bin/jdb -attach 127.0.0.1:8000
 ```
 4. 指定断点，运行
