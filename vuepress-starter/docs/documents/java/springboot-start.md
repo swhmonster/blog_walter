@@ -94,59 +94,67 @@ public class SpbtApplication {
 - SpringApplication.class的run方法
 ```java
 public ConfigurableApplicationContext run(String... args) {
-		StopWatch stopWatch = new StopWatch();
-		stopWatch.start();
-		ConfigurableApplicationContext context = null;
-		Collection<SpringBootExceptionReporter> exceptionReporters = new ArrayList<>();
-		configureHeadlessProperty();
-		SpringApplicationRunListeners listeners = getRunListeners(args);
-		listeners.starting();
-		try {
-			ApplicationArguments applicationArguments = new DefaultApplicationArguments(args);
-			ConfigurableEnvironment environment = prepareEnvironment(listeners, applicationArguments);
-			configureIgnoreBeanInfo(environment);
-			Banner printedBanner = printBanner(environment);
-
-            /**
-            *创建应用上下文，创建ApplicationContext接口的实现类，一般来说，这个实现类是AnnotationConfigServletWebServerApplicationContext.class，这个是tomcat用的上下文实现类（捎带提一下：用反射判断有没有这个class，有代表你这里要用这个实现类）。
-            */
-			context = createApplicationContext();
-
-			exceptionReporters = getSpringFactoriesInstances(SpringBootExceptionReporter.class,
-					new Class[] { ConfigurableApplicationContext.class }, context);
-
-            /**
-            *向ApplcationContext中注册一些基本的bean的定义
-            */        
-			prepareContext(context, environment, listeners, applicationArguments, printedBanner);
-
-            /**
-            *调用这个实现类的refresh()方法
-            */
-			refreshContext(context);
-
-			afterRefresh(context, applicationArguments);
-			stopWatch.stop();
-			if (this.logStartupInfo) {
-				new StartupInfoLogger(this.mainApplicationClass).logStarted(getApplicationLog(), stopWatch);
-			}
-			listeners.started(context);
-			callRunners(context, applicationArguments);
-		}
-		catch (Throwable ex) {
-			handleRunFailure(context, ex, exceptionReporters, listeners);
-			throw new IllegalStateException(ex);
-		}
-
-		try {
-			listeners.running(context);
-		}
-		catch (Throwable ex) {
-			handleRunFailure(context, ex, exceptionReporters, null);
-			throw new IllegalStateException(ex);
-		}
-		return context;
-	}
+    // 创建StopWatch对象，用于统计run方法启动时长
+    StopWatch stopWatch = new StopWatch();
+    // 启动统计
+    stopWatch.start();
+    ConfigurableApplicationContext context = null;
+    Collection<SpringBootExceptionReporter> exceptionReporters = new ArrayList<>();
+    // 配置headless 属性
+    configureHeadlessProperty();
+    // 获得SpringApplicationRunListener 数组
+    // 该数组封装于SpringApplicationRunListeners对象的listeners中
+    SpringApplicationRunListeners listeners = getRunListeners(args);
+    // 启动监听，遍历SpringApplicationRunListener数组每个元素，并执行
+    listeners.starting();
+    try {
+        // 创建ApplicationArguments对象
+        ApplicationArguments applicationArguments = new DefaultApplicationArguments(
+            args);
+        // 加载属性配置，包括所有的配置属性（如：application.properties中和外部的属性配置）
+        ConfigurableEnvironment environment = prepareEnvironment(listeners,
+                applicationArguments);
+        configureIgnoreBeanInfo(environment);
+        // 打印Banner
+        Banner printedBanner = printBanner(environment);
+        // 创建容器
+        context = createApplicationContext();
+        // 异常报告器
+        exceptionReporters = getSpringFactoriesInstances(
+                SpringBootExceptionReporter.class,
+                new Class[] { ConfigurableApplicationContext.class }, context);
+        // 准备容器，组件对象之间进行关联
+        prepareContext(context, environment, listeners, applicationArguments, printedBanner);
+        // 初始化容器
+        refreshContext(context);
+        // 初始化操作之后执行，默认实现为空
+        afterRefresh(context, applicationArguments);
+        // 停止时长统计
+        stopWatch.stop();
+        // 打印启动日志
+        if (this.logStartupInfo) {
+            new StartupInfoLogger(this.mainApplicationClass)
+                .logStarted(getApplicationLog(), stopWatch);
+        }
+        // 通知监听器：容器启动完成
+        listeners.started(context);
+        // 调用ApplicationRunner和CommandLineRunner的运行方法。
+        callRunners(context, applicationArguments);
+    } catch (Throwable ex) {
+        // 异常处理
+        handleRunFailure(context, ex, exceptionReporters, listeners);
+        throw new IllegalStateException(ex);
+    }
+    try {
+        // 通知监听器：容器正在运行
+        listeners.running(context);
+    } catch (Throwable ex) {
+        // 异常处理
+        handleRunFailure(context, ex, exceptionReporters, null);
+        throw new IllegalStateException(ex);
+    }
+    return context;
+}
 ```
 - AnnotationConfigServletWebServerApplicationContext.class通过idea参看该类类图
     - 单看字段：最核心的是GenericApplicationContext.class的DefaultListableBeanFactory属性
