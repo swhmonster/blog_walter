@@ -93,9 +93,7 @@ module.exports = {
                 {title: 'java-jdk8 lambda表达式原理', path: '/documents/java/java-lambdaprinciple'},
                 {title: 'java-jdk9 新特性', path: '/documents/java/java-java9'},
                 {title: 'java-jdk11 新特性', path: '/documents/java/java-java11'},
-                {title: 'mybatis-常用工具类', path: '/documents/java/mybatis-commontools'},
-                {title: 'swagger注释@API详细说明', path: '/documents/java/swagger-annotation'},
-                {title: 'dubbo-api-docs', path: '/documents/java/dubbo-api-docs'}
+                {title: 'mybatis-常用工具类', path: '/documents/java/mybatis-commontools'}
             ]
         }, {
             title: 'Python',
@@ -260,7 +258,9 @@ module.exports = {
                 {title: 'git-git fetch与git pull', path: '/documents/codemanagement/git-fetchpulldiff'},
                 {title: 'git-日常使用笔记', path: '/documents/codemanagement/git-notes'},
                 {title: 'maven配置详解', path: '/documents/codemanagement/maven-settings'},
-                {title: 'Gradle Getting Started', path: '/documents/codemanagement/gradle-gettingstarted'}
+                {title: 'Gradle Getting Started', path: '/documents/codemanagement/gradle-gettingstarted'},
+                {title: 'swagger注释@API详细说明', path: '/documents/codemanagement/swagger-annotation'},
+                {title: 'dubbo-api-docs', path: '/documents/codemanagement/dubbo-api-docs'}
             ]
         }, {
             title: '信息安全及算法',
