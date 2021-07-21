@@ -82,7 +82,6 @@ module.exports = {
                 {title: 'Spring Boot 配置属性设置优先级', path: '/documents/java/springboot-profilepriority'},
                 {title: 'java-多线程编程核心技术之同步锁1', path: '/documents/java/java-synchronized1'},
                 {title: 'java-多线程编程核心技术之同步锁2', path: '/documents/java/java-synchronized2'},
-                {title: 'java-JVM调优参数(GC相关)', path: '/documents/java/java-jvmgcparams'},
                 {title: 'java-基础故障处理工具', path: '/documents/java/java-jdkcmdtool'},
                 {title: 'java-jstack线程分析', path: '/documents/java/jstack'},
                 {title: 'java-jconsole远程监控', path: '/documents/java/java-jconsole'},
@@ -120,6 +119,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
+                {title: 'JVM调优参数(GC相关)', path: '/documents/javadeep/java-jvmgcparams'},
                 {title: '深入理解Java虚拟机(学习笔记)', path: '/documents/javadeep/java-jvmsummary'},
                 {title: '深入理解JVM(1)', path: '/documents/javadeep/java-jvm1'},
                 {title: '深入理解JVM(2)', path: '/documents/javadeep/java-jvm2'},
