@@ -6,5 +6,7 @@
     - Sybase
 - 非关系型数据库
     - Redis
+      - [官方网站](http://www.redis.cn/)
+      - [GitHub](https://github.com/redis)
     - HBase
     - MangoDB

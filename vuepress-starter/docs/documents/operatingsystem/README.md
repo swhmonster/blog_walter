@@ -1,2 +1,6 @@
 # 操作系统相关
-- linux
+- Linux
+- Windows
+- IOS
+- Android
+- HarmonyOs
