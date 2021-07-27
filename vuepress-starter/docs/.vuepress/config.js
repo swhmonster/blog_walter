@@ -83,6 +83,7 @@ module.exports = {
                 {title: 'Java多线程编程之同步锁1', path: '/documents/java/java-synchronized1'},
                 {title: 'Java多线程编程之同步锁2', path: '/documents/java/java-synchronized2'},
                 {title: 'Java多线程编程之AQS', path: '/documents/java/java-aqs'},
+                {title: 'Java-Instrumentation 原理', path: '/documents/java/java-Instrumentation'},
                 {title: 'Java-基础故障处理工具', path: '/documents/java/java-jdkcmdtool'},
                 {title: 'Java-jstack线程分析', path: '/documents/java/jstack'},
                 {title: 'Java-jconsole远程监控', path: '/documents/java/java-jconsole'},
