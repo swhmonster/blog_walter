@@ -116,6 +116,12 @@ module.exports = {
             sidebarDepth: 1,
             children: []
         }, {
+            title: 'Lua',
+            path: '/documents/lua/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: []
+        }, {
             title: '深入理解JVM',
             path: '/documents/javadeep/',
             collapsable: true,
