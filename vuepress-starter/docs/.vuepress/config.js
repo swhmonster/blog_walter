@@ -184,6 +184,7 @@ module.exports = {
                 {title: 'Netty-分隔符和定长解码器的应用', path: '/documents/distributedsystem/netty-decoder'},
                 {title: 'Netty-编解码技术', path: '/documents/distributedsystem/netty-serialization'},
                 {title: 'HDFS-数据存储', path: '/documents/distributedsystem/hdfs-storage'},
+                {title: 'Redis-分布式锁', path: '/documents/distributedsystem/redis-distributedlock'},
                 {title: '分布式事务', path: '/documents/distributedsystem/distributedtransaction'},
                 {title: '分布式可观测性', path: '/documents/distributedsystem/observability'},
                 {title: '流量治理', path: '/documents/distributedsystem/trafficmanagement'},
