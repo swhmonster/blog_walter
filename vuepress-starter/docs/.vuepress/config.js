@@ -229,7 +229,8 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: '常用Linux命令', path: '/documents/operatingsystem/linux-command'},
+                {title: 'Linux 目录结构', path: '/documents/operatingsystem/linux-command'},
+                {title: '常用 Linux 命令', path: '/documents/operatingsystem/linux-directorystructure'},
                 {title: '性能分析命令', path: '/documents/operatingsystem/linux&windows-jdkanalysis'}
             ]
         }, {
