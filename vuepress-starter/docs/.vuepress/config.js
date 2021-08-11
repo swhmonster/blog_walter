@@ -197,7 +197,7 @@ module.exports = {
                 {title: '透明多级分流系统-服务端缓存', path: '/documents/distributedsystem/tmds-serversidecaching'}
             ]
         }, {
-            title: '云原生-容器技术',
+            title: '云原生&容器技术',
             path: '/documents/container/',
             collapsable: true,
             sidebarDepth: 1,
