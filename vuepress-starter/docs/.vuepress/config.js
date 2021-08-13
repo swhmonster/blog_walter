@@ -160,10 +160,11 @@ module.exports = {
                 {title: '主流消息中间件对比', path: '/documents/middleware/middlewarecompare'},
                 {title: 'rocketmq 集群', path: '/documents/middleware/rocketmq-cluster'},
                 {title: 'rabbitmq 集群', path: '/documents/middleware/rabbitmq-cluster'},
-                {title: 'kafka总结', path: '/documents/middleware/kafka'},
-                {title: 'Apache-Flink分布式流数据流引擎', path: '/documents/middleware/apache-flink'},
+                {title: 'kafka 总结', path: '/documents/middleware/kafka'},
+                {title: 'Redis 键空间通知', path: '/documents/middleware/redis-notifybykeys'},
+                {title: 'Apache Flink 分布式流数据流引擎', path: '/documents/middleware/apache-flink'},
                 {
-                    title: 'Apache-Flink之Checkpoints和Savepoints',
+                    title: 'Apache Flink 之Checkpoints和Savepoints',
                     path: '/documents/middleware/apache-flink-checksavepoint'
                 }
             ]
