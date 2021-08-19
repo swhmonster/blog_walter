@@ -231,8 +231,9 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: 'Linux 目录结构', path: '/documents/operatingsystem/linux-command'},
-                {title: '常用 Linux 命令', path: '/documents/operatingsystem/linux-directorystructure'},
+                {title: 'Linux 目录结构', path: '/documents/operatingsystem/linux-directorystructure'},
+                {title: 'Linux 启动过程（RHEL 7）', path: '/documents/operatingsystem/linux-startprocess'},
+                {title: '常用 Linux 命令', path: '/documents/operatingsystem/linux-command'},
                 {title: '性能分析命令', path: '/documents/operatingsystem/linux&windows-jdkanalysis'}
             ]
         }, {
