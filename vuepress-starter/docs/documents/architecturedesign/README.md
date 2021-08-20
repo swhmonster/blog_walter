@@ -55,3 +55,5 @@
         - 核心代码框架：spring boot
         - 中间件
         - 数据库
+- 亿级流量架构参考
+  ![An image](../../asserts/img/dingding-wechat-structure.jpg)
