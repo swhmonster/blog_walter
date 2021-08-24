@@ -52,7 +52,7 @@ module.exports = {
         lastUpdated: 'Last Updated',
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'Documents', link: '/documents/'},
+            {text: 'My Technology Stack', link: '/documents/'},
             {text: 'Contact', link: '/contact/'},
             {text: 'Downloads', link: 'https://www.waltersun.cn/subsys/', target: '_blank'},
             {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
