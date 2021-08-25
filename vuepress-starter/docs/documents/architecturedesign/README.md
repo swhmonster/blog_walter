@@ -6,6 +6,7 @@
     - 分布式的基石
     - 不可变基础设施
     - 技术方法论
+- OSGI：OSGi（Open Service Gateway Initiative，直译为“开放服务网关”）实际上是一个由OSGi联盟（OSGi Alliance）发起的以Java为技术平台的动态模块化规范。
 - 面向对象设计模式
     - 六大设计原则
         - 单一职责原则
