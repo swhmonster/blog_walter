@@ -85,7 +85,7 @@ ZGC的实现类是ZCollectedHeap，它重载了一些关键的函数，主要有
 ##### ZGC 页面分配
 ![An image](../../asserts/img/java-zgc7.png)
 1. 页面缓存分配
-   ![An image](../../asserts/img/java-zgc8.png)
+   ![An image](../../asserts/img/java-zgc8.jpg)
 2. NUMA的使用
 
    NUMA的内存分配策略有localalloc、preferred、membind、interleave这4种。
