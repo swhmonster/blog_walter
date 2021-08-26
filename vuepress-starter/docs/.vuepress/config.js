@@ -144,6 +144,9 @@ module.exports = {
             children: [
                 {title: '常用Sybase命令', path: '/documents/database/sybase-command'},
                 {title: '主流数据库兼容性验证', path: '/documents/database/database-compatibility'},
+                {title: 'Redis 主从复制', path: '/documents/database/redis-master-slave-replication'},
+                {title: 'Redis 持久化', path: '/documents/database/redis-persistence'},
+                {title: 'Redis Streams 介绍', path: '/documents/database/redis-streams'},
                 {title: 'PostgreSQL-执行计划查看方式与计划分析', path: '/documents/database/postgresql-executionplan'},
                 {title: 'PostgreSQL-plsql底层对查询类语句的处理', path: '/documents/database/postgresql-underlying1'},
                 {title: 'PostgreSQL-底层对查询类语句的处理（优化），以及执行计划生成策略', path: '/documents/database/postgresql-underlying2'},
