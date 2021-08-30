@@ -67,6 +67,14 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: []
+        },{
+            title: '区块链',
+            path: '/documents/blockchain/',
+            collapsable: true,
+            sidebarDepth: 1,
+            children: [
+                {title: '什么是区块链', path: '/documents/blockchain/blockchain-bitcoins'}
+            ]
         }, {
             title: 'Java',
             path: '/documents/java/',
