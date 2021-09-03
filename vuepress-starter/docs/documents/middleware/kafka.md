@@ -1,4 +1,18 @@
 # Kafka
+## Kafka 的基本组成
+在Kafka集群中生产者将消息发送给以Topic命名的消息队列Queue中，消费者订阅发往以某个Topic命名的消息队列Queue中的消息。其中Kafka集群由若干个Broker组成，Topic由若干个Partition组成，每个Partition里面的消息通过Offset来获取。
+- **Broker**：一台Kafka服务器就是一个Broker，一个集群由多个Broker组成，一个Broker可以容纳多个Topic，Broker和Broker之间没有Master和Standby的概念，它们之间的地位基本是平等的。
+- **Topic**：每条发送到Kafka集群的消息都属于某个主题，这个主题就称为Topic。物理上不同Topic的消息分开存储，逻辑上一个Topic的消息虽然保存在一个或多个Broker上，但是用户只需指定消息的主题Topic即可生产或消费数据而不需要去关心数据存放在何处。
+- **Partition**：为了实现可扩展性，一个非常大的Topic可以被分为多个Partition，从而分布到多台Broker上。Partition中的每条消息都会被分配一个自增Id（Offset）。Kafka只保证按一个Partition中的顺序将消息发送给消费者，但是不保证单个Topic中的多个Partition之间的顺序。
+- **Offset**：消息在Topic的Partition中的位置，同一个Partition中的消息随着消息的写入，其对应的Offset也自增，其内部实现原理如图所示。
+  ![An image](../../asserts/img/kafka1.png)
+- **Replica**：副本。Topic的Partition含有N个Replica，N为副本因子。其中一个Replica为Leader，其他都为Follower，Leader处理Partition的所有读写请求，与此同时，Follower会定期地去同步Leader上的数据。
+- **Message**：消息，是通信的基本单位。每个Producer可以向一个Topic（主题）发布一些消息。
+- **Producer**：消息生产者，即将消息发布到指定的Topic中，同时Producer也能决定此消息所属的Partition：比如基于Round-Robin（轮询）方式或者Hash（哈希）方式等一些算法。
+- **Consumer**：消息消费者，即向指定的Topic获取消息，根据指定Topic的分区索引及其对应分区上的消息偏移量来获取消息。
+- **Consumer Group**：消费者组，每个Consumer属于一个Consumer Group；反过来，每个Consumer Group中可以包含多个Consumer。如果所有的Consumer都具有相同的Consumer Group，那么消息将会在Consumer之间进行负载均衡。也就是说一个Partition中的消息只会被相同Consumer Group中的某个Consumer消费，每个Consumer Group消息消费是相互独立的。如果所有的Consumer都具有不同的Consumer Group，则消息将会被广播给所有的Consumer。Producer、Consumer和Consumer Group之间的关系如图所示。
+  ![An image](../../asserts/img/kafka2.png)
+>存储结构：消息按topic分开存储，topic可以分成多个partition分区（分布到多台broker），每个partition分区有多个replica副本
 ## 主题与分区
 ### 主题管理
 ```mermaid
