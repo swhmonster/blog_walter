@@ -88,6 +88,7 @@ module.exports = {
                 {title: 'Spring Boot 的价值', path: '/documents/java/spring-TheValueOfSpringBoot'},
                 {title: 'Spring Boot 启动流程简析', path: '/documents/java/springboot-start'},
                 {title: 'Spring Boot 配置属性设置优先级', path: '/documents/java/springboot-profilepriority'},
+                {title: 'Effective Java', path: '/documents/java/java-effectivejava'},
                 {title: 'Java多线程编程之同步锁1', path: '/documents/java/java-synchronized1'},
                 {title: 'Java多线程编程之同步锁2', path: '/documents/java/java-synchronized2'},
                 {title: 'Java多线程编程之AQS', path: '/documents/java/java-aqs'},
