@@ -131,7 +131,7 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 1,
             children: [
-                {title: 'Lua 快速上手', path: '/documents/javadeep/lua-getstart'}
+                {title: 'Lua 快速上手', path: '/documents/lua/lua-getstart'}
             ]
         }, {
             title: '深入理解JVM',
