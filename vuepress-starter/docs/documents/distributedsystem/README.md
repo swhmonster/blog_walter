@@ -38,7 +38,7 @@
     - kubernetes
     - docker
 - 分布式锁
-    - 基于Redis实现，参见[Redis-分布式锁](./redis-distributedlock.md)
+    - 基于Redis实现，参见[Redis-分布式锁](../database/redis-distributedlock.md)
     - 基于ZooKeeper实现，参见[zookeeper-分布式锁原理](./zookeeper-distributedlock.md)
 - 分布式事务
     - Seata：开源的分布式事务解决方案

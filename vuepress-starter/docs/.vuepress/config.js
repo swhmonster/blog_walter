@@ -155,10 +155,12 @@ module.exports = {
             children: [
                 {title: '常用Sybase命令', path: '/documents/database/sybase-command'},
                 {title: '主流数据库兼容性验证', path: '/documents/database/database-compatibility'},
+                {title: 'Redis 键空间通知', path: '/documents/database/redis-notifybykeys'},
                 {title: 'Redis 主从复制', path: '/documents/database/redis-master-slave-replication'},
                 {title: 'Redis 持久化', path: '/documents/database/redis-persistence'},
                 {title: 'Redis Streams 介绍', path: '/documents/database/redis-streams'},
                 {title: 'Redis 集群教程', path: '/documents/database/redis-cluster'},
+                {title: 'Redis-分布式锁', path: '/documents/database/redis-distributedlock'},
                 {title: 'PostgreSQL-执行计划查看方式与计划分析', path: '/documents/database/postgresql-executionplan'},
                 {title: 'PostgreSQL-plsql底层对查询类语句的处理', path: '/documents/database/postgresql-underlying1'},
                 {title: 'PostgreSQL-底层对查询类语句的处理（优化），以及执行计划生成策略', path: '/documents/database/postgresql-underlying2'},
@@ -176,7 +178,6 @@ module.exports = {
                 {title: 'rocketmq 集群', path: '/documents/middleware/rocketmq-cluster'},
                 {title: 'rabbitmq 集群', path: '/documents/middleware/rabbitmq-cluster'},
                 {title: 'kafka 总结', path: '/documents/middleware/kafka'},
-                {title: 'Redis 键空间通知', path: '/documents/middleware/redis-notifybykeys'},
                 {title: 'Apache Flink 分布式流数据流引擎', path: '/documents/middleware/apache-flink'},
                 {
                     title: 'Apache Flink 之Checkpoints和Savepoints',
@@ -201,7 +202,6 @@ module.exports = {
                 {title: 'Netty-分隔符和定长解码器的应用', path: '/documents/distributedsystem/netty-decoder'},
                 {title: 'Netty-编解码技术', path: '/documents/distributedsystem/netty-serialization'},
                 {title: 'HDFS-数据存储', path: '/documents/distributedsystem/hdfs-storage'},
-                {title: 'Redis-分布式锁', path: '/documents/distributedsystem/redis-distributedlock'},
                 {title: '分布式事务', path: '/documents/distributedsystem/distributedtransaction'},
                 {title: '分布式可观测性', path: '/documents/distributedsystem/observability'},
                 {title: '流量治理', path: '/documents/distributedsystem/trafficmanagement'},
