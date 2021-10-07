@@ -305,6 +305,8 @@ module.exports = {
                 {title: '国密算法SM3设计原理', path: '/documents/sercurity/sm-sm3'},
                 {title: '国密算法SM4设计原理', path: '/documents/sercurity/sm-sm4'},
                 {title: '分布式理论基础-Paxos算法', path: '/documents/sercurity/paxos'},
+                {title: 'ZooKeeper ZAB', path: '/documents/sercurity/zookeeper-zab'},
+                {title: 'Raft', path: '/documents/sercurity/raft'},
                 {title: 'java代码混淆-allator集成', path: '/documents/sercurity/allatori'}
             ]
         }, {
