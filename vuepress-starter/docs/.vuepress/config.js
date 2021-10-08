@@ -31,7 +31,7 @@ module.exports = {
         '@vuepress/last-updated',
         '@vuepress/plugin-search',
         // 评论插件learncloud-valine
-        [
+        /*[
             'vuepress-plugin-comment',
             {
                 choosen: 'valine',
@@ -44,7 +44,7 @@ module.exports = {
                     path: '<%- frontmatter.to.path ?frontmatter.to.path : window.location.pathname %>'
                 }
             }
-        ]
+        ]*/
     ],
     themeConfig: {
         logo: '/logo.png',
