@@ -175,6 +175,7 @@ module.exports = {
             sidebarDepth: 1,
             children: [
                 {title: '主流消息中间件对比', path: '/documents/middleware/middlewarecompare'},
+                {title: '消息中间件“重复消费”、“顺序消费”问题', path: '/documents/middleware/repeatconsume'},
                 {title: 'rocketmq 集群', path: '/documents/middleware/rocketmq-cluster'},
                 {title: 'rabbitmq 集群', path: '/documents/middleware/rabbitmq-cluster'},
                 {title: 'kafka 总结', path: '/documents/middleware/kafka'},
