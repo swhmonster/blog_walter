@@ -1,0 +1,19 @@
+# Spring Boot 配置属性设置优先级
+Spring Boot设计了非常特殊的加载指定属性文件（PropertySource）的顺序，以允许对属性值进行合理的覆盖。属性值会以下面的优先级进行设置。
+- home目录下的Devtools全局设置属性（~/.spring-boot-devtools.properties，条件是当devtools激活时）。
+- @TestPropertySource注解的测试用例。
+- @SpringBootTest#properties注解的测试用例。
+- 命令行参数。
+- 来自SPRING_APPLICATION_JSON的属性（内嵌在环境变量或系统属性中的内联JSON）。
+- ServletConfig初始化参数。
+- ServletContext初始化参数。
+- java:comp/env的JNDI属性。
+- Java系统属性（System.getProperties()）。
+- 操作系统环境变量。
+- RandomValuePropertySource，只包含random.*中的属性。
+- jar包外的Profile-specific应用属性（application-{profile}.properties和YAML变量）。
+- jar包内的Profile-specific应用属性（application-{profile}.properties和YAML变量）。
+- jar包外的应用配置（application.properties和YAML变量）。
+- jar包内的应用配置（application.properties和YAML变量）。
+- @Configuration类上的@PropertySource注解。
+- 默认属性（通过SpringApplication.setDefaultProperties指定）。

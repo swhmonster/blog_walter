@@ -1,0 +1,70 @@
+# 分布式系统
+>推荐阅读架构类书目：《凤凰架构：构建可靠的大型分布式系统》周志明，[网页博客](https://icyfenix.cn/)
+- 透明多级分流系统(Transparent Multilevel Diversion System)
+- 分布式理论基础-Paxos算法：[参见Paxos](../sercurity/paxos.md)
+- 微服务框架
+    - Spring Cloud (REST)
+    - Spring Cloud Alibaba
+        - Dubbo (RPC)
+        >传输层将Mina和Netty抽象成了一个接口，默认情况下使用Netty
+        - Netty
+- 注册中心
+    >选用方式，可参看文档[《主流注册中心》](registrycompare.md)
+    - Spring Cloud Eureka
+        - [官方网站](https://spring.io/projects/spring-cloud)
+        - [GitHub](https://github.com/spring-cloud/)
+    - Zookeeper
+        - [官方网站](https://zookeeper.apache.org/)
+        - [GitHub](https://github.com/apache/zookeeper)
+    - Nacos（from alibaba）
+        - [官方网站](https://nacos.io/zh-cn/index.html)
+        - [GitHub](https://github.com/alibaba/nacos)
+        >可基于Spring Cloud 2.0+
+- 中间件:[参看中间件栏目](../middleware/README.md)
+- 网关
+    - 网关分类
+        - 流量网关
+        - 业务网关
+    - 开源网关
+      - Nginx+Lua:Open Resty、Kong、Orange、Abtesting Gateway等；
+      - Java:Zuul/Zuul 2、Spring Cloud Gateway、Kaazing KWG、gravitee、Dromara soul等；
+      - Go:Janus、fagongzi、Grpc-Gateway；
+      - .NET:Ocelot；
+      - Node.js:Express Gateway、MicroGateway。
+- 服务熔断与降级
+    - Hystrix：
+        - [GitHub](https://github.com/Netflix/Hystrix)
+- 容器化技术：相关文章参见[容器化技术栏目](../container/README.md)
+    - kubernetes
+    - docker
+- 分布式锁
+    - 基于Redis实现，参见[Redis-分布式锁](../database/redis-distributedlock.md)
+    - 基于ZooKeeper实现，参见[zookeeper-分布式锁原理](zookeeper-distributedlock.md)
+- 分布式事务
+    - Seata：开源的分布式事务解决方案
+        - [官方网站](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
+        - [GitHub](https://github.com/seata/seata)
+- 分布式可观测性
+    - 3个研究方向
+        - 事务日志
+        - 链路追踪
+        - 聚合度量
+    - 技术栈/技术选型
+        - 日志和度量方面
+            - Elastic Stask 技术栈：相关文章参考[大数据栏目](../bigdata/README.md)
+                - ElasticSearch：管理、检索数据
+                - Logstash：动态数据收集管道，拥有可扩展的插件生态系统。
+                - Beats：一个面向轻量型采集器的平台，这些采集器可从边缘机器发送数据
+                - Kibana：可视化读数据
+                - [官方网站](https://www.elastic.co/)
+                - [GitHub](https://github.com/elastic)
+        - 链路追踪方面
+            - 云端监控服务商
+                - Datadog的一系列商业方案
+            - 云计算厂商产品 
+                - AWS X-RAY
+                - Google Stackdriver Trace
+            - 开源的优秀产品
+                - SkyWalking
+                - Zipkin
+                - Jaeger

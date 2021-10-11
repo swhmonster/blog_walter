@@ -1,0 +1,20 @@
+# 代码管理相关
+- 代码管理
+    - git
+    - svn
+- 包管理
+    - jfrog：全语言二进制包管理加速落地DevOps
+    - nexus
+    - gradle
+    - maven
+    - npm/yarn
+- 持续集成
+    - gitlab ci/cd
+    - jenkeins
+- 代码质量
+    - sonarQube
+- 接口管理
+    - knife4j(swagger的ui增强版)
+    - swagger
+    - dubbo api docs
+    - yapi

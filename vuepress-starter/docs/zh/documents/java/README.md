@@ -1,0 +1,62 @@
+# JavaEE开发相关
+- 阿里巴巴Java开发手册终极版v1.3.0
+- java开发基础
+- java开发进阶
+- 设计模式
+    - 创建型模式
+    - 行为型模式
+    - 结构型模式
+    - 函数式编程
+    - 响应式编程
+    - 响应式设计模式
+        - Redis基于Reactor模式开发了网络事件处理器
+        - Netty整体框架采用Reactor模型
+        - NIO中非阻塞I/O采用基于Reactor模式的工作方式
+- 开发框架
+    >对于架构选择，业务具有强一致性（如金融行业、电子商务），一般不会采用spring cloud，在某些情况下，spring cloud为了满足高可用，存在一些不一致的情况。对于强一致性业务的架构选择，dubbo是个不错的选择。
+    - spring (spring cloud/restful)
+        - spring基础
+        - spring进阶
+    - dubbo (rpc)
+        >参见官方网站<http://dubbo.apache.org/>
+        - 传输层netty
+            - netty的nio，区别于java的nio(解决了空轮询问题)
+            - reactor线程模型
+            - 零拷贝
+            - 内存池（复用缓冲区）
+        - 提供高性能序列化工具支持：Kryo和FST
+- 日常开发、问题排查工具
+    - Java自带工具
+        - 可视化工具
+            - JHSDB：基于服务性代理的调试工具
+            - JConsole：Java 监视与管理控制平台
+            - VisualVm：多合故障处理工具
+            - Java Mission Control：可持续在线监控工具
+        - 命令行工具
+            - jps：虚拟机进程状况工具
+            - jstat：虚拟机统计信息监视工具
+            - jinfo：Java 配置信息工具
+            - jmap：Java 内存映像工具
+            - jhat：Java 虚拟机堆转储快照分析工具
+            - jstack：Java 堆栈跟踪工具
+    - JProfiler/Eclipse Memory Analyzer
+        - 内存分析工具
+        - JProfiler功能更强大一些，可集成idea
+    - Arthas
+        - Arthas 是Alibaba开源的Java诊断工具，深受开发者喜爱。
+        - Arthas 用户文档：<https://arthas.gitee.io/index.html>
+        - IDEA 插件，方便命令生成，推荐
+    - Brup Suite
+        - 抓包工具
+- 个人学习方法分享
+    >抛开本科专业课学习时期的学习方式，这里分享工作后进阶学习的方法
+    
+    - 进阶学习演进：
+        - java基础
+        - 深入理解jvm
+        - java并发编程原理
+        - java并发包剖析
+    - 学习荐书
+        - 《深入理解JVM》周志明
+        - 《Java并发编程原理》汪文君
+        - 《Java并发编程之美》翟陆续、薛宾田

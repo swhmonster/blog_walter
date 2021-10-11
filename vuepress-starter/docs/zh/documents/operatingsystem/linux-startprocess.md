@@ -1,0 +1,12 @@
+# Linux 启动过程（RHEL 7）
+- **步骤01**：开机自检。
+- **步骤02**：从硬盘的MBR中读取引导程序GRUB。
+- **步骤03**：引导程序根据配置文件显示引导菜单。
+- **步骤04**：如果选择进入Linux系统，此时引导程序加载Linux内核文件。
+- **步骤05**：当内核全部载入内存后，GRUB的任务完成，此时全部控制权限交给Linux，CPU开始执行Linux内核代码，如初始化任务调度、分配内存、加载驱动等。
+- **步骤06**：内核代码执行完后，开始执行Linux系统的第一个进程——systemd进程，进程号为1。
+- **步骤07**：接下来的工作由systemd进程来完成。systemd使用“target”来处理引导以及服务管理过程，“target”主要是用来分组不同的引导单元及同步进程，系统中的target位于目录/usr/lib/systemd/system中。systemd首先执行的目标是default.target，default.target是一个指向运行级别的链接。如此系统就会进入一个默认的运行级别。
+- **步骤08**：接下来，systemd会启动multi-user.target，这个target主要是用来启动完全多用户模式的，其相应的子单元位于/usr/lib/systemd/system/multi-user.target.wants目录中。许多服务都会在此阶段被启动，如防火墙，系统会话等。
+- **步骤09**：该阶段控制权会交给basic.target，basic.target会启动如音频、dmesg等服务，完成后会将工作交给sysinit.target。
+- **步骤10**：sysinit.target主要用来处理系统挂载，交换分区等，完成后会将工作交给local-fs.target。
+- **步骤11**：local-fs.target用来处理收尾工作，如处理/etc/fstab中的挂载等。
