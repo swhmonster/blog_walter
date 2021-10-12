@@ -56,7 +56,7 @@ module.exports = {
         },
         '/zh/': {
             lang: 'zh-CN',
-            title: 'Walter\'s WebSite',
+            title: 'Walter的个人网站',
             description: '技术无止尽'
         }
     },

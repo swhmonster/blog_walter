@@ -1,22 +1,22 @@
-# Welcome to my career as a programmer
-
-### Hometown
-This is my hometown.
+# 欢迎来到我的程序员生涯
+>程序员和狗的日常
+#### 我的故乡：南京
 ![An image](../../asserts/img/nanjing.jpg)
-### My lovely dog
-#### This is my lovely dog, dou dou.
+#### 我的可爱狗——逗逗
 ![An image](../../doudou.png)
-#### When he was little.
+#### 当时它还小
 ![An image](../../asserts/img/doudou-1.jpg)
-#### 2 months old.
+#### 2个月大了
 ![An image](../../asserts/img/doudou-2.jpg)
-#### location: 湖州·德清·莫干山
+#### 我们在： 湖州·德清·莫干山
 ![An image](../../asserts/img/doudou-3.jpg)
-#### The first-time swimming.
+#### 第一次游泳
 ![An image](../../asserts/img/doudou-4.jpg)
-#### 2 years old
+#### 转眼就2岁了
 ![An image](../../asserts/img/doudou-5.jpg)
-#### location: 杭州·湘湖度假区
+#### 我们在：杭州·湘湖度假区
 ![An image](../../asserts/img/doudou-6.jpg)
-#### location: 绍兴·迪荡湖公园
+#### 我们在：绍兴·迪荡湖公园
 ![An image](../../asserts/img/doudou-7.jpg)
+#### 我们在：杭州·钱江世纪公园
+![An image](../../asserts/img/doudou-8.jpg)

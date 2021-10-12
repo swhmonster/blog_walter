@@ -20,3 +20,5 @@ This is my hometown.
 ![An image](../asserts/img/doudou-6.jpg)
 #### location: 绍兴·迪荡湖公园
 ![An image](../asserts/img/doudou-7.jpg)
+#### location: 杭州·钱江世纪公园
+![An image](../asserts/img/doudou-8.jpg)
