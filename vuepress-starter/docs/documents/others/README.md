@@ -1,4 +1,4 @@
-# something about others
+# Solutions & Others
 - 跨域问题
 - 常见前端问题分析
 - 部分工具破解说明

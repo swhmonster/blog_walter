@@ -1,4 +1,4 @@
-# 大数据
+# Big Data
 - Elastic Stask 技术栈
   - ElasticSearch：管理、检索数据
   - Logstash：动态数据收集管道，拥有可扩展的插件生态系统。

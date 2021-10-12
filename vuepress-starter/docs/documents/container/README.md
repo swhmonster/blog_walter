@@ -1,4 +1,4 @@
-# 容器化技术
+# Cloud Native & Container Technology
 - Kubernetes：用于容器间的编排，以及容器集群的管理等
     - [官方网站](https://kubernetes.io/zh/)
 - Docker：容器级别的工具，创建、管理容器等
