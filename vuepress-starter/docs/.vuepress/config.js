@@ -271,6 +271,7 @@ module.exports = {
                         {title: 'Linux 启动过程（RHEL 7）', path: '/documents/operatingsystem/linux-startprocess'},
                         {title: 'Linux 动态主机配置协议 DHCP', path: '/documents/operatingsystem/linux-dhcp'},
                         {title: 'Linux 性能检测与优化', path: '/documents/operatingsystem/linux-PerformanceTesting&Optimization'},
+                        {title: 'Linux Shell Bash Demo', path: '/documents/operatingsystem/linux-shelldemo'},
                         {title: '性能分析命令', path: '/documents/operatingsystem/linux&windows-jdkanalysis'}
                     ]
                 }, {
@@ -569,6 +570,7 @@ module.exports = {
                         {title: 'Linux 启动过程（RHEL 7）', path: '/zh/documents/operatingsystem/linux-startprocess'},
                         {title: 'Linux 动态主机配置协议 DHCP', path: '/zh/documents/operatingsystem/linux-dhcp'},
                         {title: 'Linux 性能检测与优化', path: '/zh/documents/operatingsystem/linux-PerformanceTesting&Optimization'},
+                        {title: 'Linux Shell Bash Demo', path: '/documents/operatingsystem/linux-shelldemo'},
                         {title: '性能分析命令', path: '/zh/documents/operatingsystem/linux&windows-jdkanalysis'}
                     ]
                 }, {
