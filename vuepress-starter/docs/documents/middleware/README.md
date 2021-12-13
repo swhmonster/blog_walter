@@ -6,7 +6,7 @@
   - FastDFS
 - 消息中间件
   >参看[《主流消息中间件对比》](./middlewarecompare.md)
-  - RocketMQ
+  - MetaQ（RocketMQ基于MetaQ开发而来）
   - RabbitMQ
   - Kafka
 - 分布式数据
