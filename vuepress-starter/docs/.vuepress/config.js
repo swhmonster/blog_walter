@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Walter\'s WebSite',
+    title: 'Walter\'s Website',
     description: 'Just playing around',
     // host: '192.168.162.101',
     // port: 8888,
@@ -51,7 +51,7 @@ module.exports = {
         // 作为特例，默认语言可以使用 '/' 作为其路径。
         '/': {
             lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
-            title: 'Walter\'s WebSite',
+            title: 'Walter\'s Website',
             description: 'Just playing around',
         },
         '/zh/': {
@@ -142,7 +142,9 @@ module.exports = {
                     path: '/documents/go/',
                     collapsable: true,
                     sidebarDepth: 1,
-                    children: []
+                    children: [
+                        {title: '我对 GO 的理解', path: '/documents/go/understandgo'}
+                    ]
                 }, {
                     title: 'Lua',
                     path: '/documents/lua/',
@@ -272,7 +274,8 @@ module.exports = {
                         {title: 'Linux 动态主机配置协议 DHCP', path: '/documents/operatingsystem/linux-dhcp'},
                         {title: 'Linux 性能检测与优化', path: '/documents/operatingsystem/linux-PerformanceTesting&Optimization'},
                         {title: 'Linux Shell Bash Demo', path: '/documents/operatingsystem/linux-shelldemo'},
-                        {title: '性能分析命令', path: '/documents/operatingsystem/linux&windows-jdkanalysis'}
+                        {title: '性能分析命令', path: '/documents/operatingsystem/linux&windows-jdkanalysis'},
+                        {title: 'sftp 基础使用', path: '/documents/operatingsystem/sftpusage'}
                     ]
                 }, {
                     title: 'Web',
@@ -441,7 +444,9 @@ module.exports = {
                     path: '/zh/documents/go/',
                     collapsable: true,
                     sidebarDepth: 1,
-                    children: []
+                    children: [
+                        {title: '我对 GO 的理解', path: '/zh/documents/go/understandgo'}
+                    ]
                 }, {
                     title: 'Lua',
                     path: '/zh/documents/lua/',
@@ -571,7 +576,8 @@ module.exports = {
                         {title: 'Linux 动态主机配置协议 DHCP', path: '/zh/documents/operatingsystem/linux-dhcp'},
                         {title: 'Linux 性能检测与优化', path: '/zh/documents/operatingsystem/linux-PerformanceTesting&Optimization'},
                         {title: 'Linux Shell Bash Demo', path: '/documents/operatingsystem/linux-shelldemo'},
-                        {title: '性能分析命令', path: '/zh/documents/operatingsystem/linux&windows-jdkanalysis'}
+                        {title: '性能分析命令', path: '/zh/documents/operatingsystem/linux&windows-jdkanalysis'},
+                        {title: 'sftp 基础使用', path: '/zh/documents/operatingsystem/sftpusage'}
                     ]
                 }, {
                     title: '前端开发',
