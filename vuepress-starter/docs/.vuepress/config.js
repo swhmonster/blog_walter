@@ -143,7 +143,8 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: '我对 GO 的理解', path: '/documents/go/understandgo'}
+                        {title: '我对 GO 的理解', path: '/documents/go/understandgo'},
+                        {title: 'Go 语言有什么不一样', path: '/documents/go/whatisgo'}
                     ]
                 }, {
                     title: 'Lua',
@@ -445,7 +446,8 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: '我对 GO 的理解', path: '/zh/documents/go/understandgo'}
+                        {title: '我对 GO 的理解', path: '/zh/documents/go/understandgo'},
+                        {title: 'Go 语言有什么不一样', path: '/zh/documents/go/whatisgo'}
                     ]
                 }, {
                     title: 'Lua',
