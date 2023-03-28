@@ -7,7 +7,7 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'master',
     head: [
-        ['link', {rel: 'icon', href: '/java.png'}],
+        ['link', {rel: 'icon', href: '/waltersun_cn.png'}],
         ['script', {},
             `
             var _hmt = _hmt || [];
