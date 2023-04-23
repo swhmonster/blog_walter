@@ -8,6 +8,7 @@ module.exports = {
     docsBranch: 'master',
     head: [
         ['link', {rel: 'icon', href: '/waltersun_cn.png'}],
+        ['meta',{name:'baidu-site-verification',content:'codeva-p4cxM4eU2P'}],
         ['script', {},
             `
             var _hmt = _hmt || [];
