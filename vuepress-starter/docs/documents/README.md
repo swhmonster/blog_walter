@@ -3,6 +3,8 @@
 ### Hometown
 This is my hometown.
 ![An image](../asserts/img/nanjing.jpg)
+### Work Place: Xixi Campus
+![An image](../asserts/img/xixicampus.jpeg)
 ### My lovely dog
 #### This is my lovely dog, dou dou.
 ![An image](../doudou.png)

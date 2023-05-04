@@ -2,6 +2,8 @@
 >程序员和狗的日常
 #### 我的故乡：南京
 ![An image](../../asserts/img/nanjing.jpg)
+#### 美丽园区：西溪A区
+![An image](../../asserts/img/xixicampus.jpeg)
 #### 我的可爱狗——逗逗
 ![An image](../../doudou.png)
 #### 当时它还小
