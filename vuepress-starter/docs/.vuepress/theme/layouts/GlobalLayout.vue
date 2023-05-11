@@ -20,7 +20,7 @@
                      @mouseover="githubChangeIn()" @mouseout="githubChangeOut()"
                      @click="openGithub()"
                      alt>
-                <img alt=" wechat-icon" src="../../public/wechat.png"
+                <img alt="wechat-icon" src="../../public/wechat.png"
                      :height="wechatIconHeight"
                      @mouseover="wechatChangeIn()" @mouseout="wechatChangeOut()">
             </div>
