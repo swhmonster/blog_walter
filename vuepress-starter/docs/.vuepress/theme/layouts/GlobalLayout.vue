@@ -13,9 +13,17 @@
             </div>
             <img alt="wechat-scan" src="../../public/codescan8cm.jpeg" v-show="flag"
                  style="float: right;height: 150px; width:150px; position:fixed;box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04); right: 30px;bottom: 80px">
-            <img alt="wechat-icon" src="../../public/wechat.png"
-                 style="margin-right: 30px;height: 35px;position:fixed;right: 30px;bottom: 30px;"
-                 @mouseover="changeIn()" @mouseout="changeOut()">
+            <div style="margin-right: 30px;height: 35px;position:fixed;right: 30px;bottom: 30px;">
+                <img src="../../public/github.png" height="35px"
+                     :height="githubIconHeight"
+                     :style="{cursor:flag?'hand':'pointer'}"
+                     @mouseover="githubChangeIn()" @mouseout="githubChangeOut()"
+                     @click="openGithub()"
+                     alt>
+                <img alt=" wechat-icon" src="../../public/wechat.png"
+                     :height="wechatIconHeight"
+                     @mouseover="wechatChangeIn()" @mouseout="wechatChangeOut()">
+            </div>
         </footer>
     </div>
 </template>
@@ -24,7 +32,10 @@
 export default {
     data() {
         return {
-            flag: false
+            flag: false,
+            sizeFlag: false,
+            wechatIconHeight: 35,
+            githubIconHeight: 35
         }
     },
     computed: {
@@ -40,12 +51,27 @@ export default {
         }
     },
     methods: {
-        changeIn() {
+        wechatChangeIn() {
             this.flag = true;
+            this.sizeFlag = true;
+            this.wechatIconHeight = 45;
         },
-        changeOut() {
+        wechatChangeOut() {
             this.flag = false;
+            this.sizeFlag = false;
+            this.wechatIconHeight = 35;
         },
+        githubChangeIn() {
+            this.sizeFlag = true;
+            this.githubIconHeight = 45;
+        },
+        githubChangeOut() {
+            this.sizeFlag = false;
+            this.githubIconHeight = 35;
+        },
+        openGithub(){
+            window.open("https://github.com/swhmonster","_blank")
+        }
     }
 }
 </script>
