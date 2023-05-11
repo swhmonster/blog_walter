@@ -78,7 +78,7 @@ module.exports = {
                     {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
                     {text: 'CSDN Blog', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
                     {text: 'Donation', link: '/documents/donation/'},
-                    {text: 'Message', link: '/documents/leavemsg/'},
+                    // {text: 'Message', link: '/documents/leavemsg/'},
                     {text: 'Giving', link: '/documents/publicwelfare/'}
                 ],
                 sidebar: [{
@@ -382,7 +382,7 @@ module.exports = {
                     {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
                     {text: 'CSDN博客', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
                     {text: '打赏', link: '/zh/documents/donation/'},
-                    {text: '留言', link: '/zh/documents/leavemsg/'},
+                    // {text: '留言', link: '/zh/documents/leavemsg/'},
                     {text: '公益', link: '/zh/documents/publicwelfare/'}
                 ],
                 sidebar: [{
