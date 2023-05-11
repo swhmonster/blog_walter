@@ -188,6 +188,7 @@ module.exports = {
                         {title: 'PostgreSQL-plsql底层对查询类语句的处理', path: '/documents/database/postgresql-underlying1'},
                         {title: 'PostgreSQL-底层对查询类语句的处理（优化），以及执行计划生成策略', path: '/documents/database/postgresql-underlying2'},
                         {title: 'MySQL-ExpLain Statement', path: '/documents/database/mysql-explainstatement'},
+                        {title: 'MySQL-为什么单表数据在2000W＋后会明显下降', path: '/documents/database/mysql-500wlimit'},
                         {title: 'MySQL-Lock', path: '/documents/database/mysql-lock'},
                         {title: 'Oracle-ExpLain Statement', path: '/documents/database/oracle-explainstatement'}
                     ]
@@ -491,6 +492,7 @@ module.exports = {
                         {title: 'PostgreSQL-plsql底层对查询类语句的处理', path: '/zh/documents/database/postgresql-underlying1'},
                         {title: 'PostgreSQL-底层对查询类语句的处理（优化），以及执行计划生成策略', path: '/zh/documents/database/postgresql-underlying2'},
                         {title: 'MySQL-ExpLain Statement', path: '/zh/documents/database/mysql-explainstatement'},
+                        {title: 'MySQL-为什么单表数据在2000W＋后会明显下降', path: '/zh/documents/database/mysql-500wlimit'},
                         {title: 'MySQL-Lock', path: '/zh/documents/database/mysql-lock'},
                         {title: 'Oracle-ExpLain Statement', path: '/zh/documents/database/oracle-explainstatement'}
                     ]
