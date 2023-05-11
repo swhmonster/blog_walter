@@ -14,15 +14,36 @@
             <img alt="wechat-scan" src="../../public/codescan8cm.jpeg" v-show="flag"
                  style="float: right;height: 150px; width:150px; position:fixed;box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04); right: 30px;bottom: 80px">
             <div style="margin-right: 30px;height: 35px;position:fixed;right: 30px;bottom: 30px;">
-                <img src="../../public/github.png" height="35px"
+                <img src="../../public/toolBox.png"
+                     :height="toolBoxIconHeight"
+                     :style="{cursor:flag?'hand':'pointer'}"
+                     style="margin-right: 5px;"
+                     @mouseover="toolBoxChangeIn()"
+                     @mouseout="toolBoxChangeOut()"
+                     @click="openToolBox()"
+                     alt>
+                <img src="../../public/github.png"
                      :height="githubIconHeight"
                      :style="{cursor:flag?'hand':'pointer'}"
-                     @mouseover="githubChangeIn()" @mouseout="githubChangeOut()"
+                     style="margin-right: 5px;"
+                     @mouseover="githubChangeIn()"
+                     @mouseout="githubChangeOut()"
                      @click="openGithub()"
                      alt>
-                <img alt="wechat-icon" src="../../public/wechat.png"
+                <img src="../../public/csdn.png"
+                     :height="csdnIconHeight"
+                     :style="{cursor:flag?'hand':'pointer'}"
+                     style="margin-right: 5px;"
+                     @mouseover="csdnChangeIn()"
+                     @mouseout="csdnChangeOut()"
+                     @click="openCsdn()"
+                     alt>
+                <img src="../../public/wechat.png"
                      :height="wechatIconHeight"
-                     @mouseover="wechatChangeIn()" @mouseout="wechatChangeOut()">
+                     style="margin-right: 5px;"
+                     @mouseover="wechatChangeIn()"
+                     @mouseout="wechatChangeOut()"
+                     alt>
             </div>
         </footer>
     </div>
@@ -35,7 +56,9 @@ export default {
             flag: false,
             sizeFlag: false,
             wechatIconHeight: 35,
-            githubIconHeight: 35
+            githubIconHeight: 35,
+            csdnIconHeight: 35,
+            toolBoxIconHeight: 35
         }
     },
     computed: {
@@ -69,8 +92,32 @@ export default {
             this.sizeFlag = false;
             this.githubIconHeight = 35;
         },
-        openGithub(){
-            window.open("https://github.com/swhmonster","_blank")
+        csdnChangeIn() {
+            this.sizeFlag = true;
+            this.csdnIconHeight = 45;
+        },
+        csdnChangeOut() {
+            this.flag = false;
+            this.sizeFlag = false;
+            this.csdnIconHeight = 35;
+        },
+        toolBoxChangeIn() {
+            this.sizeFlag = true;
+            this.toolBoxIconHeight = 45;
+        },
+        toolBoxChangeOut() {
+            this.flag = false;
+            this.sizeFlag = false;
+            this.toolBoxIconHeight = 35;
+        },
+        openGithub() {
+            window.open("https://github.com/swhmonster", "_blank")
+        },
+        openCsdn() {
+            window.open("https://blog.csdn.net/Soul_Programmer_Swh", "_blank")
+        },
+        openToolBox() {
+            window.open("https://www.waltersun.cn/subsys/", "_blank")
         }
     }
 }
