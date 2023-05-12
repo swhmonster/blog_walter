@@ -93,7 +93,7 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: '什么是区块链', path: '/documents/blockchain/blockchain-bitcoins'}
+                        {title: 'What is blockchain', path: '/documents/blockchain/blockchain-bitcoins'}
                     ]
                 }, {
                     title: 'Java',
@@ -101,31 +101,31 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: '阿里巴巴Java开发手册终极版v1.3.0', path: '/documents/java/alibaba-javadevelop-final-v1.3.0'},
-                        {title: 'Spring-IOC的bean加载', path: '/documents/java/spring-iocfindbeans'},
-                        {title: 'Spring-为什么Spring4.0提倡使用构造函数注入方式？', path: '/documents/java/spring-ioc'},
-                        {title: 'Spring-设计模式在Spring中的应用', path: '/documents/java/spring-desingpartern'},
-                        {title: 'Spring Boot 的价值', path: '/documents/java/spring-TheValueOfSpringBoot'},
-                        {title: 'Spring Boot 启动流程简析', path: '/documents/java/springboot-start'},
-                        {title: 'Spring Boot 配置属性设置优先级', path: '/documents/java/springboot-profilepriority'},
+                        {title: 'Spring IOC\'s bean loading', path: '/documents/java/spring-iocfindbeans'},
+                        {title: 'Spring-Why does Spring 4.0 advocate using constructor injection?', path: '/documents/java/spring-ioc'},
+                        {title: 'Spring-Application of Design Patterns in Spring', path: '/documents/java/spring-desingpartern'},
+                        {title: 'The Value of Spring Boot', path: '/documents/java/spring-TheValueOfSpringBoot'},
+                        {title: 'A Brief Analysis of the Spring Boot Startup Process', path: '/documents/java/springboot-start'},
+                        {title: 'Setting Priority for Spring Boot Configuration Properties', path: '/documents/java/springboot-profilepriority'},
                         {title: 'Effective Java', path: '/documents/java/java-effectivejava'},
-                        {title: 'Java多线程编程之同步锁1', path: '/documents/java/java-synchronized1'},
-                        {title: 'Java多线程编程之同步锁2', path: '/documents/java/java-synchronized2'},
-                        {title: 'Java多线程编程之AQS', path: '/documents/java/java-aqs'},
-                        {title: 'Java-Instrumentation 原理', path: '/documents/java/java-Instrumentation'},
-                        {title: 'Java-基础故障处理工具', path: '/documents/java/java-jdkcmdtool'},
-                        {title: 'Java-jstack线程分析', path: '/documents/java/jstack'},
-                        {title: 'Java-jconsole远程监控', path: '/documents/java/java-jconsole'},
-                        {title: 'Java-HashMap的设计与优化', path: '/documents/java/java-hashmap'},
-                        {title: 'Java-调试体系', path: '/documents/java/java-debug'},
-                        {title: 'Java-io模型', path: '/documents/java/io'},
+                        {title: 'Synchronized Lock for Java Multithreaded Programming 1', path: '/documents/java/java-synchronized1'},
+                        {title: 'Synchronized Lock for Java Multithreaded Programming 2', path: '/documents/java/java-synchronized2'},
+                        {title: 'AQS for Java Multithreaded Programming', path: '/documents/java/java-aqs'},
+                        {title: 'Principles of Java Instrumentation', path: '/documents/java/java-Instrumentation'},
+                        {title: 'Java-Basic fault handling tools', path: '/documents/java/java-jdkcmdtool'},
+                        {title: 'Java-JStack Thread Analysis', path: '/documents/java/jstack'},
+                        {title: 'Java-Jconsole remote monitoring', path: '/documents/java/java-jconsole'},
+                        {title: 'Java-Design and Optimization of HashMap', path: '/documents/java/java-hashmap'},
+                        {title: 'Java-Debugging system', path: '/documents/java/java-debug'},
+                        {title: 'Java-IO model', path: '/documents/java/io'},
                         {title: 'Java-ZGC', path: '/documents/java/java-zgc'},
-                        {title: 'Java-G1参数介绍和调优', path: '/documents/java/java-g1gc'},
-                        {title: 'Java-jdk8 hashmap加入了红黑树', path: '/documents/java/java-jdk8hashmap'},
-                        {title: 'Java-jdk8 lambda表达式原理', path: '/documents/java/java-lambdaprinciple'},
-                        {title: 'Java-jdk9 新特性', path: '/documents/java/java-java9'},
-                        {title: 'Java-jdk11 新特性', path: '/documents/java/java-java11'},
-                        {title: 'mybatis-常用工具类', path: '/documents/java/mybatis-commontools'}
+                        {title: 'Java-G1 parameter introduction and tuning', path: '/documents/java/java-g1gc'},
+                        {title: 'Java-Jdk8 hashmap added red and black trees', path: '/documents/java/java-jdk8hashmap'},
+                        {title: 'Java-Principle of jdk8 lambda expression', path: '/documents/java/java-lambdaprinciple'},
+                        {title: 'Java-New features of jdk9', path: '/documents/java/java-java9'},
+                        {title: 'Java-New features of jdk11', path: '/documents/java/java-java11'},
+                        {title: 'Mybatis-Common Tool Class', path: '/documents/java/mybatis-commontools'},
+                        {title: 'Alibaba Java Development Manual Ultimate Edition', path: '/documents/java/alibaba-javadevelop-final-v1.3.0'}
                     ]
                 }, {
                     title: 'Python',
@@ -405,7 +405,6 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: '阿里巴巴Java开发手册终极版v1.3.0', path: '/zh/documents/java/alibaba-javadevelop-final-v1.3.0'},
                         {title: 'Spring-IOC的bean加载', path: '/zh/documents/java/spring-iocfindbeans'},
                         {title: 'Spring-为什么Spring4.0提倡使用构造函数注入方式？', path: '/zh/documents/java/spring-ioc'},
                         {title: 'Spring-设计模式在Spring中的应用', path: '/zh/documents/java/spring-desingpartern'},
@@ -429,7 +428,8 @@ module.exports = {
                         {title: 'Java-jdk8 lambda表达式原理', path: '/zh/documents/java/java-lambdaprinciple'},
                         {title: 'Java-jdk9 新特性', path: '/zh/documents/java/java-java9'},
                         {title: 'Java-jdk11 新特性', path: '/zh/documents/java/java-java11'},
-                        {title: 'mybatis-常用工具类', path: '/zh/documents/java/mybatis-commontools'}
+                        {title: 'mybatis-常用工具类', path: '/zh/documents/java/mybatis-commontools'},
+                        {title: '阿里巴巴Java开发手册终极版v1.3.0', path: '/zh/documents/java/alibaba-javadevelop-final-v1.3.0'}
                     ]
                 }, {
                     title: 'Python',
