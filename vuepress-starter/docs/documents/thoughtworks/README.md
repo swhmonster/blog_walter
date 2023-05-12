@@ -1,4 +1,4 @@
 # Advanced Technology
-推荐一个声誉很好的软件开发咨询公司，会周期性的发布关于新技术、语言和工具的报告——技术雷达。
+Recommend a reputable software development consulting company that periodically publishes reports on new technologies, languages, and tools - Technical Radar.
 
-[官网地址](https://www.thoughtworks.com/)
+[official website](https://www.thoughtworks.com/)

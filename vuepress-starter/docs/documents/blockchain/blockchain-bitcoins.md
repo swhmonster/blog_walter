@@ -1,18 +1,18 @@
-# 什么是区块链
-## 从比特币了解区块链
-**先讲一个故事**
-从前，有个古老的村落，里面住着一群古老的村民，这个村庄没有银行为大家存钱、记账。没有一个让所有村民都信赖的村长来维护和记录村民之间的账务往来，也就是没有任何中间机构或个人来记账。于是，村民想出一个不需要中间机构或个人，而是大家一起记账的方法。
+# What is blockchain
+## Understanding Blockchain from Bitcoin
+**Let's start with a story**
+Once upon a time, there was an ancient village where a group of ancient villagers lived. There was no bank in this village to save money or keep accounts for everyone. There is no village head who can be trusted by all villagers to maintain and record the financial transactions between villagers, that is, there are no intermediary institutions or individuals to keep accounts. So, the villagers came up with a method of keeping accounts together without the need for intermediary institutions or individuals.
 
-比如，张三要给李四1 000块钱。张三在村里大吼一声：“大家注意了，我张三给李四转了1 000块钱。”附近的村民听到了之后做两件事：（1）通过声音判断这是张三喊的，而不是别人冒名张三喊的，从而防止别人去花张三的钱；（2）检查张三是否有足够的钱，每个村民都有个小账本记录了各个村民有多少钱，当确认张三真的有1 000块钱后，每个村民都会在自己的小账本记录：“××××年×月×日，张三转给李四1 000块钱。”除此之外，这些村民口口相传，把张三转账的事情告诉了十里八村，当所有人都知道转账的事情后，大家就能够共同证明“张三转给李四1 000块钱”。这样，一个不需要村长（中心节点）却能让所有村民都能达成一致的记账系统诞生了。这个记账系统就可以类比为我们今天常说的比特币系统。
+For example, Zhang San needs to give Li Si 1000 yuan. Zhang San shouted loudly in the village, "Attention everyone, I transferred 1000 yuan to Li Si from Zhang San." The nearby villagers heard this and did two things: (1) Judging by the sound that it was Zhang San shouting, not someone else pretending to be Zhang San shouting, to prevent others from spending Zhang San's money; (2) Check if Zhang San has enough money. Each villager has a small ledger that records how much money each villager has. After confirming that Zhang San really has 1000 yuan, each villager will record it in their own ledger:“ ×××× year × month × On the day, Zhang San transferred 1000 yuan to Li Si In addition, these villagers passed the word of mouth and told Shiliba Village about Zhang San's transfer. When everyone knew about the transfer, they could collectively prove that "Zhang San transferred 1000 yuan to Li Si". In this way, a bookkeeping system that does not require a village head (central node) but allows all villagers to reach an agreement was born. This accounting system can be likened to the Bitcoin system we often refer to today.
 
-故事到此并未结束，由此引出了三个值得思考的问题。
-1. 记的账在后面会不会被篡改？
-2. 村民有什么动力帮别人记账？
-3. 这么多人记账，万一记的不一致岂不是坏了，以谁记的为准？
+The story does not end here, which raises three questions worth considering.
+1. Will the recorded accounts be tampered with later?
+2. What motivates villagers to help others keep accounts?
+3. With so many people keeping accounts, if the records are inconsistent, wouldn't it be bad? Who records them?
 
-比特币系统巧妙地解决了这三个问题。
-- 比特币采用两种策略保证账本不可篡改：①人人记账。人人手上都维护一本账本，这样即使某个人改了自己的账本，他也无权修改其他村民手上的账本，修改自己的账本相当于“掩耳盗铃”，别人是不会认可的。②采用“区块＋链”的特殊账本结构。在这种账本结构中，每一个区块保存着某段时间内所发生的交易，这些区块通过链式结构连接在一起，形成了一个记录全部交易的完整账本。如果对区块内容进行了修改就会破坏整个区块链的链式结构，导致链条断了，从而很容易被检测到，这两个策略保证了从全局来看整个账本是不可篡改的。
-- 前面一条中提到了人人参与记账，大家肯定会问“凭啥要我帮别人记账呢”。这就涉及比特币系统中的激励机制。参与记账的村民，被称为“矿工”。这些矿工中，首个记账被认可的人：①将获得一笔奖励，这笔奖励就是若干个比特币，这也是比特币发行的唯一来源，这种奖励措施使众多矿工积极参加记账；②谁在某一块账本被认可，其他人都会分别拷贝这一块账本，从而保证所有人维护的账本是完全一致的。这两点保证了区块链的自动安全运行。
-- 既然有了激励，大家就会争抢着记账并努力让自己的记账被认可，怎么确定以谁记的为准呢？为了能够确定以谁记的账为准，村民们想到了一个公平的办法：对每一块账本（类比为我们现实账本上的一页），他们从题库中找了一道难题，让所有参与记账的“矿工”都去破解这道难题，谁若最先破解了，该页／块就以他记的账为准。这个破解难题的过程，就被称为“挖矿”，也即工作量证明的过程。这里需要说明的是，这个难题的解题过程需要不断地尝试，较为困难，但是找到答案发给别人后，别人是很容易验证的。
-  
-因此，比特币通过“区块＋链”的分布式账本保障了交易的不可篡改，通过发放比特币的激励措施激励了“矿工”的参与，通过计算难题（矿工挖矿）解决了记账一致性的问题。这样，完美地形成了一个不依赖任何中间人即可完成记账的自动运行系统。如图1.9所示，这其中具有“区块＋链”不可篡改账本、多方参与、结果共识的技术，就是比特币背后的区块链技术。
+The Bitcoin system cleverly solves these three problems.
+- Bitcoin adopts two strategies to ensure that the ledger cannot be tampered with: ① Everyone keeps accounts. Everyone maintains an account book, so even if someone changes their own account book, they have no right to modify the accounts of other villagers. Modifying their own account book is equivalent to "stealing the bell" and others will not approve Adopting a special ledger structure of "block+chain". In this ledger structure, each block stores the transactions occurred in a certain period of time. These blocks are connected together through a chain structural join to form a complete ledger recording all transactions. If the block content is modified, it will disrupt the chain structure of the entire blockchain, causing the chain to break, making it easy to detect. These two strategies ensure that the entire ledger is tamperproof from a global perspective.
+- The previous article mentioned that everyone participates in bookkeeping, and people will definitely ask, 'Why should I help others with bookkeeping?'. This involves the incentive mechanism in the Bitcoin system. The villagers who participate in accounting are called "miners". Among these miners, the first person whose bookkeeping is recognized: ① will receive a reward, which is a number of Bitcoins, which is also the only source of Bitcoin issuance. This reward measure enables many miners to actively participate in bookkeeping; ② Whoever is recognized in a certain ledger will be copied separately by others to ensure that the ledger maintained by everyone is completely consistent. These two points ensure the automatic and safe operation of blockchain.
+- Since there is an incentive, everyone will compete for bookkeeping and strive to make their bookkeeping recognized. How can we determine who will take the bookkeeping as the standard? In order to determine who recorded the account as the standard, the villagers came up with a fair solution: for each piece of account book (similar to a page on our actual account book), they found a difficult problem from the question bank and asked all the "miners" involved in the accounting to solve this problem. If anyone first solves the problem, the page/block will be based on the account they recorded. This process of solving difficult problems is called "mining", that is, the process of proof-of-work. It should be noted that the process of solving this difficult problem requires constant experimentation and is relatively difficult, but once the answer is found and sent to others, it is easy for them to verify.
+
+Therefore, Bitcoin ensures the immutability of transactions through the distributed ledger of "blockchain", incentivizes the participation of "miners" through the issuance of Bitcoin, and solves the problem of accounting consistency through computational difficulties (miners mining). In this way, an automated system that can complete bookkeeping without relying on any intermediaries has been perfectly formed. As shown in Figure 1.9, the blockchain technology behind Bitcoin is characterized by its "blockchain" tamper proof ledger, multi-party participation, and consensus results.
