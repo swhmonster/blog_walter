@@ -1,13 +1,13 @@
 # JavaEE开发相关
-- 阿里巴巴Java开发手册终极版v1.3.0
-- java开发基础
-- java开发进阶
-- 设计模式
-    - 创建型模式
-    - 行为型模式
-    - 结构型模式
-    - 函数式编程
-    - 响应式编程
+- Alibaba Java Development Manual Ultimate Edition
+- java development foundations
+- java development advanced
+- Design patterns
+    - Creation mode
+    - Behavioral patterns
+    - Structural mode
+    - Functional programming
+    - Reactive programming
     - 响应式设计模式
         - Redis基于Reactor模式开发了网络事件处理器
         - Netty整体框架采用Reactor模型
