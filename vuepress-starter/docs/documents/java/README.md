@@ -8,55 +8,55 @@
     - Structural mode
     - Functional programming
     - Reactive programming
-    - 响应式设计模式
-        - Redis基于Reactor模式开发了网络事件处理器
-        - Netty整体框架采用Reactor模型
-        - NIO中非阻塞I/O采用基于Reactor模式的工作方式
-- 开发框架
-    >对于架构选择，业务具有强一致性（如金融行业、电子商务），一般不会采用spring cloud，在某些情况下，spring cloud为了满足高可用，存在一些不一致的情况。对于强一致性业务的架构选择，dubbo是个不错的选择。
+    - Responsive Design Pattern
+        - Redis developed a network event processor based on the Reactor pattern
+        - Netty's overall framework adopts the Reactor model
+        - Non blocking I/O in NIO operates in Reactor mode
+- Development Framework
+    >For architecture selection, the business has strong consistency (such as in the financial industry and e-commerce), and spring cloud is generally not used. In some cases, spring cloud may have some inconsistencies in order to meet high availability requirements. Dubbo is a good choice for architecture selection for strongly consistent business.
     - spring (spring cloud/restful)
-        - spring基础
-        - spring进阶
+        - Spring Foundation
+        - Spring Advanced
     - dubbo (rpc)
-        >参见官方网站<http://dubbo.apache.org/>
-        - 传输层netty
-            - netty的nio，区别于java的nio(解决了空轮询问题)
-            - reactor线程模型
-            - 零拷贝
-            - 内存池（复用缓冲区）
-        - 提供高性能序列化工具支持：Kryo和FST
-- 日常开发、问题排查工具
-    - Java自带工具
-        - 可视化工具
-            - JHSDB：基于服务性代理的调试工具
-            - JConsole：Java 监视与管理控制平台
-            - VisualVm：多合故障处理工具
-            - Java Mission Control：可持续在线监控工具
-        - 命令行工具
-            - jps：虚拟机进程状况工具
-            - jstat：虚拟机统计信息监视工具
-            - jinfo：Java 配置信息工具
-            - jmap：Java 内存映像工具
-            - jhat：Java 虚拟机堆转储快照分析工具
-            - jstack：Java 堆栈跟踪工具
+        >Refer to the official website<http://dubbo.apache.org/>
+        - Transport layer netty
+            - Netty's nio is different from Java's nio (which solves the problem of empty polling)
+            - Reactor Thread Model
+            - Zero-copy
+            - Memory pool (reuse buffer)
+        - Provide high-performance serialization tool support: Kryo and FST
+- Daily development and problem-solving tools
+    - Java comes with tools
+        - Visual Tools
+            - JHSDB: A Debugging Tool Based on Service Proxy
+            - JConsole: Java Monitoring and Management Control Platform
+            - VisualVm: Multi Joint Fault Handling Tool
+            - Java Mission Control: Sustainable online monitoring tool
+        - Command Line Tools
+            - jps: Virtual Machine Process Status Tool
+            - jstat: Virtual Machine Statistics Monitoring Tool
+            - jinfo：Java Configuration Information Tool
+            - jmap：Java Memory Imaging Tool
+            - jhat：Java Virtual Machine heap dump snapshot analysis tool
+            - jstack：Java stack tracing tool
     - JProfiler/Eclipse Memory Analyzer
-        - 内存分析工具
-        - JProfiler功能更强大一些，可集成idea
+        - Memory Analysis Tools
+        - JProfile has more powerful functions and can integrate ideas
     - Arthas
-        - Arthas 是Alibaba开源的Java诊断工具，深受开发者喜爱。
-        - Arthas 用户文档：<https://arthas.gitee.io/index.html>
-        - IDEA 插件，方便命令生成，推荐
+        - Arthas is an open-source Java diagnostic tool on Alibaba that is highly loved by developers.
+        - Arthas User Documentation：<https://arthas.gitee.io/index.html>
+        - IDEA plugin for easy command generation, recommended
     - Brup Suite
-        - 抓包工具
-- 个人学习方法分享
-    >抛开本科专业课学习时期的学习方式，这里分享工作后进阶学习的方法
+        - Packet capturing tool
+- Personal learning methods sharing
+    >Putting aside the learning methods during undergraduate professional courses, here are some methods for advanced learning after work
     
-    - 进阶学习演进：
-        - java基础
-        - 深入理解jvm
-        - java并发编程原理
-        - java并发包剖析
-    - 学习荐书
-        - 《深入理解JVM》周志明
-        - 《Java并发编程原理》汪文君
-        - 《Java并发编程之美》翟陆续、薛宾田
+    - Advanced Learning Evolution：
+        - Fundamentals of Java
+        - Deep understanding of jvm
+        - Principles of Java Concurrent Programming
+        - Analysis of Java and outsourcing
+    - Study Recommendation Letter
+        - Deep Understanding of JVM by Zhou Zhiming
+        - Principles of Java Concurrent Programming "by Wang Wenjun
+        - The Beauty of Java Concurrent Programming "by Zhai Luxu and Xue Bintian
