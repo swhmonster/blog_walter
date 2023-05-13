@@ -1,73 +1,49 @@
-如何解决高并发下I/O瓶颈
-
-什么是 I/O
-
-I/O 是机器获取和交换信息的主要渠道，而流是完成 I/O 操作的主要方式。在计算机中，流是一种信息的转换。流是有序的，因此相对于某一机器或者应用程序而言，我们通常把机器或者应用程序接收外界的信息称为输入流（InputStream），从机器或者应用程序向外输出的信息称为输出流（OutputStream），合称为输入 / 输出流（I/O Streams）。
-
-机器间或程序间在进行信息交换或者数据交换时，总是先将对象或数据转换为某种形式的流，再通过流的传输，到达指定机器或程序后，再将流转换为对象数据。因此，流就可以被看作是一种数据的载体，通过它可以实现数据交换和传输。
-
-Java 的 I/O 操作类在包 java.io 下，其中 InputStream、OutputStream 以及 Reader、Writer 类是 I/O 包中的 4 个基本类，它们分别处理字节流和字符流。如下图所示：
+How to solve the I/O bottleneck under high concurrency
+What is I/O
+I/O is the main channel for machines to obtain and exchange information, and flow is the main way to complete I/O operations. In computers, flow is a type of information transformation. Streams are ordered, so compared to a certain machine or application, we usually refer to the information received by the machine or application as an Input Stream, and the information output from the machine or application is called an Output Stream, collectively known as I/O Streams.
+When exchanging information or data between machines or programs, objects or data are always first converted into some form of stream, and then transmitted through the stream to reach the specified machine or program before being converted into object data. Therefore, a stream can be seen as a carrier of data, through which data exchange and transmission can be achieved.
+Java's I/O operation classes are located in the package java.io, where InputStream, OutputStream, and Reader and Writer classes are the four basic classes in the I/O package that handle byte streams and character streams, respectively. As shown in the following figure:
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200612095230610.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvdWxfUHJvZ3JhbW1lcl9Td2g=,size_16,color_FFFFFF,t_70)
 
-“不管是文件读写还是网络发送接收，信息的最小存储单元都是字节，那为什么 I/O 流操作要分为字节流操作和字符流操作呢？”
-
-我们知道字符到字节必须经过转码，这个过程非常耗时，如果我们不知道编码类型就很容易出现乱码问题。所以 I/O 流提供了一个直接操作字符的接口，方便我们平时对字符进行流操作。下面我们就分别了解下“字节流”和“字符流”。
-
-1. 字节流
-
-InputStream/OutputStream 是字节流的抽象类，这两个抽象类又派生出了若干子类，不同的子类分别处理不同的操作类型。如果是文件的读写操作，就使用 FileInputStream/FileOutputStream；如果是数组的读写操作，就使用 ByteArrayInputStream/ByteArrayOutputStream；如果是普通字符串的读写操作，就使用 BufferedInputStream/BufferedOutputStream。具体内容如下图所示：
+Whether it's file read/write or network send/receive, the minimum storage unit for information is bytes. So why should I/O stream operations be divided into byte stream operations and character stream operations
+We know that characters must undergo transcoding from byte to byte, which is a very time-consuming process. If we do not know the encoding type, it is easy to encounter garbled code problems. So the I/O stream provides a direct interface for manipulating characters, making it convenient for us to stream characters in our daily lives. Let's take a look at "byte stream" and "character stream" respectively.
+1. Bytestream
+   InputStream/OutputStream is an abstract class of byte streams, which have derived several subclasses that handle different types of operations. If it is a file read and write operation, use FileInputStream/FileOutputStream; If it is an array read and write operation, use ByteArrayInputStream/ByteArrayOutputStream; If it is a read and write operation of a regular string, use BufferedInputStream/BufferedOutputStream. The specific content is shown in the following figure:
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200612095238437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvdWxfUHJvZ3JhbW1lcl9Td2g=,size_16,color_FFFFFF,t_70)
-2. 字符流
-
-Reader/Writer 是字符流的抽象类，这两个抽象类也派生出了若干子类，不同的子类分别处理不同的操作类型，具体内容如下图所示：
+2. Character stream
+   
+Reader/Writer is an abstract class of character streams, and these two abstract classes also derive several subclasses. Different subclasses handle different operation types, as shown in the following figure:
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200612095245945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvdWxfUHJvZ3JhbW1lcl9Td2g=,size_16,color_FFFFFF,t_70)
 
-传统 I/O 的性能问题
-
-我们知道，I/O 操作分为磁盘 I/O 操作和网络 I/O 操作。前者是从磁盘中读取数据源输入到内存中，之后将读取的信息持久化输出在物理磁盘上；后者是从网络中读取信息输入到内存，最终将信息输出到网络中。但不管是磁盘 I/O 还是网络 I/O，在传统 I/O 中都存在严重的性能问题。
-
-1.多次内存复制
-在传统 I/O 中，我们可以通过 InputStream 从源数据中读取数据流输入到缓冲区里，通过 OutputStream 将数据输出到外部设备（包括磁盘、网络）。你可以先看下输入操作在操作系统中的具体流程，如下图所示：
+Performance issues with traditional I/O
+We know that I/O operations are divided into disk I/O operations and network I/O operations. The former reads the data source from the disk and inputs it into the memory, and then persistence outputs the read information to the physical disk; The latter reads information from the network and inputs it into memory, ultimately outputting the information to the network. But whether it's disk I/O or network I/O, there are serious performance issues in traditional I/O.
+1. Multiple memory copies
+   In traditional I/O, we can read the data stream from the source data through InputStream and input it into a buffer, and output the data to external devices (including disks and networks) through OutputStream. You can first take a look at the specific process of input operations in the operating system, as shown in the following figure:
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200612095251412.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvdWxfUHJvZ3JhbW1lcl9Td2g=,size_16,color_FFFFFF,t_70)
-JVM 会发出 read() 系统调用，并通过 read 系统调用向内核发起读请求；
-内核向硬件发送读指令，并等待读就绪；
-内核把将要读取的数据复制到指向的内核缓存中；
-操作系统内核将数据复制到用户空间缓冲区，然后 read 系统调用返回。
-
-在这个过程中，数据先从外部设备复制到内核空间，再从内核空间复制到用户空间，这就发生了两次内存复制操作。这种操作会导致不必要的数据拷贝和上下文切换，从而降低 I/O 的性能。
-
-2. 阻塞
-
-在传统 I/O 中，InputStream 的 read() 是一个 while 循环操作，它会一直等待数据读取，直到数据就绪才会返回。这就意味着如果没有数据就绪，这个读取操作将会一直被挂起，用户线程将会处于阻塞状态。
-
-在少量连接请求的情况下，使用这种方式没有问题，响应速度也很高。但在发生大量连接请求时，就需要创建大量监听线程，这时如果线程没有数据就绪就会被挂起，然后进入阻塞状态。一旦发生线程阻塞，这些线程将会不断地抢夺 CPU 资源，从而导致大量的 CPU 上下文切换，增加系统的性能开销。
-
-如何优化 I/O 操作
-
-面对以上两个性能问题，不仅编程语言对此做了优化，各个操作系统也进一步优化了 I/O。JDK1.4 发布了 java.nio 包（new I/O 的缩写），NIO 的发布优化了内存复制以及阻塞导致的严重性能问题。JDK1.7 又发布了 NIO2，提出了从操作系统层面实现的异步 I/O。下面我们就来了解下具体的优化实现。
-
-1. 使用缓冲区优化读写流操作
-
-在传统 I/O 中，提供了基于流的 I/O 实现，即 InputStream 和 OutputStream，这种基于流的实现以字节为单位处理数据。
-
-NIO 与传统 I/O 不同，它是基于块（Block）的，它以块为基本单位处理数据。在 NIO 中，最为重要的两个组件是缓冲区（Buffer）和通道（Channel）。Buffer 是一块连续的内存块，是 NIO 读写数据的中转地。Channel 表示缓冲数据的源头或者目的地，它用于读取缓冲或者写入数据，是访问缓冲的接口。
-
-传统 I/O 和 NIO 的最大区别就是传统 I/O 是面向流，NIO 是面向 Buffer。Buffer 可以将文件一次性读入内存再做后续处理，而传统的方式是边读文件边处理数据。虽然传统 I/O 后面也使用了缓冲块，例如 BufferedInputStream，但仍然不能和 NIO 相媲美。使用 NIO 替代传统 I/O 操作，可以提升系统的整体性能，效果立竿见影。
-
-2. 使用 DirectBuffer 减少内存复制
-
-NIO 的 Buffer 除了做了缓冲块优化之外，还提供了一个可以直接访问物理内存的类 DirectBuffer。普通的 Buffer 分配的是 JVM 堆内存，而 DirectBuffer 是直接分配物理内存 (非堆内存)。
-
-我们知道数据要输出到外部设备，必须先从用户空间复制到内核空间，再复制到输出设备，而在 Java 中，在用户空间中又存在一个拷贝，那就是从 Java 堆内存中拷贝到临时的直接内存中，通过临时的直接内存拷贝到内存空间中去。此时的直接内存和堆内存都是属于用户空间。
-
+- The JVM will issue a read() system call and initiate a read request to the kernel through the read system call;
+- The kernel sends read instructions to the hardware and waits for the read to be ready;
+- The kernel copies the data to be read into the pointed kernel cache;
+- The operating system kernel copies the data to the user space buffer, and then the read system call returns.
+   In this process, the data is copied from the external device to the kernel space first, and then from the kernel space to the user space, which results in two memory copying operations. This operation can lead to unnecessary data copying and context switching, thereby reducing I/O performance.
+2. Blockage
+   In traditional I/O, the read() of InputStream is a while loop operation that waits for data to be read until it is ready before returning. This means that if there is no data ready, the read operation will remain suspended and the user thread will be in a blocked state.
+   In the case of a small number of connection requests, using this method is not a problem and the response speed is also very high. But when a large number of connection requests occur, it is necessary to create a large number of listening threads. At this time, if the thread is not ready for data, it will be suspended and enter a blocking state. Once thread blockages occur, these threads will continuously grab CPU resources, leading to a large number of CPU context switches and increasing system performance overhead.
+   How to optimize I/O operations
+   Faced with the above two performance issues, not only has the programming language been optimized, but various operating systems have also further optimized I/O. JDK1.4 released the java. nio package (abbreviation for new I/O), and the release of NIO optimized for severe performance issues caused by memory replication and blocking. JDK1.7 also released NIO2, proposing asynchronous I/O implementation at the operating system level. Let's take a look at the specific optimization implementation below.
+1. Optimize read/write stream operations using buffers
+   In traditional I/O, stream based I/O implementations are provided, namely InputStream and OutputStream, which process data in bytes.
+   NIO is different from traditional I/O in that it is block based and processes data on a block basis. The two most important components in NIO are the buffer and channel. A buffer is a contiguous memory block that serves as a transit point for NIO to read and write data. Channel represents the source or destination of buffered data, which is used to read buffered or write data, and is the interface for accessing buffered data.
+   The biggest difference between traditional I/O and NIO is that traditional I/O is stream oriented, while NIO is buffer oriented. Buffer can read files into memory at once for subsequent processing, while the traditional method is to process data while reading files. Although traditional I/O also uses buffer blocks, such as BufferedInputStream, it still cannot be compared to NIO. Replacing traditional I/O operations with NIO can improve the overall performance of the system and achieve immediate results.
+2. Use DirectBuffer to reduce memory replication
+   In addition to optimizing buffer blocks, NIO's buffer also provides a class called DirectBuffer that can directly access physical memory. A regular buffer allocates JVM heap memory, while a DirectBuffer directly allocates physical memory (non heap memory).
+   We know that data must be copied from the user space to the kernel space and then to the output device before being output to external devices. In Java, there is another copy in the user space, that is, it is copied from the Java heap memory to the temporary direct memory, and then to the memory space through the temporary direct memory. At this time, both direct memory and heap memory belong to user space.
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200612095302160.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvdWxfUHJvZ3JhbW1lcl9Td2g=,size_16,color_FFFFFF,t_70)
-你肯定会在想，为什么 Java 需要通过一个临时的非堆内存来复制数据呢？如果单纯使用 Java 堆内存进行数据拷贝，当拷贝的数据量比较大的情况下，Java 堆的 GC 压力会比较大，而使用非堆内存可以减低 GC 的压力。
+You must be thinking, why does Java need to copy data through a temporary non heap memory? If you simply use Java heap memory for data copying, when the amount of copied data is relatively large, the GC pressure of the Java heap will be relatively high, while using non heap memory can reduce the GC pressure.
+DirectBuffer simplifies the process of saving data directly to non heap memory, thereby reducing one data copy. The following is the write method in the IOUtil. java class in the JDK source code:
 
-DirectBuffer 则是直接将步骤简化为数据直接保存到非堆内存，从而减少了一次数据拷贝。以下是 JDK 源码中 IOUtil.java 类中的 write 方法：
-
-
+```java
         if (src instanceof DirectBuffer)
             return writeFromNativeBuffer(fd, src, position, nd);
 
@@ -81,60 +57,35 @@ DirectBuffer 则是直接将步骤简化为数据直接保存到非堆内存，�
             bb.put(src);
             bb.flip();
         // ...............
-
-这里拓展一点，由于 DirectBuffer 申请的是非 JVM 的物理内存，所以创建和销毁的代价很高。DirectBuffer 申请的内存并不是直接由 JVM 负责垃圾回收，但在 DirectBuffer 包装类被回收时，会通过 Java Reference 机制来释放该内存块。
-
-DirectBuffer 只优化了用户空间内部的拷贝，而之前我们是说优化用户空间和内核空间的拷贝，那 Java 的 NIO 中是否能做到减少用户空间和内核空间的拷贝优化呢？
-
-答案是可以的，DirectBuffer 是通过 unsafe.allocateMemory(size) 方法分配内存，也就是基于本地类 Unsafe 类调用 native 方法进行内存分配的。而在 NIO 中，还存在另外一个 Buffer 类：MappedByteBuffer，跟 DirectBuffer 不同的是，MappedByteBuffer 是通过本地类调用 mmap 进行文件内存映射的，map() 系统调用方法会直接将文件从硬盘拷贝到用户空间，只进行一次数据拷贝，从而减少了传统的 read() 方法从硬盘拷贝到内核空间这一步。
-
-3. 避免阻塞，优化 I/O 操作
-
-NIO 很多人也称之为 Non-block I/O，即非阻塞 I/O，因为这样叫，更能体现它的特点。为什么这么说呢？
-
-传统的 I/O 即使使用了缓冲块，依然存在阻塞问题。由于线程池线程数量有限，一旦发生大量并发请求，超过最大数量的线程就只能等待，直到线程池中有空闲的线程可以被复用。而对 Socket 的输入流进行读取时，读取流会一直阻塞，直到发生以下三种情况的任意一种才会解除阻塞：
-
-有数据可读；
-连接释放；
-空指针或 I/O 异常。
-
-阻塞问题，就是传统 I/O 最大的弊端。NIO 发布后，通道和多路复用器这两个基本组件实现了 NIO 的非阻塞，下面我们就一起来了解下这两个组件的优化原理。
-
-通道（Channel）
-前面我们讨论过，传统 I/O 的数据读取和写入是从用户空间到内核空间来回复制，而内核空间的数据是通过操作系统层面的 I/O 接口从磁盘读取或写入。
-
-最开始，在应用程序调用操作系统 I/O 接口时，是由 CPU 完成分配，这种方式最大的问题是“发生大量 I/O 请求时，非常消耗 CPU“；之后，操作系统引入了 DMA（直接存储器存储），内核空间与磁盘之间的存取完全由 DMA 负责，但这种方式依然需要向 CPU 申请权限，且需要借助 DMA 总线来完成数据的复制操作，如果 DMA 总线过多，就会造成总线冲突。
-
-通道的出现解决了以上问题，Channel 有自己的处理器，可以完成内核空间和磁盘之间的 I/O 操作。在 NIO 中，我们读取和写入数据都要通过 Channel，由于 Channel 是双向的，所以读、写可以同时进行。
-
-多路复用器（Selector）
-
-Selector 是 Java NIO 编程的基础。用于检查一个或多个 NIO Channel 的状态是否处于可读、可写。
-
-Selector 是基于事件驱动实现的，我们可以在 Selector 中注册 accpet、read 监听事件，Selector 会不断轮询注册在其上的 Channel，如果某个 Channel 上面发生监听事件，这个Channel 就处于就绪状态，然后进行 I/O 操作。
-
-一个线程使用一个 Selector，通过轮询的方式，可以监听多个 Channel 上的事件。我们可以在注册 Channel 时设置该通道为非阻塞，当 Channel 上没有 I/O 操作时，该线程就不会一直等待了，而是会不断轮询所有 Channel，从而避免发生阻塞。
-
-目前操作系统的 I/O 多路复用机制都使用了 epoll，相比传统的 select 机制，epoll 没有最大连接句柄 1024 的限制。所以 Selector 在理论上可以轮询成千上万的客户端。
-
-下面我用一个生活化的场景来举例，看完你就更清楚 Channel 和 Selector 在非阻塞 I/O 中承担什么角色，发挥什么作用了。
-
-我们可以把监听多个 I/O 连接请求比作一个火车站的进站口。以前检票只能让搭乘就近一趟发车的旅客提前进站，而且只有一个检票员，这时如果有其他车次的旅客要进站，就只能在站口排队。这就相当于最早没有实现线程池的 I/O 操作。
-
-后来火车站升级了，多了几个检票入口，允许不同车次的旅客从各自对应的检票入口进站。这就相当于用多线程创建了多个监听线程，同时监听各个客户端的 I/O 请求。
-
-最后火车站进行了升级改造，可以容纳更多旅客了，每个车次载客更多了，而且车次也安排合理，乘客不再扎堆排队，可以从一个大的统一的检票口进站了，这一个检票口可以同时检票多个车次。这个大的检票口就相当于 Selector，车次就相当于 Channel，旅客就相当于 I/O 流。
-
-总结
-
-Java 的传统 I/O 开始是基于 InputStream 和 OutputStream 两个操作流实现的，这种流操作是以字节为单位，如果在高并发、大数据场景中，很容易导致阻塞，因此这种操作的性能是非常差的。还有，输出数据从用户空间复制到内核空间，再复制到输出设备，这样的操作会增加系统的性能开销。
-
-传统 I/O 后来使用了 Buffer 优化了“阻塞”这个性能问题，以缓冲块作为最小单位，但相比整体性能来说依然不尽人意。
-
-于是 NIO 发布，它是基于缓冲块为单位的流操作，在 Buffer 的基础上，新增了两个组件“管道和多路复用器”，实现了非阻塞 I/O，NIO 适用于发生大量 I/O 连接请求的场景，这三个组件共同提升了 I/O 的整体性能。
-
-
-你可以在Github上通过几个简单的例子来实践
+```
+Expanding here, as DirectBuffer requests non JVM physical memory, the cost of creation and destruction is high. The memory requested by DirectBuffer is not directly garbage collected by the JVM, but when the DirectBuffer wrapper class is collected, the memory block is released through the Java Reference mechanism.
+DirectBuffer only optimizes the internal copy of user space. Previously, we said to optimize the copy of user space and kernel space. Can Java's NIO reduce the copy optimization of user space and kernel space?
+The answer is yes, DirectBuffer allocates memory through the unsafe. allocateMemory (size) method, which is based on the local class Unsafe calling the native method for memory allocation. In NIO, there is another buffer class: MappedByteBuffer. Unlike DirectBuffer, MappedByteBuffer calls mmap through the local class to map the file memory. The map() system call method will directly copy the file from the hard disk to the user space, and only copy the data once, thus reducing the traditional read() method to copy the file from the hard disk to the kernel space.
+3. Avoid blocking and optimize I/O operations
+   Many people also refer to NIO as Non block I/O, which is non blocking I/O, because it better reflects its characteristics. Why do you say that?
+   Even with the use of buffer blocks, traditional I/O still has blocking issues. Because the number of threads in the thread pool is limited, once a large number of concurrent requests occur, threads exceeding the maximum number can only wait until there are idle threads in the thread pool that can be reused. When reading the input stream of the socket, the read stream will remain blocked until any of the following three situations occur:
+   Data readable;
+   Connection release;
+   Empty pointer or I/O abnormality.
+   Blocking is the biggest drawback of traditional I/O. After the release of NIO, the two basic components of channel and multiplexer have achieved non blocking of NIO. Let's take a look at the optimization principles of these two components together.
+   Channel
+   As we discussed earlier, data reading and writing in traditional I/O is copied back and forth from user space to kernel space, while data in kernel space is read or written from disk through the I/O interface at the operating system level.
+   At the beginning, when an application program calls the operating system I/O interface, the allocation is completed by the CPU, The biggest problem with this method is that "when a large number of I/O requests occur, it consumes a lot of CPU"; later, the operating system introduced DMA (direct memory storage), which is entirely responsible for accessing kernel space and disks. However, this method still requires permission from the CPU and requires the use of DMA buses to complete data replication operations. If there are too many DMA buses, it will cause bus conflicts.
+   The emergence of channels solves the above problems. Channels have their own processors that can complete I/O operations between kernel space and disks. In NIO, we read and write data through a channel, which is bidirectional, so both reads and writes can occur simultaneously.
+   Multiplexer
+   The selector is the foundation of Java NIO programming. Used to check whether the state of one or more NIO channels is readable and writable.
+   The selector is based on event driven implementation. We can register accept and read listening events in the selector, and the selector will continuously poll the registered channels. If a listening event occurs on a certain channel, the channel will be in a ready state and then perform I/O operations.
+   A thread using a selector can listen to events on multiple channels through polling. We can set the channel to non blocking when registering it. When there are no I/O operations on the channel, the thread will not wait continuously, but will continuously poll all channels to avoid blocking.
+   At present, the I/O multiplexing mechanism of the operating system uses epoll. Compared to the traditional select mechanism, epoll does not have a maximum connection handle limit of 1024. So in theory, a selector can poll thousands of clients.
+   Below, I will use a real-life scenario as an example. After reading it, you will have a clearer understanding of the roles and roles of Channels and Selectors in non blocking I/O.
+   We can compare listening to multiple I/O connection requests to the entrance of a train station. Previously, ticket checking could only allow passengers taking the nearest train to enter the station in advance, and there was only one ticket inspector. At this time, if passengers from other train numbers wanted to enter the station, they could only queue up at the station entrance. This is equivalent to that I/O operations of the thread pool were not implemented at the earliest.
+   Later, the railway station was upgraded with several additional ticket entrances, allowing passengers of different train numbers to enter the station from their respective ticket entrances. This is equivalent to creating multiple listening threads with multiple threads, while listening to I/O requests from various clients.
+   Finally, the railway station was upgraded and renovated to accommodate more passengers. Each train carried more passengers, and the train schedules were also arranged reasonably. Passengers no longer queue up and can enter the station through a large unified ticket checkpoint, which can simultaneously check tickets for multiple trains. This large ticket checkpoint is equivalent to a selector, a train number is equivalent to a channel, and passengers are equivalent to I/O flow.
+   summary
+   The traditional I/O of Java was initially implemented based on two operation streams, InputStream and OutputStream, which operate in bytes. In high concurrency and big data scenarios, it is easy to cause blocking, so the performance of this operation is very poor. In addition, the output data is copied from the user space to the kernel space and then to the output device, which will increase the performance overhead of the system.
+   Traditional I/O later used Buffers to optimize the performance issue of "blocking", with buffer blocks as the minimum unit, but compared to the overall performance, it is still unsatisfactory.
+   So NIO was released, which is a stream operation based on buffer blocks. On the basis of Buffer, two new components "pipeline and multiplexer" were added to achieve non blocking I/O. NIO is suitable for scenarios where a large number of I/O connection requests occur, and these three components together improve the overall performance of I/O.
+   You can practice it through a few simple examples on Github
 
 
 
