@@ -1,101 +1,100 @@
-# Effective Java
-## 创建和销毁对象
-- 用静态工厂方法代替构造器
-- 遇到多个构造器参数时要考虑使用构建器
-- 用私有构造器或者枚举类型强化 Singleton 属性
-- 通过私有构造器强化不可实例化的能力
-- 优先考虑依赖注入来引入资源
-- 避免创建不必要的对象
-- 清除过期的对象的引用
-- 避免使用终结方法和清除方法
-- try-with-resources 优先于 try-finally
-## 对于所有对象都通用的方法
-- 覆盖 equals 时请遵守通用约定
-- 覆盖 equals 时总要覆盖 hashCode
-- 始终要覆盖 toString
-- 谨慎地覆盖 clone
-- 考虑实现 Comparable 接口
-## 类和接口
-- 使用类和成员的可访问性最小化
-- 要在公有类中使用访问方法而非公有域
-- 使可变性最小化
-- 复合优先于集成
-- 要么设计继承并提供文档说明，要么禁止继承
-- 接口优于抽象类
-- 为后代设计接口
-- 接口只用于定义类型
-- 类层次优于标签类
-- 静态成员类优于非静态成员类
-- 限制源文件为单个顶级类
-## 泛型
-- 请不要使用原生态类型
-- 清除非受检的警告
-- 列表优于数组
-- 优先考虑泛型方法
-- 利用有限制通配符来提升 API 的灵活性
-- 谨慎并用泛型和可变参数
-- 优先考虑类型安全的异构容器
-## 枚举和注解
-- 用 enum 代替 int 常量
-- 用实例域代替序数
-- 用 EnumSet 代替位域
-- 用 EnumMap 代替序数索引
-- 用接口模拟可扩展的枚举
-- 注解优于命名模式
-- 坚持使用 Override 注解
-- 用标记接口定义类型
-## Lambda 和 Stream
-- Lambda 优先于匿名类
-- 方法引用优先于 Lambda
-- 坚持使用标准的函数接口
-- 谨慎使用 Stream
-- 优先选择 Stream 中无副作用的函数
-- Stream 要优先用 Collection 作为返回类型
-- 谨慎使用 Stream 并行
-## 方法
-- 检查参数的有效性
-- 必要时进行保护性拷贝
-- 谨慎设计方法签名
-- 慎用重载
-- 慎用可变参数
-- 返回零长度的数据或者集合，而不是 null
-- 谨慎返回 optional
-- 为所有导出的 API 元素编写文档注释
-## 通用编程
-- 将局部变量的作用域最小化
-- for-each 循环优先于传统的 for 循环
-- 了解和使用类库
-- 如果需要精确的答案，请避免使用 float 和 double
-- 基本类型优于装箱基本类型
-- 如果其他类型更适合，则尽量避免使用字符串
-- 了解字符串连接的性能
-- 通过接口引用对象
-- 接口优于反射机制
-- 谨慎地使用本地方法
-- 谨慎地进行优化
-- 遵守普遍接受的命名惯例
-## 异常
-- 只针对异常的情况才使用异常
-- 对可恢复的情况使用受检异常，对编程错误使用运行时异常
-- 避免不必要地使用受检异常
-- 优先使用标准的异常
-- 抛出与抽象对象对应的异常
-- 每个方法抛出的所有异常都要建立文档
-- 在细节消息中包含失败-捕获信息
-- 努力使失败保持原子性
-- 不要忽略异常
-## 并发
-- 同步访问共享的可变数据
-- 避免过度同步
-- executor、task 和 stream 优先于线程
-- 并发工具优先于 wait 和 notify
-- 线程安全性的文档化
-- 慎用延迟初始化
-- 不要依赖线程调度器
-## 序列化
-- 其他方法优先于 Java 序列化
-- 谨慎地实现 Serializable 接口
-- 考虑使用自定义的序列化形式
-- 保护性地编写 readObject 方法
-- 对于实例控制，枚举类型优先于 readResolve 
-- 考虑用序列化代理代替序列化实例
+## Creating and Destroying Objects
+- Replacing Constructors with Static Factory Method
+- Consider using a builder when encountering multiple constructor parameters
+- Strengthening the Singleton property with private constructors or enumeration types
+- Strengthening non instantiation capabilities through private constructors
+- Prioritize dependency injection to introduce resources
+- Avoid creating unnecessary objects
+- Clear references to expired objects
+- Avoid using termination and cleanup methods
+- Try with resources takes precedence over try finally
+## A method that is common to all objects
+- Please follow the general convention when covering equals
+- Always overwrite hashCode when overriding equals
+- Always overwrite toString
+- Carefully cover the clone
+- Consider implementing the Comparable interface
+## Classes and interfaces
+- Minimize accessibility of classes and members
+- To use access methods in public classes instead of public domains
+- Minimize variability
+- Composite prioritizes integration
+- Either design inheritance and provide documentation, or prohibit inheritance
+- Interface is better than abstract class
+- Design interfaces for future generations
+- Interface is only used to define types
+- Class hierarchy is superior to label classes
+- Static member classes outperform non- static member classes
+- Restrict source files to a single top- level class
+## Generics
+- Please do not use the original ecological type
+- Clear non checked warnings
+- List is better than array
+- Prioritize generic methods
+- Utilizing restricted wildcards to enhance API flexibility
+- Be cautious and use generics and variable parameters
+- Prioritize type safe heterogeneous containers
+## Enumeration and Annotation
+- Replacing the int constant with enum
+- Replacing ordinal numbers with instance fields
+- Replacing Bitfields with EnumSet
+- Replacing ordinal index with EnumMap
+- Simulating Scalable Enumeration with an Interface
+- Annotations are better than naming patterns
+- Persist in using override annotations
+- Defining Types with Markup Interface
+## Lambda and Stream
+- Lambda takes precedence over anonymous classes
+- Method references take precedence over lambda
+- Adhere to using standard function interfaces
+- Use Stream with caution
+- Prioritize selecting functions without side effects in Stream
+- Stream should prioritize using Collection as the return type
+- Use Stream parallelism with caution
+## Method
+- Check the validity of parameters
+- Make protective copies when necessary
+- Prudent Design Method Signature
+- Be cautious when using heavy loads
+- Be cautious in using variable parameters
+- Returns zero length data or collection instead of null
+- Be cautious and return to option
+- Write document comments for all exported API elements
+## Universal programming
+- Minimize the scope of local variables
+- For each loop takes precedence over traditional for loops
+- Understanding and Using Class Libraries
+- If you need precise answers, please avoid using float and double
+- Basic type is better than packing basic type
+- If other types are more suitable, try to avoid using strings as much as possible
+- Understand the performance of string concatenation
+- Referencing objects through interfaces
+- Interface is better than reflection mechanism
+- Use local methods with caution
+- Carefully optimize
+- Adhere to universally accepted naming conventions
+## Abnormal
+- Use exceptions only for exceptional situations
+- Use checked exceptions for recoverable situations and runtime exceptions for programming errors
+- Avoid unnecessary use of detected anomalies
+- Exceptions that prioritize the use of standards
+- Throw an exception corresponding to an abstract object
+- All exceptions thrown by each method must be documented
+- Include failure capture information in detail messages
+- Try to keep failure atomicity
+- Don't ignore exceptions
+## Concurrent
+- Synchronize access to shared variable data
+- Avoid excessive synchronization
+- Executor, task, and stream take precedence over threads
+- Concurrent tools take precedence over wait and notify
+- Documenting Thread Safety
+- Be cautious when using delayed initialization
+- Do not rely on thread schedulers
+## Serialization
+- Other methods take precedence over Java serialization
+- Carefully implement the Serializable interface
+- Consider using a custom serialization form
+- Protectively writing readObject methods
+- For instance control, enumeration types take precedence over readResolve
+- Consider using serialization proxies instead of serialization instances
