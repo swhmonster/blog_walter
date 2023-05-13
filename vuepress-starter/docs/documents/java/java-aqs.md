@@ -1,53 +1,54 @@
-# 抽象同步队列AQS概述
->AQS是锁的底层支持
-## AQS类图
+# Overview of Abstract Synchronization Queue AQS
+>AQS is the underlying support for locks
+## AQS Class Diagram
 
 ![An image](../../asserts/img/AbstractQueuedSynchronizer.png)
 
-由该图可以看到，AQS是一个FIFO的双向队列，其内部通过节点head和tail记录队首和队尾元素，队列元素的类型为Node。其中Node中的thread变量用来存放进入AQS队列里面的线程；Node节点内部的SHARED用来标记该线程是获取共享资源时被阻塞挂起后放入AQS队列的，EXCLUSIVE用来标记线程是获取独占资源时被挂起后放入AQS队列的；waitStatus记录当前线程等待状态，可以为CANCELLED（线程被取消了）、SIGNAL（线程需要被唤醒）、CONDITION（线程在条件队列里面等待）、PROPAGATE（释放共享资源时需要通知其他节点）；prev记录当前节点的前驱节点，next记录当前节点的后继节点。
+From this figure, it can be seen that AQS is a FIFO bidirectional queue, which records the first and last elements of the queue through nodes head and tail. The type of queue element is Node. The thread variable in Node is used to store threads entering the AQS queue; The SHARED inside the Node node is used to mark that the thread was blocked and suspended when obtaining shared resources, and then placed in the AQS queue. EXCLUSIVE is used to mark that the thread was suspended when obtaining exclusive resources and then placed in the AQS queue; WaitStatus records the current thread waiting status, which can be CANCELLED (thread cancelled), SIGNAL (thread needs to be awakened), CONDITION (thread waiting in conditional queue), PROPAGATE (other nodes need to be notified when releasing shared resources); Prev records the predecessor node of the current node, and next records the successor node of the current node.
 
-在AQS中维持了一个单一的状态信息state，可以通过getState、setState、compareAndSetState函数修改其值。对于ReentrantLock的实现来说，state可以用来表示当前线程获取锁的可重入次数；对于读写锁ReentrantReadWriteLock来说，state的高16位表示读状态，也就是获取该读锁的次数，低16位表示获取到写锁的线程的可重入次数；对于semaphore来说，state用来表示当前可用信号的个数；对于CountDownlatch来说，state用来表示计数器当前的值。
+A single state information state is maintained in AQS, and its value can be modified through the getState, setState, and compareAndSetState functions. For the implementation of ReentrantLock, state can be used to represent the number of times the current thread can re-enter the lock; For the read-write lock ReentrantReadWriteLock, the high 16 bits of state represent the read state, which is the number of times the read lock was acquired, and the low 16 bits represent the number of times the thread that acquired the write lock can re-enter; For semaphores, state is used to represent the current number of available signals; For CountDownlatch, state is used to represent the current value of the counter.
 
-AQS有个内部类ConditionObject，用来结合锁实现线程同步。ConditionObject可以直接访问AQS对象内部的变量，比如state状态值和AQS队列。ConditionObject是条件变量，每个条件变量对应一个条件队列（单向链表队列），其用来存放调用条件变量的await方法后被阻塞的线程，如类图所示，这个条件队列的头、尾元素分别为firstWaiter和lastWaiter。
 
-对于AQS来说，线程同步的关键是对状态值state进行操作。根据state是否属于一个线程，操作state的方式分为独占方式和共享方式。在独占方式下获取和释放资源使用的方法为：void acquire（int arg）void acquireInterruptibly（int arg）boolean release（int arg）。
+AQS has an Inner class ConditionObject, which is used to implement thread synchronization in combination with locks. ConditionObject can directly access variables within AQS objects, such as state state values and AQS queues. ConditionObject is a condition variable. Each condition variable corresponds to a condition queue (singly linked list queue), which is used to store the blocked threads after calling the await method of the condition variable. As shown in the class diagram, the header and footer elements of this condition queue are firstWaiter and lastWaiter respectively.
 
-在共享方式下获取和释放资源的方法为：void acquireShared（int arg）void acquireSharedInterruptibly（int arg）boolean releaseShared（int arg）。
+For AQS, the key to thread synchronization is to operate on the state value state. According to whether a state belongs to a thread, the methods of operating a state are divided into exclusive mode and shared mode. The method for obtaining and releasing resources in exclusive mode is: void acquire (int arg) void acquire Interruptible (int arg) boolean release (int arg).
 
-使用独占方式获取的资源是与具体线程绑定的，就是说如果一个线程获取到了资源，就会标记是这个线程获取到了，其他线程再尝试操作state获取资源时会发现当前该资源不是自己持有的，就会在获取失败后被阻塞。比如独占锁ReentrantLock的实现，当一个线程获取了ReentrantLock的锁后，在AQS内部会首先使用CAS操作把state状态值从0变为1，然后设置当前锁的持有者为当前线程，当该线程再次获取锁时发现它就是锁的持有者，则会把状态值从1变为2，也就是设置可重入次数，而当另外一个线程获取锁时发现自己并不是该锁的持有者就会被放入AQS阻塞队列后挂起。
+The method for obtaining and releasing resources in shared mode is: void acquireShared (int arg) void acquireSharedInterruptibly (int arg) boolean releaseShared (int arg).
 
-对应共享方式的资源与具体线程是不相关的，当多个线程去请求资源时通过CAS方式竞争获取资源，当一个线程获取到了资源后，另外一个线程再次去获取时如果当前资源还能满足它的需要，则当前线程只需要使用CAS方式进行获取即可。比如Semaphore信号量，当一个线程通过acquire（）方法获取信号量时，会首先看当前信号量个数是否满足需要，不满足则把当前线程放入阻塞队列，如果满足则通过自旋CAS获取信号量。
+The resource obtained using exclusive method is bound to a specific thread, which means that if a thread obtains a resource, it will be marked as having obtained it. When other threads try to operate the state to obtain the resource, they will find that the current resource is not owned by themselves, and will be blocked after the acquisition fails. For example, in the implementation of exclusive lock ReentrantLock, when a thread acquires the lock of ReentrantLock, it will first use the CAS operation inside AQS to change the state value from 0 to 1, and then set the current lock holder as the current thread. When the thread acquires the lock again and finds that it is the lock holder, it will change the state value from 1 to 2, which is to set the number of reentrances, When another thread obtains a lock and discovers that it is not the holder of the lock, it will be placed in the AQS blocking queue and suspended.
 
-在独占方式下，获取与释放资源的流程如下：
-1. 当一个线程调用acquire（int arg）方法获取独占资源时，会首先使用tryAcquire方法尝试获取资源，具体是设置状态变量state的值，成功则直接返回，失败则将当前线程封装为类型为Node.EXCLUSIVE的Node节点后插入到AQS阻塞队列的尾部，并调用LockSupport.park（this）方法挂起自己。
+The resources corresponding to the sharing method are not related to the specific thread. When multiple threads request resources, they compete through CAS to obtain them. When one thread obtains the resources and another thread obtains them again, if the current resource can still meet its needs, then the frontline process only needs to use CAS to obtain them. For example, Semaphore semaphores, when a thread obtains a semaphore through the acquire () method, it first checks whether the current number of semaphores meets the needs. If it does not, it puts the current thread in the blocking queue. If it does, it obtains the semaphore through spin CAS.
+
+The process of obtaining and releasing resources in exclusive mode is as follows:
+1. When a thread calls the acquire (int arg) method to obtain exclusive resources, it will first use the tryAcquire method to attempt to obtain the resources, specifically by setting the value of the state variable. If successful, it will be returned directly. If unsuccessful, the current thread will be encapsulated as a Node node of type Node.EXCLUSIVE and inserted into the end of the AQS blocking queue, and the LockSupport. park (this) method will be called to suspend itself.
+2. When a thread calls the release (int arg) method, it will try to use the tryRelease operation to release resources. This is to set the value of the state variable, and then call the LockSupport. unpark (thread) method to activate a blocked thread in the AQS queue. The activated thread uses tryAcquire to try and see if the current state variable state value meets its needs. If it does, the thread is activated and continues to run downwards. Otherwise, it will still be placed in the AQS queue and suspended.
    
-2. 当一个线程调用release（int arg）方法时会尝试使用tryRelease操作释放资源，这里是设置状态变量state的值，然后调用LockSupport.unpark（thread）方法激活AQS队列里面被阻塞的一个线程（thread）。被激活的线程则使用tryAcquire尝试，看当前状态变量state的值是否能满足自己的需要，满足则该线程被激活，然后继续向下运行，否则还是会被放入AQS队列并被挂起。
-
-需要注意的是，AQS类并没有提供可用的tryAcquire和tryRelease方法，正如AQS是锁阻塞和同步器的基础框架一样，tryAcquire和tryRelease需要由具体的子类来实现。子类在实现tryAcquire和tryRelease时要根据具体场景使用CAS算法尝试修改state状态值，成功则返回true，否则返回false。子类还需要定义，在调用acquire和release方法时state状态值的增减代表什么含义。
-
-比如继承自AQS实现的独占锁ReentrantLock，定义当status为0时表示锁空闲，为1时表示锁已经被占用。在重写tryAcquire时，在内部需要使用CAS算法查看当前state是否为0，如果为0则使用CAS设置为1，并设置当前锁的持有者为当前线程，而后返回true，如果CAS失败则返回false。
-
-比如继承自AQS实现的独占锁在实现tryRelease时，在内部需要使用CAS算法把当前state的值从1修改为0，并设置当前锁的持有者为null，然后返回true，如果CAS失败则返回false。
-
-在共享方式下，获取与释放资源的流程如下：
-1. 当线程调用acquireShared（int arg）获取共享资源时，会首先使用tryAcquireShared尝试获取资源，具体是设置状态变量state的值，成功则直接返回，失败则将当前线程封装为类型为Node.SHARED的Node节点后插入到AQS阻塞队列的尾部，并使用LockSupport.park（this）方法挂起自己。
-2. 当一个线程调用releaseShared（int arg）时会尝试使用tryReleaseShared操作释放资源，这里是设置状态变量state的值，然后使用LockSupport.unpark（thread）激活AQS队列里面被阻塞的一个线程（thread）。被激活的线程则使用tryReleaseShared查看当前状态变量state的值是否能满足自己的需要，满足则该线程被激活，然后继续向下运行，否则还是会被放入AQS队列并被挂起。
-
-同样需要注意的是，AQS类并没有提供可用的tryAcquireShared和tryReleaseShared方法，正如AQS是锁阻塞和同步器的基础框架一样，tryAcquireShared和tryReleaseShared需要由具体的子类来实现。子类在实现tryAcquireShared和tryReleaseShared时要根据具体场景使用CAS算法尝试修改state状态值，成功则返回true，否则返回false。
-
-比如继承自AQS实现的读写锁ReentrantReadWriteLock里面的读锁在重写tryAcquireShared时，首先查看写锁是否被其他线程持有，如果是则直接返回false，否则使用CAS递增state的高16位（在ReentrantReadWriteLock中，state的高16位为获取读锁的次数）。
-
-比如继承自AQS实现的读写锁ReentrantReadWriteLock里面的读锁在重写tryReleaseShared时，在内部需要使用CAS算法把当前state值的高16位减1，然后返回true，如果CAS失败则返回false。
-
-基于AQS实现的锁除了需要重写上面介绍的方法外，还需要重写isHeldExclusively方法，来判断锁是被当前线程独占还是被共享。
-
-另外，也许你会好奇，独占方式下的void acquire（int arg）和void acquireInterruptibly（int arg），与共享方式下的void acquireShared（int arg）和void acquireSharedInterruptibly（int arg），这两套函数中都有一个带有Interruptibly关键字的函数，那么带这个关键字和不带有什么区别呢？我们来讲讲。
-
-其实不带Interruptibly关键字的方法的意思是不对中断进行响应，也就是线程在调用不带Interruptibly关键字的方法获取资源时或者获取资源失败被挂起时，其他线程中断了该线程，那么该线程不会因为被中断而抛出异常，它还是继续获取资源或者被挂起，也就是说不对中断进行响应，忽略中断。
-
-而带Interruptibly关键字的方法要对中断进行响应，也就是线程在调用带Interruptibly关键字的方法获取资源时或者获取资源失败被挂起时，其他线程中断了该线程，那么该线程会抛出InterruptedException异常而返回。
-
-最后，我们来看看如何维护AQS提供的队列，主要看入队操作。
-- 入队操作：当一个线程获取锁失败后该线程会被转换为Node节点，然后就会使用enq（final Node node）方法将该节点插入到AQS的阻塞队列。
+It should be noted that the AQS class does not provide available tryAcquire and tryRelease methods, just as AQS is the basic framework for lock blocking and synchronizers, tryAcquire and tryRelease need to be implemented by specific subclasses. When subclasses implement tryAcquire and tryRelease, they need to use the CAS algorithm to try to modify the state value based on the specific scenario. If successful, they will return true, otherwise they will return false. Subclasses also need to define what the increase or decrease in state values represent when calling the acquire and release methods.
+   
+For example, the exclusive lock ReentrantLock inherited from AQS implementation defines that when status is 0, the lock is idle, and when status is 1, the lock is already occupied. When rewriting tryAcquire, the CAS algorithm needs to be used internally to check if the current state is 0. If it is 0, CAS is set to 1, and the current lock holder is set to the current thread. Then, true is returned, and false is returned if CAS fails.
+   
+For example, when implementing tryRelease for exclusive locks inherited from AQS implementation, the CAS algorithm needs to be used internally to modify the current state value from 1 to 0, set the current lock holder to null, and then return true. If CAS fails, it returns false.
+   
+The process of obtaining and releasing resources in a shared mode is as follows:
+   
+When a thread calls acquireShared (int arg) to obtain a shared resource, it first attempts to obtain the resource using tryAcquireShared by setting the value of the state variable. If successful, it returns directly. If unsuccessful, it encapsulates the current thread as a Node node of type Node. SHARED and inserts it into the end of the AQS blocking queue, using the LockSupport. park (this) method to suspend itself.
+2. When a thread calls releaseShared (int arg), it will attempt to use the tryReleaseShared operation to release resources. Here, the value of the state variable is set, and then LockSupport. unpark (thread) is used to activate a blocked thread in the AQS queue. The activated thread uses tryReleaseShared to check whether the current state variable state value meets its needs. If it does, the thread is activated and continues to run downwards. Otherwise, it will still be placed in the AQS queue and suspended.
+   
+It should also be noted that the AQS class does not provide available tryAcquireShared and tryReleaseShared methods, just as AQS is the fundamental framework for lock blocking and synchronizers, tryAcquireShared and tryReleaseShared need to be implemented by specific subclasses. When subclasses implement tryAcquireShared and tryReleaseShared, they need to use the CAS algorithm to try to modify the state value based on the specific scenario. If successful, they return true, otherwise they return false.
+   
+For example, when rewriting tryAcquireShared, the read and write lock inherited from the AQS implementation, ReentrantReadWriteLock, first checks whether the write lock is held by another thread. If so, returns false directly. Otherwise, CAS is used to increment the upper 16 bits of the state (in ReentrantReadWriteLock, the upper 16 bits of the state are the number of times the read lock is obtained).
+   
+For example, when a read write lock inherited from the AQS implementation, ReentrantReadWriteLock, is rewritten by tryReleaseShared, the CAS algorithm needs to be used internally to subtract the high 16 bits of the current state value by 1, and then return true. If the CAS fails, it returns false.
+   
+In addition to rewriting the methods described above, locks implemented based on AQS also need to rewrite the isHeldExclusively method to determine whether the lock is exclusive or shared by the current thread.
+   
+Additionally, you may be curious that void acquire (int arg) and void acquire Interruptible (int arg) in exclusive mode have a function with the Interruptible keyword compared to void acquire Shared (int arg) and void acquire SharedInterruptible (int arg) in shared mode. So what is the difference between having this keyword and not having it? Let's talk about it.
+   
+In fact, a method without the Interruptible keyword means not responding to interrupts. This means that when a thread calls a method without the Interruptible keyword to obtain resources or fails to obtain resources and is suspended, another thread interrupts the thread. Therefore, the thread will not throw an exception because it is interrupted. Instead, it will continue to obtain resources or be suspended, meaning it will not respond to interrupts and ignore interrupts.
+   
+And methods with the Interruptible keyword need to respond to interrupts, that is, when a thread calls a method with the Interruptible keyword to obtain resources or fails to obtain resources, and other threads interrupt the thread, the thread will throw an InterruptedException exception and return.
+   
+Finally, let's take a look at how to maintain the queues provided by AQS, mainly focusing on queue entry operations.
+- Queuing operation: When a thread fails to acquire a lock, it will be converted to a Node node, and then the enq (final Node node) method will be used to insert the node into the blocking queue of AQS.
   
-    ![An image](../../asserts/img/AbstractQueuedSynchronizer1.png)
+  ![An image](../../asserts/img/AbstractQueuedSynchronizer1.png)
