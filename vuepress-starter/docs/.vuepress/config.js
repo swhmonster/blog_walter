@@ -104,9 +104,10 @@ module.exports = {
                         {title: 'Spring IOC\'s bean loading', path: '/documents/java/spring-iocfindbeans'},
                         {title: 'Spring-Why does Spring 4.0 advocate using constructor injection?', path: '/documents/java/spring-ioc'},
                         {title: 'Spring-Application of Design Patterns in Spring', path: '/documents/java/spring-desingpartern'},
-                        {title: 'The Value of Spring Boot', path: '/documents/java/spring-TheValueOfSpringBoot'},
-                        {title: 'A Brief Analysis of the Spring Boot Startup Process', path: '/documents/java/springboot-start'},
-                        {title: 'Setting Priority for Spring Boot Configuration Properties', path: '/documents/java/springboot-profilepriority'},
+                        {title: 'Spring Boot-The Value of Spring Boot', path: '/documents/java/spring-TheValueOfSpringBoot'},
+                        {title: 'Spring Boot-A Brief Analysis of the Spring Boot Startup Process', path: '/documents/java/springboot-start'},
+                        {title: 'Spring Boot-Setting Priority for Spring Boot Configuration Properties', path: '/documents/java/springboot-profilepriority'},
+                        {title: 'Spring Boot-How many requests can SpringBoot handle simultaneously?', path: '/documents/java/spring-handleRequestLimit'},
                         {title: 'Effective Java', path: '/documents/java/java-effectivejava'},
                         {title: 'Synchronized Lock for Java Multithreaded Programming 1', path: '/documents/java/java-synchronized1'},
                         {title: 'Synchronized Lock for Java Multithreaded Programming 2', path: '/documents/java/java-synchronized2'},
@@ -288,10 +289,10 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: '了解浏览器背后的运行机制', path: '/documents/webinfo/inner-browser'},
-                        {title: '前端页面性能优化', path: '/documents/webinfo/frontend-optimization'},
-                        {title: 'Vue-devtools的安装与使用', path: '/documents/webinfo/vue-devtools'},
-                        {title: 'Rollup打包Vue组件库', path: '/documents/webinfo/rollupwebpack'}
+                        {title: 'Understand the operating mechanism behind browsers', path: '/documents/webinfo/inner-browser'},
+                        {title: 'Frontend page performance optimization', path: '/documents/webinfo/frontend-optimization'},
+                        {title: 'Installation and Use of Vue devtools', path: '/documents/webinfo/vue-devtools'},
+                        {title: 'Rollup packaging Vue component library', path: '/documents/webinfo/rollupwebpack'}
                     ]
                 }, {
                     title: 'IDE Development Tools',
@@ -412,6 +413,7 @@ module.exports = {
                         {title: 'Spring Boot 的价值', path: '/zh/documents/java/spring-TheValueOfSpringBoot'},
                         {title: 'Spring Boot 启动流程简析', path: '/zh/documents/java/springboot-start'},
                         {title: 'Spring Boot 配置属性设置优先级', path: '/zh/documents/java/springboot-profilepriority'},
+                        {title: 'Spring Boot 可以同时处理多少请求？', path: '/zh/documents/java/spring-handleRequestLimit'},
                         {title: 'Effective Java', path: '/zh/documents/java/java-effectivejava'},
                         {title: 'Java多线程编程之同步锁1', path: '/zh/documents/java/java-synchronized1'},
                         {title: 'Java多线程编程之同步锁2', path: '/zh/documents/java/java-synchronized2'},
