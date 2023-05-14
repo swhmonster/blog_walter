@@ -133,11 +133,11 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: 'Python多环境配置管理', path: '/documents/python/python-multisettings'},
+                        {title: 'Python Multi Environment Configuration Management', path: '/documents/python/python-multisettings'},
                         {title: 'Tips for Effective Python', path: '/documents/python/python-TipsforEffectivePython'},
-                        {title: 'PEP8风格代码规范指南', path: '/documents/python/python-pep8style'},
-                        {title: '打包python项目，发布到pypi', path: '/documents/python/python-delpoy'},
-                        {title: 'smtplib带附件邮件发送(python2)', path: '/documents/python/python-emailsend'}
+                        {title: 'PEP8 Style Code Specification Guide', path: '/documents/python/python-pep8style'},
+                        {title: 'Package Python projects and publish them to pypi', path: '/documents/python/python-delpoy'},
+                        {title: 'SMTPlib email with attachments (Python 2)', path: '/documents/python/python-emailsend'}
                     ]
                 }, {
                     title: 'Go',
@@ -243,8 +243,8 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: 'Docker-基础使用及持续开发', path: '/documents/container/docker-baseuse'},
-                        {title: 'Docker-使用Dockerfile创建镜像', path: '/documents/container/dockerfile'}
+                        {title: 'Docker - Basic Use and Continuous Development', path: '/documents/container/docker-baseuse'},
+                        {title: 'Docker - Create an image using Dockerfile', path: '/documents/container/dockerfile'}
                     ]
                 }, {
                     title: 'Big Data',
@@ -261,10 +261,11 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: '领域驱动设计', path: '/documents/architecturedesign/domain-driven-design'},
+                        {title: 'domain driven design', path: '/documents/architecturedesign/domain-driven-design'},
                         {title: 'OSGI', path: '/documents/architecturedesign/osgi'},
-                        {title: '面向对象设计模式', path: '/documents/architecturedesign/designparttern'},
-                        {title: '幂等设计', path: '/documents/architecturedesign/idempotentdesign'}
+                        {title: 'Object-oriented design pattern', path: '/documents/architecturedesign/designparttern'},
+                        {title: 'Idempotent design', path: '/documents/architecturedesign/idempotentdesign'},
+                        {title: 'Learn functional programming in three programming paradigms with Google Guava', path: '/documents/architecturedesign/designpattern-kaiyuanshizhan-3'}
                     ]
                 }, {
                     title: 'Operating System',
@@ -568,7 +569,8 @@ module.exports = {
                         {title: '领域驱动设计', path: '/zh/documents/architecturedesign/domain-driven-design'},
                         {title: 'OSGI', path: '/zh/documents/architecturedesign/osgi'},
                         {title: '面向对象设计模式', path: '/zh/documents/architecturedesign/designparttern'},
-                        {title: '幂等设计', path: '/zh/documents/architecturedesign/idempotentdesign'}
+                        {title: '幂等设计', path: '/zh/documents/architecturedesign/idempotentdesign'},
+                        {title: '借Google Guava学习三大编程范式中的函数式编程', path: '/zh/documents/architecturedesign/designpattern-kaiyuanshizhan-3'}
                     ]
                 }, {
                     title: '操作系统',
