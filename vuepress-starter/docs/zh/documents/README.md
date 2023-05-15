@@ -3,7 +3,7 @@
 #### 我的故乡：南京
 ![An image](../../asserts/img/nanjing.jpg)
 #### 美丽园区：西溪A区
-![An image](../../asserts/img/xixicampus.jpeg)
+![An image](../../asserts/img/xixicampus.jpg)
 #### 我的可爱狗——逗逗
 ![An image](../../asserts/img/doudou-4.jpg)
 ![An image](../../asserts/img/doudou-5.jpg)
