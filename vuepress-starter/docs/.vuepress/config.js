@@ -193,6 +193,7 @@ module.exports = {
                         {title: 'MySQL-ExpLain Statement', path: '/documents/database/mysql-explainstatement'},
                         {title: 'MySQL-为什么单表数据在2000W＋后会明显下降', path: '/documents/database/mysql-500wlimit'},
                         {title: 'MySQL-Lock', path: '/documents/database/mysql-lock'},
+                        {title: 'New features of MySQL 8.0', path: '/documents/database/mysql-8newfeatures'},
                         {title: 'Oracle-ExpLain Statement', path: '/documents/database/oracle-explainstatement'}
                     ]
                 }, {
@@ -501,6 +502,7 @@ module.exports = {
                         {title: 'MySQL-ExpLain Statement', path: '/zh/documents/database/mysql-explainstatement'},
                         {title: 'MySQL-为什么单表数据在2000W＋后会明显下降', path: '/zh/documents/database/mysql-500wlimit'},
                         {title: 'MySQL-Lock', path: '/zh/documents/database/mysql-lock'},
+                        {title: 'MySQL-8.0新特性', path: '/zh/documents/database/mysql-8newfeatures'},
                         {title: 'Oracle-ExpLain Statement', path: '/zh/documents/database/oracle-explainstatement'}
                     ]
                 }, {
