@@ -127,6 +127,7 @@ module.exports = {
                         {title: 'Java-Principle of jdk8 lambda expression', path: '/documents/java/java-lambdaprinciple'},
                         {title: 'Java-New features of jdk9', path: '/documents/java/java-java9'},
                         {title: 'Java-New features of jdk11', path: '/documents/java/java-java11'},
+                        {title: 'Java Polymorphic Serialization - Avoiding Pitfalls', path: '/documents/java/java-polymorphism-serialize'},
                         {title: 'Mybatis-Common Tool Class', path: '/documents/java/mybatis-commontools'}
                         // {title: 'Alibaba Java Development Manual Ultimate Edition', path: '/documents/java/alibaba-javadevelop-final-v1.3.0'}
                     ]
@@ -436,6 +437,7 @@ module.exports = {
                         {title: 'Java-jdk8 lambda表达式原理', path: '/zh/documents/java/java-lambdaprinciple'},
                         {title: 'Java-jdk9 新特性', path: '/zh/documents/java/java-java9'},
                         {title: 'Java-jdk11 新特性', path: '/zh/documents/java/java-java11'},
+                        {title: 'Java-多态序列化-避坑', path: '/zh/documents/java/java-polymorphism-serialize'},
                         {title: 'mybatis-常用工具类', path: '/zh/documents/java/mybatis-commontools'}
                         // {title: '阿里巴巴Java开发手册终极版v1.3.0', path: '/zh/documents/java/alibaba-javadevelop-final-v1.3.0'}
                     ]
