@@ -72,7 +72,7 @@ module.exports = {
                 lastUpdated: 'Last Updated',
                 nav: [
                     {text: 'Home', link: '/'},
-                    {text: 'My Technology Stack', link: '/documents/'},
+                    {text: 'Tech-Stack', link: '/documents/'},
                     {text: 'Contact', link: '/documents/contact/'},
                     {text: 'TooBox', link: 'https://www.waltersun.cn/subsys/', target: '_blank'},
                     // {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
@@ -382,7 +382,7 @@ module.exports = {
                 lastUpdated: '最近更新时间',
                 nav: [
                     {text: '主页', link: '/zh/'},
-                    {text: '个人技术栈', link: '/zh/documents/'},
+                    {text: '技术栈', link: '/zh/documents/'},
                     {text: '联系', link: '/zh/documents/contact/'},
                     {text: '工具箱', link: 'https://www.waltersun.cn/subsys/', target: '_blank'},
                     // {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
