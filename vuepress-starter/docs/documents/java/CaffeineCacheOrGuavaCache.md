@@ -1,0 +1,21 @@
+> The default local cache in Spring Boot version 1. x is Guava Cache. After Spring5 (SpringBoot 2. x), Spring officially abandoned Guava Cache as the caching mechanism and instead used a more high-performance Caffeine as the default caching component, which is a great affirmation for Caffeine.
+## Comparison between Caffeine Cache and Guava Cache
+Caffeine Cache and Guava Cache are both Java libraries used for caching data, providing efficient memory caching mechanisms. Here is a performance comparison between them:
+- Caching algorithm: Both Caffeine Cache and Guava Cache use cache elimination strategies based on the LRU algorithm, but Caffeine Cache uses more efficient caching algorithms in implementation, which can provide higher cache hit rates in the same hardware environment.
+- Memory usage: CaCaffeine Cache and Guava Cache are both Java libraries used for caching data, providing efficient memory caching mechanisms. Here is a performance comparison between them:
+- Caching algorithm: Both Caffeine Cache and Guava Cache use cache elimination strategies based on the LRU algorithm, but Caffeine Cache uses more efficient caching algorithms in implementation, which can provide higher cache hit rates in the same hardware environment.
+- Memory usage: Compared with the Guava Cache, the Caffeine Cache uses less memory to store cache data, and it also supports Memory leak protection and cache data limit size and other functions, which makes it more flexible and reliable.
+- Concurrency performance: Caffeine Cache supports higher concurrency performance and can provide better cache response speed and scalability in high concurrency environments.
+- Ease of use: Guava Cache provides a simpler and more user-friendly API, as well as more documentation and examples, making it more suitable for beginners to use. Caffeine Cache provides more advanced features and more flexible configuration options, suitable for more advanced usage scenarios.
+
+In summary, Caffeine Cache has higher performance and more flexible configuration options compared to Guava Cache, while also being more secure and reliable. But Guava Cache provides a simpler and more user-friendly API with more documentation and examples, suitable for beginners to use. Therefore, it is very important to choose a suitable Java cache library based on actual needs.
+## Some implementation details of Caffeine Cache
+The implementation of Cache uses a data structure called "non lock Hash table" to store cache data. This data structure is an efficient concurrent data structure that can provide better performance in high concurrency environments.
+
+Specifically, the Cache uses a Hash table structure called "linked list hash". It allocates each cache item to a bucket, which contains a linked list or an array based hash table. When a cache item is added to the Hash table, its hash value is calculated and stored in the corresponding bucket. When searching for a cache item, first calculate its hash value, find the corresponding bucket, and then search for the cache item within the bucket.
+
+In the Cache, the Hash table uses a conflict resolution method called "Linear probing". When adding a cache item, if the bucket it needs to be stored in is already occupied, it will search down the bucket's linked list or hash table until an empty bucket is found. This method is relatively simple, but it may cause performance degradation of Hash table, because it may cause unbalanced utilization among buckets.
+
+To solve this problem, Caffeine Cache uses a method called "linear topology" to optimize the performance of Hash table. It will try to keep the distance between buckets equal, so that the utilization of buckets can be more balanced, thus improving the performance of the Hash table. This is one of the more efficient caching algorithms implemented in Caffeine Cache.
+
+In addition, the Cache also uses some other optimization techniques to improve cache performance, such as Weak reference, cache value reconstruction, and periodic clearing. These technologies can make Caffeine Cache more efficient and secure in implementation.
