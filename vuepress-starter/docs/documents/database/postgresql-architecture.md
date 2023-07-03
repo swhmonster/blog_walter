@@ -1,38 +1,39 @@
-## PostgreSQL的进程架构
-PostgreSQL的进程架构是由多个进程组成的，每个进程都有不同的作用和职责。下面是PostgreSQL的进程架构的详细说明：
-### 后台进程(Postmaster)
-后台进程是PostgreSQL启动时创建的第一个进程，它负责管理和控制数据库系统的全局操作，如启动和关闭其他进程、管理共享缓存、处理全局锁、处理全局事务、管理日志等。在PostgreSQL中，每个连接进程都有一个单独的后台进程与之对应，这个后台进程会监控和管理它所对应的连接进程。
-### 连接进程
-连接进程是为客户端请求提供服务的进程，每个连接进程都与一个客户端对应，并且为该客户端提供服务。当客户端请求连接时，后台进程会为其分配一个新的连接进程，连接进程负责处理客户端发出的SQL语句，并返回相应的查询结果给客户端。连接进程之间是完全隔离的，它们之间不能共享内存或信息。
-### 后台工作进程
-后台工作进程是PostgreSQL中用于执行后台任务的进程，可以执行各种任务，如备份和恢复、自动分析和维护、监控、自动诊断和修复等。后台工作进程通常是由配置文件中的cron任务或者其他定时任务触发的，不需要与客户端进行交互。
-### 后台进程
-后台进程是PostgreSQL用于监视系统状态的进程，它可以自动化地监控系统状态，如记录日志、发送警报通知、监控资源使用情况等。后台进程通常会周期性地执行，以便及时发现和解决各种问题。
+## The Process Architecture of PostgreSQL
+The process architecture of PostgreSQL is composed of multiple processes, each with different roles and responsibilities. The following is a detailed explanation of the process architecture of PostgreSQL:
+### Background process (Postmaster)
+The Background process is the first process created when PostgreSQL starts. It is responsible for managing and controlling the global operations of the database system, such as starting and closing other processes, managing shared caches, processing global locks, processing global transactions, and managing logs. In PostgreSQL, each connection process has a separate Background process corresponding to it. This Background process will monitor and manage its corresponding connection process.
+### Connection process
+The connection process is a process that provides services for client requests, and each connection process corresponds to a client and provides services for that client. When the client requests a connection, the Background process will assign a new connection process to it. The connection process is responsible for processing the SQL statements issued by the client and returning the corresponding query results to the client. The connection processes are completely isolated, and they cannot share Shared memory or information.
+### Background Worker Process
+Background worker processes are processes used in PostgreSQL to execute background tasks, which can perform various tasks such as backup and recovery, automatic analysis and maintenance, monitoring, automatic diagnosis and repair, etc. The background work process is usually triggered by cron tasks or other scheduled tasks in the configuration file, and does not require interaction with the client.
+### Background process
+Background process is a process used by PostgreSQL to monitor system status. It can automatically monitor system status, such as logging, sending alert notifications, and monitoring resource usage. The Background process usually executes periodically in order to find and solve various problems in a timely manner.
 
-总之，PostgreSQL的进程架构非常复杂，包括多个进程和各种不同类型的职责和作用。了解PostgreSQL的进程架构可以帮助开发人员更好地理解PostgreSQL的工作原理，并且能够进行更好的性能优化和故障排查。
+In summary, the process architecture of PostgreSQL is very complex, including multiple processes and various types of responsibilities and roles. Understanding the process architecture of PostgreSQL can help developers better understand its working principles and enable better performance optimization and troubleshooting.
 
-PostgreSQL的进程架构示例图：
+Example process architecture diagram of PostgreSQL:
 ![An image](../../asserts/img/postgresql-architecture1.png)
 
-## PostgreSQL的内存架构
-PostgreSQL的内存架构包括共享内存和进程内存两个部分，它们扮演着不同的角色和作用。
-### 共享内存
-共享内存是在PostgreSQL启动时分配的内存区域，它被所有的连接进程和后台进程所共享。共享内存包括：
-- 数据缓存区(Buffer Cache)：缓存了近期查询过的表、索引以及其他数据，以便在后续的查询中快速访问。
-- 状态信息区(Shared memory)：包括了各种全局状态信息，如事务状态、锁信息、进程和连接信息等。
-- 内部缓存区(Internal Cache)：用于存储内部数据结构的缓存，如共享内存中的锁表、哈希表、等待事件队列等。
-- WAL缓冲区(WAL Buffer)：用于缓存WAL日志的数据，以便在写入WAL文件之前进行排序和缓冲。
+## The Memory Architecture of PostgreSQL
+The memory architecture of PostgreSQL includes Shared memory and process memory, which play different roles.
+### Shared memory
+Shared memory is the memory area allocated when PostgreSQL starts. It is shared by all connection processes and Background process. Shared memory includes:
+- Buffer Cache: Caches recently queried tables, indexes, and other data for quick access in subsequent queries.
+- Shared memory: Contains various global state information, such as transaction status, lock information, process and connection information.
+- Internal Cache: A cache used to store internal data structures, such as lock tables, Hash table, and wait event queues in Shared memory.
+- WAL Buffer: Used to cache data from WAL logs for sorting and buffering before writing to the WAL file.
 
-共享内存的优点是能够减少内存的重复使用，从而提高了PostgreSQL的性能和效率。但是，共享内存的使用需要考虑到并发性、锁和内存管理等问题，因此需要进行合理的设计和管理。
-### 进程内存
-进程内存是由每个连接进程单独分配的内存，它包括：
-- 连接信息：存储了客户端连接信息和连接状态，如用户名、密码和连接选项等。
-- 查询执行计划：存储了查询执行的计划和状态信息，如查询计划树和运行时的状态信息。
-- 临时缓冲区：用于存储中间结果和临时计算数据。
-- 状态信息：存储了当前进程的状态信息，如事务状态、锁信息等。
+- The advantage of Shared memory is that it can reduce the reuse of memory, thus improving the performance and efficiency of PostgreSQL. However, the use of Shared memory needs to consider concurrency, locks, memory management and other issues, so it needs to be designed and managed reasonably.
+### Process memory
+Process memory is memory allocated separately by each connected process, which includes:
+- Connection information: stores client connection information and connection status, such as username, password, and connection options.
+- Query Execution Plan: Stores the plan and status information for query execution, such as the query plan tree and runtime status information.
+- Temporary buffer: used to store intermediate results and temporary calculation data.
+- Status information: Stores the status information of the current process, such as transaction status, lock information, etc.
 
-进程内存的优点是能够提高数据的隔离性和安全性，从而保护了每个连接进程的数据和状态。但是，进程内存的使用需要考虑到内存的分配和释放、数据隔离和共享等问题，因此需要进行合理的设计和管理。
+The advantage of process memory is that it can improve data isolation and security, thereby protecting the data and state of each connected process. However, the use of process memory needs to consider issues such as memory allocation and release, data isolation and sharing, and therefore requires reasonable design and management.
 
-总之，PostgreSQL的内存架构是由共享内存和进程内存两个部分组成，它们各自扮演着不同的角色和作用。共享内存提供了数据的共享和重复使用，从而提高了性能和效率，而进程内存提高了数据的隔离性和安全性，从而保护了每个连接进程的数据和状态。了解PostgreSQL的内存架构可以帮助开发人员更好地理解PostgreSQL的工作原理，并且能够进行更好的性能优化和故障排查。
-PostgreSQL的内存架构示例图：
+In a word, the memory architecture of PostgreSQL is composed of Shared memory and process memory, which play different roles. Shared memory provides data sharing and reuse, which improves performance and efficiency, while process memory improves data isolation and security, thus protecting the data and status of each connected process. Understanding the memory architecture of PostgreSQL can help developers better understand its working principles and enable better performance optimization and troubleshooting.
+
+Example diagram of PostgreSQL's memory architecture:
 ![An image](../../asserts/img/postgresql-architecture2.png)
