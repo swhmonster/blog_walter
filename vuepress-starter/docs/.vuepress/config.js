@@ -192,6 +192,7 @@ module.exports = {
                         {title: 'PostgreSQL-Execution Plan Viewing Method and Plan Analysis', path: '/documents/database/postgresql-executionplan'},
                         {title: 'PostgreSQL-Processing of Query Class Statements at the Bottom of PLSQL', path: '/documents/database/postgresql-underlying1'},
                         {title: 'PostgreSQL-The underlying processing (optimization) of query statements and execution plan generation strategies', path: '/documents/database/postgresql-underlying2'},
+                        {title: 'Process architecture and memory architecture of PostgreSQL', path: '/documents/database/postgresql-architecture'},
                         {title: 'MySQL-ExpLain Statement', path: '/documents/database/mysql-explainstatement'},
                         {title: 'MySQL-Why does single table data significantly decrease after 2000W+?', path: '/documents/database/mysql-500wlimit'},
                         {title: 'MySQL-Lock', path: '/documents/database/mysql-lock'},
@@ -335,13 +336,14 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: '加解密算法及国密介绍', path: '/documents/sercurity/encryption-introduction'},
-                        {title: '国密算法SM3设计原理', path: '/documents/sercurity/sm-sm3'},
-                        {title: '国密算法SM4设计原理', path: '/documents/sercurity/sm-sm4'},
-                        {title: '分布式理论基础-Paxos算法', path: '/documents/sercurity/paxos'},
+                        {title: 'Introduction to encryption and decryption algorithms and national secrets', path: '/documents/sercurity/encryption-introduction'},
+                        {title: 'Design Principles of State Secret Algorithm SM3', path: '/documents/sercurity/sm-sm3'},
+                        {title: 'Design Principles of State Secret Algorithm SM4', path: '/documents/sercurity/sm-sm4'},
+                        {title: 'Fundamentals of Distributed Theory - Paxos Algorithm', path: '/documents/sercurity/paxos'},
+                        {title: 'Distributed ID generation algorithm - Snowflake ID', path: '/documents/sercurity/distributesys-idgenerator'},
                         {title: 'ZooKeeper ZAB', path: '/documents/sercurity/zookeeper-zab'},
                         {title: 'Raft', path: '/documents/sercurity/raft'},
-                        {title: 'java代码混淆-allator集成', path: '/documents/sercurity/allatori'}
+                        {title: 'Java code obfuscation - accumulator integration', path: '/documents/sercurity/allatori'}
                     ]
                 }, {
                     title: 'Solutions & Others',
@@ -503,6 +505,7 @@ module.exports = {
                         {title: 'PostgreSQL-执行计划查看方式与计划分析', path: '/zh/documents/database/postgresql-executionplan'},
                         {title: 'PostgreSQL-plsql底层对查询类语句的处理', path: '/zh/documents/database/postgresql-underlying1'},
                         {title: 'PostgreSQL-底层对查询类语句的处理（优化），以及执行计划生成策略', path: '/zh/documents/database/postgresql-underlying2'},
+                        {title: 'PostgreSQL-进程架构和内存架构', path: '/zh/documents/database/postgresql-architecture'},
                         {title: 'MySQL-ExpLain Statement', path: '/zh/documents/database/mysql-explainstatement'},
                         {title: 'MySQL-为什么单表数据在2000W＋后会明显下降', path: '/zh/documents/database/mysql-500wlimit'},
                         {title: 'MySQL-Lock', path: '/zh/documents/database/mysql-lock'},
@@ -650,6 +653,7 @@ module.exports = {
                         {title: '国密算法SM3设计原理', path: '/zh/documents/sercurity/sm-sm3'},
                         {title: '国密算法SM4设计原理', path: '/zh/documents/sercurity/sm-sm4'},
                         {title: '分布式理论基础-Paxos算法', path: '/zh/documents/sercurity/paxos'},
+                        {title: '分布式ID生成算法-雪花算法', path: '/zh/documents/sercurity/distributesys-idgenerator'},
                         {title: 'ZooKeeper ZAB', path: '/zh/documents/sercurity/zookeeper-zab'},
                         {title: 'Raft', path: '/zh/documents/sercurity/raft'},
                         {title: 'java代码混淆-allator集成', path: '/zh/documents/sercurity/allatori'}
