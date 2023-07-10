@@ -280,14 +280,15 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: 'Linux 常用命令', path: '/documents/operatingsystem/linux-command'},
-                        {title: 'Linux 目录结构', path: '/documents/operatingsystem/linux-directorystructure'},
-                        {title: 'Linux 启动过程（RHEL 7）', path: '/documents/operatingsystem/linux-startprocess'},
-                        {title: 'Linux 动态主机配置协议 DHCP', path: '/documents/operatingsystem/linux-dhcp'},
-                        {title: 'Linux 性能检测与优化', path: '/documents/operatingsystem/linux-PerformanceTesting&Optimization'},
+                        {title: 'Linux Common Commands', path: '/documents/operatingsystem/linux-command'},
+                        {title: 'Linux Directory Structure', path: '/documents/operatingsystem/linux-directorystructure'},
+                        {title: 'Linux Startup Process（RHEL 7）', path: '/documents/operatingsystem/linux-startprocess'},
+                        {title: 'Linux Dynamic Host Configuration Protocol DHCP', path: '/documents/operatingsystem/linux-dhcp'},
+                        {title: 'Linux Performance Testing and Optimization', path: '/documents/operatingsystem/linux-PerformanceTesting&Optimization'},
                         {title: 'Linux Shell Bash Demo', path: '/documents/operatingsystem/linux-shelldemo'},
-                        {title: '性能分析命令', path: '/documents/operatingsystem/linux&windows-jdkanalysis'},
-                        {title: 'sftp 基础使用', path: '/documents/operatingsystem/sftpusage'}
+                        {title: 'Performance Analysis Command', path: '/documents/operatingsystem/linux&windows-jdkanalysis'},
+                        {title: 'DNS parsing and dig commands', path: '/documents/operatingsystem/linux-dns&digCmd'},
+                        {title: 'sftp Basic Usage', path: '/documents/operatingsystem/sftpusage'}
                     ]
                 }, {
                     title: 'Web',
@@ -600,6 +601,7 @@ module.exports = {
                         {title: 'Linux 性能检测与优化', path: '/zh/documents/operatingsystem/linux-PerformanceTesting&Optimization'},
                         {title: 'Linux Shell Bash Demo', path: '/documents/operatingsystem/linux-shelldemo'},
                         {title: '性能分析命令', path: '/zh/documents/operatingsystem/linux&windows-jdkanalysis'},
+                        {title: 'DNS解析与dig命令', path: '/zh/documents/operatingsystem/linux-dns&digCmd'},
                         {title: 'sftp 基础使用', path: '/zh/documents/operatingsystem/sftpusage'}
                     ]
                 }, {
