@@ -8,7 +8,7 @@ module.exports = {
     docsBranch: 'master',
     head: [
         ['link', {rel: 'icon', href: '/waltersun_cn.png'}],
-        ['meta',{name:'baidu-site-verification',content:'codeva-p4cxM4eU2P'}],
+        ['meta', {name: 'baidu-site-verification', content: 'codeva-p4cxM4eU2P'}],
         ['script', {},
             `
             var _hmt = _hmt || [];
@@ -63,8 +63,8 @@ module.exports = {
         }
     },
     themeConfig: {
-        locales :{
-            '/':{
+        locales: {
+            '/': {
                 logo: '/waltersun_cn.png',
                 selectText: 'Languages',
                 label: 'English',
@@ -78,7 +78,7 @@ module.exports = {
                     // {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
                     // {text: 'CSDN Blog', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
                     {text: 'Donation', link: '/documents/donation/'},
-                    {text: 'UI2.0',link: 'https://www.waltersun.cn/newui/', target: '_blank'}
+                    {text: 'UI2.0', link: 'https://www.waltersun.cn/newui/', target: '_blank'}
                     // {text: 'Message', link: '/documents/leavemsg/'},
                     // {text: 'Giving', link: '/documents/publicwelfare/'}
                 ],
@@ -88,7 +88,7 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: []
-                },{
+                }, {
                     title: 'Block Chain',
                     path: '/documents/blockchain/',
                     collapsable: true,
@@ -103,17 +103,47 @@ module.exports = {
                     sidebarDepth: 1,
                     children: [
                         {title: 'Spring IOC\'s bean loading', path: '/documents/java/spring-iocfindbeans'},
-                        {title: 'Spring-Why does Spring 4.0 advocate using constructor injection?', path: '/documents/java/spring-ioc'},
-                        {title: 'Spring-Application of Design Patterns in Spring', path: '/documents/java/spring-desingpartern'},
-                        {title: 'Spring-Basic Principles of Spring Transaction Implementation', path: '/documents/java/spring-transaction-principle'},
-                        {title: 'Spring Boot-The Value of Spring Boot', path: '/documents/java/spring-TheValueOfSpringBoot'},
-                        {title: 'Spring Boot-List of SpringBoot Configuration Parameters', path: '/documents/java/springboot-profiles'},
-                        {title: 'Spring Boot-A Brief Analysis of the Spring Boot Startup Process', path: '/documents/java/springboot-start'},
-                        {title: 'Spring Boot-Setting Priority for Spring Boot Configuration Properties', path: '/documents/java/springboot-profilepriority'},
-                        {title: 'Spring Boot-How many requests can SpringBoot handle simultaneously?', path: '/documents/java/spring-handleRequestLimit'},
+                        {
+                            title: 'Spring-Why does Spring 4.0 advocate using constructor injection?',
+                            path: '/documents/java/spring-ioc'
+                        },
+                        {
+                            title: 'Spring-Application of Design Patterns in Spring',
+                            path: '/documents/java/spring-desingpartern'
+                        },
+                        {
+                            title: 'Spring-Basic Principles of Spring Transaction Implementation',
+                            path: '/documents/java/spring-transaction-principle'
+                        },
+                        {
+                            title: 'Spring Boot-The Value of Spring Boot',
+                            path: '/documents/java/spring-TheValueOfSpringBoot'
+                        },
+                        {
+                            title: 'Spring Boot-List of SpringBoot Configuration Parameters',
+                            path: '/documents/java/springboot-profiles'
+                        },
+                        {
+                            title: 'Spring Boot-A Brief Analysis of the Spring Boot Startup Process',
+                            path: '/documents/java/springboot-start'
+                        },
+                        {
+                            title: 'Spring Boot-Setting Priority for Spring Boot Configuration Properties',
+                            path: '/documents/java/springboot-profilepriority'
+                        },
+                        {
+                            title: 'Spring Boot-How many requests can SpringBoot handle simultaneously?',
+                            path: '/documents/java/spring-handleRequestLimit'
+                        },
                         {title: 'Effective Java', path: '/documents/java/java-effectivejava'},
-                        {title: 'Synchronized Lock for Java Multithreaded Programming 1', path: '/documents/java/java-synchronized1'},
-                        {title: 'Synchronized Lock for Java Multithreaded Programming 2', path: '/documents/java/java-synchronized2'},
+                        {
+                            title: 'Synchronized Lock for Java Multithreaded Programming 1',
+                            path: '/documents/java/java-synchronized1'
+                        },
+                        {
+                            title: 'Synchronized Lock for Java Multithreaded Programming 2',
+                            path: '/documents/java/java-synchronized2'
+                        },
                         {title: 'AQS for Java Multithreaded Programming', path: '/documents/java/java-aqs'},
                         {title: 'Principles of Java Instrumentation', path: '/documents/java/java-Instrumentation'},
                         {title: 'Java-Basic fault handling tools', path: '/documents/java/java-jdkcmdtool'},
@@ -124,12 +154,21 @@ module.exports = {
                         {title: 'Java-IO model', path: '/documents/java/io'},
                         {title: 'Java-ZGC', path: '/documents/java/java-zgc'},
                         {title: 'Java-G1 parameter introduction and tuning', path: '/documents/java/java-g1gc'},
-                        {title: 'Java-Jdk8 hashmap added red and black trees', path: '/documents/java/java-jdk8hashmap'},
-                        {title: 'Java-Principle of jdk8 lambda expression', path: '/documents/java/java-lambdaprinciple'},
+                        {
+                            title: 'Java-Jdk8 hashmap added red and black trees',
+                            path: '/documents/java/java-jdk8hashmap'
+                        },
+                        {
+                            title: 'Java-Principle of jdk8 lambda expression',
+                            path: '/documents/java/java-lambdaprinciple'
+                        },
                         {title: 'Java8 ComplatableFuture', path: '/documents/java/java-completablefuture'},
                         {title: 'Java-New features of jdk9', path: '/documents/java/java-java9'},
                         {title: 'Java-New features of jdk11', path: '/documents/java/java-java11'},
-                        {title: 'Java Polymorphic Serialization - Avoiding Pitfalls', path: '/documents/java/java-polymorphism-serialize'},
+                        {
+                            title: 'Java Polymorphic Serialization - Avoiding Pitfalls',
+                            path: '/documents/java/java-polymorphism-serialize'
+                        },
                         {title: 'Caffeine Cache Or Guava Cache', path: '/documents/java/CaffeineCacheOrGuavaCache'},
                         {title: 'Mybatis-Common Tool Class', path: '/documents/java/mybatis-commontools'}
                         // {title: 'Alibaba Java Development Manual Ultimate Edition', path: '/documents/java/alibaba-javadevelop-final-v1.3.0'}
@@ -140,10 +179,16 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: 'Python Multi Environment Configuration Management', path: '/documents/python/python-multisettings'},
+                        {
+                            title: 'Python Multi Environment Configuration Management',
+                            path: '/documents/python/python-multisettings'
+                        },
                         {title: 'Tips for Effective Python', path: '/documents/python/python-TipsforEffectivePython'},
                         {title: 'PEP8 Style Code Specification Guide', path: '/documents/python/python-pep8style'},
-                        {title: 'Package Python projects and publish them to pypi', path: '/documents/python/python-delpoy'},
+                        {
+                            title: 'Package Python projects and publish them to pypi',
+                            path: '/documents/python/python-delpoy'
+                        },
                         {title: 'SMTPlib email with attachments (Python 2)', path: '/documents/python/python-emailsend'}
                     ]
                 }, {
@@ -184,19 +229,40 @@ module.exports = {
                     sidebarDepth: 1,
                     children: [
                         {title: 'Common Sybase Commands', path: '/documents/database/sybase-command'},
-                        {title: 'Mainstream Database Compatibility Verification', path: '/documents/database/database-compatibility'},
+                        {
+                            title: 'Mainstream Database Compatibility Verification',
+                            path: '/documents/database/database-compatibility'
+                        },
                         {title: 'Redis Keyspace Notification', path: '/documents/database/redis-notifybykeys'},
-                        {title: 'Redis Master-slave Replication', path: '/documents/database/redis-master-slave-replication'},
+                        {
+                            title: 'Redis Master-slave Replication',
+                            path: '/documents/database/redis-master-slave-replication'
+                        },
                         {title: 'Redis Persistence', path: '/documents/database/redis-persistence'},
                         {title: 'Redis Streams Introduction', path: '/documents/database/redis-streams'},
                         {title: 'Redis Cluster Tutorial', path: '/documents/database/redis-cluster'},
                         {title: 'Redis-Distributed Locks', path: '/documents/database/redis-distributedlock'},
-                        {title: 'PostgreSQL-Execution Plan Viewing Method and Plan Analysis', path: '/documents/database/postgresql-executionplan'},
-                        {title: 'PostgreSQL-Processing of Query Class Statements at the Bottom of PLSQL', path: '/documents/database/postgresql-underlying1'},
-                        {title: 'PostgreSQL-The underlying processing (optimization) of query statements and execution plan generation strategies', path: '/documents/database/postgresql-underlying2'},
-                        {title: 'Process architecture and memory architecture of PostgreSQL', path: '/documents/database/postgresql-architecture'},
+                        {
+                            title: 'PostgreSQL-Execution Plan Viewing Method and Plan Analysis',
+                            path: '/documents/database/postgresql-executionplan'
+                        },
+                        {
+                            title: 'PostgreSQL-Processing of Query Class Statements at the Bottom of PLSQL',
+                            path: '/documents/database/postgresql-underlying1'
+                        },
+                        {
+                            title: 'PostgreSQL-The underlying processing (optimization) of query statements and execution plan generation strategies',
+                            path: '/documents/database/postgresql-underlying2'
+                        },
+                        {
+                            title: 'Process architecture and memory architecture of PostgreSQL',
+                            path: '/documents/database/postgresql-architecture'
+                        },
                         {title: 'MySQL-ExpLain Statement', path: '/documents/database/mysql-explainstatement'},
-                        {title: 'MySQL-Why does single table data significantly decrease after 2000W+?', path: '/documents/database/mysql-500wlimit'},
+                        {
+                            title: 'MySQL-Why does single table data significantly decrease after 2000W+?',
+                            path: '/documents/database/mysql-500wlimit'
+                        },
                         {title: 'MySQL-Lock', path: '/documents/database/mysql-lock'},
                         {title: 'New features of MySQL 8.0', path: '/documents/database/mysql-8newfeatures'},
                         {title: 'Oracle-ExpLain Statement', path: '/documents/database/oracle-explainstatement'}
@@ -229,7 +295,10 @@ module.exports = {
                         {title: 'Nginx 缓存机制', path: '/documents/distributedsystem/nginx-cache'},
                         {title: '注册中心-主流注册中心', path: '/documents/distributedsystem/registrycompare'},
                         {title: 'zookeeper-基础入门', path: '/documents/distributedsystem/zookeeper'},
-                        {title: 'zookeeper-分布式锁原理', path: '/documents/distributedsystem/zookeeper-distributedlock'},
+                        {
+                            title: 'zookeeper-分布式锁原理',
+                            path: '/documents/distributedsystem/zookeeper-distributedlock'
+                        },
                         {title: 'Netty-高性能之道', path: '/documents/distributedsystem/netty-highperformance'},
                         {title: 'Netty-解决JDK空轮询Bug', path: '/documents/distributedsystem/netty-dealjdkepoll'},
                         {title: 'Netty-粘包与拆包', path: '/documents/distributedsystem/netty-stickypackage'},
@@ -241,10 +310,19 @@ module.exports = {
                         {title: '流量治理', path: '/documents/distributedsystem/trafficmanagement'},
                         {title: '透明多级分流系统-客户端缓存', path: '/documents/distributedsystem/tmds-clientcache'},
                         {title: '透明多级分流系统-域名解析', path: '/documents/distributedsystem/tmds-dns'},
-                        {title: '透明多级分流系统-传输链路', path: '/documents/distributedsystem/tmds-transmissionlink'},
-                        {title: '透明多级分流系统-内容分发网络', path: '/documents/distributedsystem/tmds-contentdeliverynetwork'},
+                        {
+                            title: '透明多级分流系统-传输链路',
+                            path: '/documents/distributedsystem/tmds-transmissionlink'
+                        },
+                        {
+                            title: '透明多级分流系统-内容分发网络',
+                            path: '/documents/distributedsystem/tmds-contentdeliverynetwork'
+                        },
                         {title: '透明多级分流系统-负载均衡', path: '/documents/distributedsystem/tmds-loadbalancing'},
-                        {title: '透明多级分流系统-服务端缓存', path: '/documents/distributedsystem/tmds-serversidecaching'}
+                        {
+                            title: '透明多级分流系统-服务端缓存',
+                            path: '/documents/distributedsystem/tmds-serversidecaching'
+                        }
                     ]
                 }, {
                     title: 'Cloud Native & Container Technology',
@@ -252,7 +330,10 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: 'Docker - Basic Use and Continuous Development', path: '/documents/container/docker-baseuse'},
+                        {
+                            title: 'Docker - Basic Use and Continuous Development',
+                            path: '/documents/container/docker-baseuse'
+                        },
                         {title: 'Docker - Create an image using Dockerfile', path: '/documents/container/dockerfile'}
                     ]
                 }, {
@@ -274,7 +355,10 @@ module.exports = {
                         {title: 'OSGI', path: '/documents/architecturedesign/osgi'},
                         {title: 'Object-oriented design pattern', path: '/documents/architecturedesign/designparttern'},
                         {title: 'Idempotent design', path: '/documents/architecturedesign/idempotentdesign'},
-                        {title: 'Learn functional programming in three programming paradigms with Google Guava', path: '/documents/architecturedesign/designpattern-kaiyuanshizhan-3'}
+                        {
+                            title: 'Learn functional programming in three programming paradigms with Google Guava',
+                            path: '/documents/architecturedesign/designpattern-kaiyuanshizhan-3'
+                        }
                     ]
                 }, {
                     title: 'Operating System',
@@ -283,12 +367,24 @@ module.exports = {
                     sidebarDepth: 1,
                     children: [
                         {title: 'Linux Common Commands', path: '/documents/operatingsystem/linux-command'},
-                        {title: 'Linux Directory Structure', path: '/documents/operatingsystem/linux-directorystructure'},
+                        {
+                            title: 'Linux Directory Structure',
+                            path: '/documents/operatingsystem/linux-directorystructure'
+                        },
                         {title: 'Linux Startup Process（RHEL 7）', path: '/documents/operatingsystem/linux-startprocess'},
-                        {title: 'Linux Dynamic Host Configuration Protocol DHCP', path: '/documents/operatingsystem/linux-dhcp'},
-                        {title: 'Linux Performance Testing and Optimization', path: '/documents/operatingsystem/linux-PerformanceTesting&Optimization'},
+                        {
+                            title: 'Linux Dynamic Host Configuration Protocol DHCP',
+                            path: '/documents/operatingsystem/linux-dhcp'
+                        },
+                        {
+                            title: 'Linux Performance Testing and Optimization',
+                            path: '/documents/operatingsystem/linux-PerformanceTesting&Optimization'
+                        },
                         {title: 'Linux Shell Bash Demo', path: '/documents/operatingsystem/linux-shelldemo'},
-                        {title: 'Performance Analysis Command', path: '/documents/operatingsystem/linux&windows-jdkanalysis'},
+                        {
+                            title: 'Performance Analysis Command',
+                            path: '/documents/operatingsystem/linux&windows-jdkanalysis'
+                        },
                         {title: 'DNS parsing and dig commands', path: '/documents/operatingsystem/linux-dns&digCmd'},
                         {title: 'sftp Basic Usage', path: '/documents/operatingsystem/sftpusage'}
                     ]
@@ -298,8 +394,14 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: 'Understand the operating mechanism behind browsers', path: '/documents/webinfo/inner-browser'},
-                        {title: 'Frontend page performance optimization', path: '/documents/webinfo/frontend-optimization'},
+                        {
+                            title: 'Understand the operating mechanism behind browsers',
+                            path: '/documents/webinfo/inner-browser'
+                        },
+                        {
+                            title: 'Frontend page performance optimization',
+                            path: '/documents/webinfo/frontend-optimization'
+                        },
                         {title: 'Installation and Use of Vue devtools', path: '/documents/webinfo/vue-devtools'},
                         {title: 'Rollup packaging Vue component library', path: '/documents/webinfo/rollupwebpack'}
                     ]
@@ -315,7 +417,10 @@ module.exports = {
                         },
                         {title: 'IntelliJ IDEA-配置注释模板', path: '/documents/ide/idea-templates'},
                         {title: 'IntelliJ IDEA-配置远程调试', path: '/documents/ide/idea-remotedebug'},
-                        {title: 'IntelliJ IDEA-插件之java内存分析工具(JProfiler)', path: '/documents/ide/idea-jprofiler'},
+                        {
+                            title: 'IntelliJ IDEA-插件之java内存分析工具(JProfiler)',
+                            path: '/documents/ide/idea-jprofiler'
+                        },
                         {title: 'Lombok-注解', path: '/documents/ide/lombok-annotation'}
                     ]
                 }, {
@@ -339,14 +444,26 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: 'Introduction to encryption and decryption algorithms and national secrets', path: '/documents/sercurity/encryption-introduction'},
+                        {
+                            title: 'Introduction to encryption and decryption algorithms and national secrets',
+                            path: '/documents/sercurity/encryption-introduction'
+                        },
                         {title: 'Design Principles of State Secret Algorithm SM3', path: '/documents/sercurity/sm-sm3'},
                         {title: 'Design Principles of State Secret Algorithm SM4', path: '/documents/sercurity/sm-sm4'},
-                        {title: 'Fundamentals of Distributed Theory - Paxos Algorithm', path: '/documents/sercurity/paxos'},
-                        {title: 'Distributed ID generation algorithm - Snowflake ID', path: '/documents/sercurity/distributesys-idgenerator'},
+                        {
+                            title: 'Fundamentals of Distributed Theory - Paxos Algorithm',
+                            path: '/documents/sercurity/paxos'
+                        },
+                        {
+                            title: 'Distributed ID generation algorithm - Snowflake ID',
+                            path: '/documents/sercurity/distributesys-idgenerator'
+                        },
                         {title: 'ZooKeeper ZAB', path: '/documents/sercurity/zookeeper-zab'},
                         {title: 'Raft', path: '/documents/sercurity/raft'},
-                        {title: 'Java code obfuscation - accumulator integration', path: '/documents/sercurity/allatori'}
+                        {
+                            title: 'Java code obfuscation - accumulator integration',
+                            path: '/documents/sercurity/allatori'
+                        }
                     ]
                 }, {
                     title: 'Solutions & Others',
@@ -378,7 +495,7 @@ module.exports = {
                     children: []
                 }]
             },
-            '/zh/':{
+            '/zh/': {
                 logo: '/waltersun_cn.png',
                 // 多语言下拉菜单的标题
                 selectText: '选择语言',
@@ -394,7 +511,7 @@ module.exports = {
                     // {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
                     // {text: 'CSDN博客', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
                     {text: '打赏', link: '/zh/documents/donation/'},
-                    {text: 'UI2.0',link: 'https://www.waltersun.cn/newui/', target: '_blank'}
+                    {text: 'UI2.0', link: 'https://www.waltersun.cn/newui/', target: '_blank'}
                     // {text: '留言', link: '/zh/documents/leavemsg/'},
                     // {text: '公益', link: '/zh/documents/publicwelfare/'}
                 ],
@@ -404,7 +521,7 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: []
-                },{
+                }, {
                     title: '区块链',
                     path: '/zh/documents/blockchain/',
                     collapsable: true,
@@ -419,14 +536,23 @@ module.exports = {
                     sidebarDepth: 1,
                     children: [
                         {title: 'Spring-IOC的bean加载', path: '/zh/documents/java/spring-iocfindbeans'},
-                        {title: 'Spring-为什么Spring4.0提倡使用构造函数注入方式？', path: '/zh/documents/java/spring-ioc'},
+                        {
+                            title: 'Spring-为什么Spring4.0提倡使用构造函数注入方式？',
+                            path: '/zh/documents/java/spring-ioc'
+                        },
                         {title: 'Spring-设计模式在Spring中的应用', path: '/zh/documents/java/spring-desingpartern'},
                         {title: 'Spring-事务实现基本原理', path: '/zh/documents/java/spring-transaction-principle'},
                         {title: 'Spring Boot 的价值', path: '/zh/documents/java/spring-TheValueOfSpringBoot'},
                         {title: 'Spring Boot 配置参数一览', path: '/zh/documents/java/springboot-profiles'},
                         {title: 'Spring Boot 启动流程简析', path: '/zh/documents/java/springboot-start'},
-                        {title: 'Spring Boot 配置属性设置优先级', path: '/zh/documents/java/springboot-profilepriority'},
-                        {title: 'Spring Boot 可以同时处理多少请求？', path: '/zh/documents/java/spring-handleRequestLimit'},
+                        {
+                            title: 'Spring Boot 配置属性设置优先级',
+                            path: '/zh/documents/java/springboot-profilepriority'
+                        },
+                        {
+                            title: 'Spring Boot 可以同时处理多少请求？',
+                            path: '/zh/documents/java/spring-handleRequestLimit'
+                        },
                         {title: 'Effective Java', path: '/zh/documents/java/java-effectivejava'},
                         {title: 'Java多线程编程之同步锁1', path: '/zh/documents/java/java-synchronized1'},
                         {title: 'Java多线程编程之同步锁2', path: '/zh/documents/java/java-synchronized2'},
@@ -442,7 +568,10 @@ module.exports = {
                         {title: 'Java-G1参数介绍和调优', path: '/zh/documents/java/java-g1gc'},
                         {title: 'Java-jdk8 hashmap加入了红黑树', path: '/zh/documents/java/java-jdk8hashmap'},
                         {title: 'Java-jdk8 lambda表达式原理', path: '/zh/documents/java/java-lambdaprinciple'},
-                        {title: 'Java-jdk8 CompletableFuture实现原理及使用详解', path: '/zh/documents/java/java-completablefuture'},
+                        {
+                            title: 'Java-jdk8 CompletableFuture实现原理及使用详解',
+                            path: '/zh/documents/java/java-completablefuture'
+                        },
                         {title: 'Java-jdk9 新特性', path: '/zh/documents/java/java-java9'},
                         {title: 'Java-jdk11 新特性', path: '/zh/documents/java/java-java11'},
                         {title: 'Java-多态序列化-避坑', path: '/zh/documents/java/java-polymorphism-serialize'},
@@ -457,7 +586,10 @@ module.exports = {
                     sidebarDepth: 1,
                     children: [
                         {title: 'Python多环境配置管理', path: '/zh/documents/python/python-multisettings'},
-                        {title: 'Tips for Effective Python', path: '/zh/documents/python/python-TipsforEffectivePython'},
+                        {
+                            title: 'Tips for Effective Python',
+                            path: '/zh/documents/python/python-TipsforEffectivePython'
+                        },
                         {title: 'PEP8风格代码规范指南', path: '/zh/documents/python/python-pep8style'},
                         {title: '打包python项目，发布到pypi', path: '/zh/documents/python/python-delpoy'},
                         {title: 'smtplib带附件邮件发送(python2)', path: '/zh/documents/python/python-emailsend'}
@@ -507,12 +639,27 @@ module.exports = {
                         {title: 'Redis Streams 介绍', path: '/zh/documents/database/redis-streams'},
                         {title: 'Redis 集群教程', path: '/zh/documents/database/redis-cluster'},
                         {title: 'Redis-分布式锁', path: '/zh/documents/database/redis-distributedlock'},
-                        {title: 'PostgreSQL-执行计划查看方式与计划分析', path: '/zh/documents/database/postgresql-executionplan'},
-                        {title: 'PostgreSQL-plsql底层对查询类语句的处理', path: '/zh/documents/database/postgresql-underlying1'},
-                        {title: 'PostgreSQL-底层对查询类语句的处理（优化），以及执行计划生成策略', path: '/zh/documents/database/postgresql-underlying2'},
-                        {title: 'PostgreSQL-进程架构和内存架构', path: '/zh/documents/database/postgresql-architecture'},
+                        {
+                            title: 'PostgreSQL-执行计划查看方式与计划分析',
+                            path: '/zh/documents/database/postgresql-executionplan'
+                        },
+                        {
+                            title: 'PostgreSQL-plsql底层对查询类语句的处理',
+                            path: '/zh/documents/database/postgresql-underlying1'
+                        },
+                        {
+                            title: 'PostgreSQL-底层对查询类语句的处理（优化），以及执行计划生成策略',
+                            path: '/zh/documents/database/postgresql-underlying2'
+                        },
+                        {
+                            title: 'PostgreSQL-进程架构和内存架构',
+                            path: '/zh/documents/database/postgresql-architecture'
+                        },
                         {title: 'MySQL-ExpLain Statement', path: '/zh/documents/database/mysql-explainstatement'},
-                        {title: 'MySQL-为什么单表数据在2000W＋后会明显下降', path: '/zh/documents/database/mysql-500wlimit'},
+                        {
+                            title: 'MySQL-为什么单表数据在2000W＋后会明显下降',
+                            path: '/zh/documents/database/mysql-500wlimit'
+                        },
                         {title: 'MySQL-Lock', path: '/zh/documents/database/mysql-lock'},
                         {title: 'MySQL-8.0新特性', path: '/zh/documents/database/mysql-8newfeatures'},
                         {title: 'Oracle-ExpLain Statement', path: '/zh/documents/database/oracle-explainstatement'}
@@ -545,22 +692,43 @@ module.exports = {
                         {title: 'Nginx 缓存机制', path: '/zh/documents/distributedsystem/nginx-cache'},
                         {title: '注册中心-主流注册中心', path: '/zh/documents/distributedsystem/registrycompare'},
                         {title: 'zookeeper-基础入门', path: '/zh/documents/distributedsystem/zookeeper'},
-                        {title: 'zookeeper-分布式锁原理', path: '/zh/documents/distributedsystem/zookeeper-distributedlock'},
+                        {
+                            title: 'zookeeper-分布式锁原理',
+                            path: '/zh/documents/distributedsystem/zookeeper-distributedlock'
+                        },
                         {title: 'Netty-高性能之道', path: '/zh/documents/distributedsystem/netty-highperformance'},
                         {title: 'Netty-解决JDK空轮询Bug', path: '/zh/documents/distributedsystem/netty-dealjdkepoll'},
                         {title: 'Netty-粘包与拆包', path: '/zh/documents/distributedsystem/netty-stickypackage'},
-                        {title: 'Netty-分隔符和定长解码器的应用', path: '/zh/documents/distributedsystem/netty-decoder'},
+                        {
+                            title: 'Netty-分隔符和定长解码器的应用',
+                            path: '/zh/documents/distributedsystem/netty-decoder'
+                        },
                         {title: 'Netty-编解码技术', path: '/zh/documents/distributedsystem/netty-serialization'},
                         {title: 'HDFS-数据存储', path: '/zh/documents/distributedsystem/hdfs-storage'},
                         {title: '分布式事务', path: '/zh/documents/distributedsystem/distributedtransaction'},
                         {title: '分布式可观测性', path: '/zh/documents/distributedsystem/observability'},
                         {title: '流量治理', path: '/zh/documents/distributedsystem/trafficmanagement'},
-                        {title: '透明多级分流系统-客户端缓存', path: '/zh/documents/distributedsystem/tmds-clientcache'},
+                        {
+                            title: '透明多级分流系统-客户端缓存',
+                            path: '/zh/documents/distributedsystem/tmds-clientcache'
+                        },
                         {title: '透明多级分流系统-域名解析', path: '/zh/documents/distributedsystem/tmds-dns'},
-                        {title: '透明多级分流系统-传输链路', path: '/zh/documents/distributedsystem/tmds-transmissionlink'},
-                        {title: '透明多级分流系统-内容分发网络', path: '/zh/documents/distributedsystem/tmds-contentdeliverynetwork'},
-                        {title: '透明多级分流系统-负载均衡', path: '/zh/documents/distributedsystem/tmds-loadbalancing'},
-                        {title: '透明多级分流系统-服务端缓存', path: '/zh/documents/distributedsystem/tmds-serversidecaching'}
+                        {
+                            title: '透明多级分流系统-传输链路',
+                            path: '/zh/documents/distributedsystem/tmds-transmissionlink'
+                        },
+                        {
+                            title: '透明多级分流系统-内容分发网络',
+                            path: '/zh/documents/distributedsystem/tmds-contentdeliverynetwork'
+                        },
+                        {
+                            title: '透明多级分流系统-负载均衡',
+                            path: '/zh/documents/distributedsystem/tmds-loadbalancing'
+                        },
+                        {
+                            title: '透明多级分流系统-服务端缓存',
+                            path: '/zh/documents/distributedsystem/tmds-serversidecaching'
+                        }
                     ]
                 }, {
                     title: '云原生&容器技术',
@@ -590,7 +758,10 @@ module.exports = {
                         {title: 'OSGI', path: '/zh/documents/architecturedesign/osgi'},
                         {title: '面向对象设计模式', path: '/zh/documents/architecturedesign/designparttern'},
                         {title: '幂等设计', path: '/zh/documents/architecturedesign/idempotentdesign'},
-                        {title: '借Google Guava学习三大编程范式中的函数式编程', path: '/zh/documents/architecturedesign/designpattern-kaiyuanshizhan-3'}
+                        {
+                            title: '借Google Guava学习三大编程范式中的函数式编程',
+                            path: '/zh/documents/architecturedesign/designpattern-kaiyuanshizhan-3'
+                        }
                     ]
                 }, {
                     title: '操作系统',
@@ -602,7 +773,10 @@ module.exports = {
                         {title: 'Linux 目录结构', path: '/zh/documents/operatingsystem/linux-directorystructure'},
                         {title: 'Linux 启动过程（RHEL 7）', path: '/zh/documents/operatingsystem/linux-startprocess'},
                         {title: 'Linux 动态主机配置协议 DHCP', path: '/zh/documents/operatingsystem/linux-dhcp'},
-                        {title: 'Linux 性能检测与优化', path: '/zh/documents/operatingsystem/linux-PerformanceTesting&Optimization'},
+                        {
+                            title: 'Linux 性能检测与优化',
+                            path: '/zh/documents/operatingsystem/linux-PerformanceTesting&Optimization'
+                        },
                         {title: 'Linux Shell Bash Demo', path: '/documents/operatingsystem/linux-shelldemo'},
                         {title: '性能分析命令', path: '/zh/documents/operatingsystem/linux&windows-jdkanalysis'},
                         {title: 'DNS解析与dig命令', path: '/zh/documents/operatingsystem/linux-dns&digCmd'},
@@ -631,7 +805,10 @@ module.exports = {
                         },
                         {title: 'IntelliJ IDEA-配置注释模板', path: '/zh/documents/ide/idea-templates'},
                         {title: 'IntelliJ IDEA-配置远程调试', path: '/zh/documents/ide/idea-remotedebug'},
-                        {title: 'IntelliJ IDEA-插件之java内存分析工具(JProfiler)', path: '/zh/documents/ide/idea-jprofiler'},
+                        {
+                            title: 'IntelliJ IDEA-插件之java内存分析工具(JProfiler)',
+                            path: '/zh/documents/ide/idea-jprofiler'
+                        },
                         {title: 'Lombok-注解', path: '/zh/documents/ide/lombok-annotation'}
                     ]
                 }, {
