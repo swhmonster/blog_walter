@@ -54,12 +54,12 @@ module.exports = {
         '/': {
             lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
             title: 'Walter\'s Website',
-            description: 'Just playing around',
+            description: 'Endless Technology - Technology Shapes Life',
         },
         '/zh/': {
             lang: 'zh-CN',
             title: 'Walter的个人网站',
-            description: '技术无止尽'
+            description: '技无止尽-技塑人生'
         }
     },
     themeConfig: {
