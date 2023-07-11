@@ -65,7 +65,7 @@ module.exports = {
     themeConfig: {
         locales :{
             '/':{
-                logo: '/logo.png',
+                logo: '/waltersun_cn.png',
                 selectText: 'Languages',
                 label: 'English',
                 smoothScroll: true,
@@ -378,7 +378,7 @@ module.exports = {
                 }]
             },
             '/zh/':{
-                logo: '/logo.png',
+                logo: '/waltersun_cn.png',
                 // 多语言下拉菜单的标题
                 selectText: '选择语言',
                 // 该语言在下拉菜单中的标签
