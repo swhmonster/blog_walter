@@ -77,8 +77,8 @@ module.exports = {
                     {text: 'TooBox', link: 'https://www.waltersun.cn/subsys/', target: '_blank'},
                     // {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
                     // {text: 'CSDN Blog', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
-                    {text: 'Donation', link: '/documents/donation/'},
-                    {text: 'UI2.0', link: 'https://www.waltersun.cn/newui/', target: '_blank'}
+                    {text: 'Donation', link: '/documents/donation/'}
+                    // {text: 'UI2.0', link: 'https://www.waltersun.cn/newui/', target: '_blank'}
                     // {text: 'Message', link: '/documents/leavemsg/'},
                     // {text: 'Giving', link: '/documents/publicwelfare/'}
                 ],
@@ -510,8 +510,8 @@ module.exports = {
                     {text: '工具箱', link: 'https://www.waltersun.cn/subsys/', target: '_blank'},
                     // {text: 'Github', link: 'https://github.com/swhmonster', target: '_blank'},
                     // {text: 'CSDN博客', link: 'https://blog.csdn.net/Soul_Programmer_Swh', target: '_blank'},
-                    {text: '打赏', link: '/zh/documents/donation/'},
-                    {text: 'UI2.0', link: 'https://www.waltersun.cn/newui/', target: '_blank'}
+                    {text: '打赏', link: '/zh/documents/donation/'}
+                    // {text: 'UI2.0', link: 'https://www.waltersun.cn/newui/', target: '_blank'}
                     // {text: '留言', link: '/zh/documents/leavemsg/'},
                     // {text: '公益', link: '/zh/documents/publicwelfare/'}
                 ],
