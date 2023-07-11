@@ -84,4 +84,4 @@ CompleteFuture<String>future1=CompleteFuture. supplyAsync() - >"hello");
 CompleteFuture<Integer>future2=CompleteFuture. supplyAsync (() - >10);
 CompleteFuture<String>newFuture=future1. thenCombine (future2, (s, i) - >s+i);
 ```
-In the above code, two CompleteFuture objects were first created using the supplyAsync method, which are used to asynchronously execute a task that returns a string type and a task that returns an integer type. Then, through then
+In the above code, a CompleteFuture object was first created using the supplyAsync method to asynchronously execute a task that returns a string type. Then, the CompleteFuture object is converted into a new CompleteFuture object using the thenCompose method, which is used to asynchronously execute a task that returns an integer type. The conversion function returns the string length as the result. The difference of this method is that it concatenates tasks and can achieve chain calling of multiple asynchronous operations.
