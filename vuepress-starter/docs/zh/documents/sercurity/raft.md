@@ -1,4 +1,4 @@
-## Raft
+## Raft算法
 ### Raft概述
 RAFT是一种一致性算法，用于在分布式系统中保证数据副本的一致性。RAFT算法在2014年由Diego Ongaro和John Ousterhout提出，在分布式系统领域得到了广泛应用。
 
