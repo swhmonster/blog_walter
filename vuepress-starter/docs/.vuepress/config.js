@@ -847,6 +847,7 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
+                        {title: 'Fury：一个基于JIT动态编译的高性能多语言原生序列化框架', path: '/zh/documents/others/serialize-fury'},
                         {title: 'JProfiler分析dump文件（.hprof）', path: '/zh/documents/others/jprofiler-analysis'},
                         {title: 'Windows远程桌面——网络唤醒配置', path: '/zh/documents/others/wakeonline'},
                         {title: '跨域问题分析及解决', path: '/zh/documents/others/crossdomain'},
