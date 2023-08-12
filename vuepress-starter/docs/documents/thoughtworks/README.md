@@ -1,4 +1,6 @@
-# Advanced Technology
-Recommend a reputable software development consulting company that periodically publishes reports on new technologies, languages, and tools - Technical Radar.
+## Computer Science
+Computer Science is the study of the principles, design, development, and application of computer technology and systems. It encompasses a broad range of topics including computer hardware, software, networks, human-computer interaction, artificial intelligence, and more. The primary goal of computer science is to equip students with the knowledge and skills needed to analyze, design, develop, test, maintain, and manage computer systems and technologies, as well as to apply computer science principles to solve real-world problems across a variety of fields.
 
-[official website](https://www.thoughtworks.com/)
+Some of the key sub-disciplines within computer science include computer architecture, operating systems, programming languages, computer networks, databases, artificial intelligence, software engineering, computer graphics, computer security, and more.
+
+Computer science has a wide range of applications, including software and hardware development, network design and management, information security, artificial intelligence, machine learning, data processing, game development, and more. As technology continues to advance, computer science is becoming increasingly important in all aspects of society.

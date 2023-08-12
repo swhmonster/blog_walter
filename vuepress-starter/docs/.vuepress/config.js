@@ -83,11 +83,14 @@ module.exports = {
                     // {text: 'Giving', link: '/documents/publicwelfare/'}
                 ],
                 sidebar: [{
-                    title: 'Advanced Technology',
+                    title: 'Computer Science',
                     path: '/documents/thoughtworks/',
                     collapsable: true,
                     sidebarDepth: 1,
-                    children: []
+                    children: [
+                        {title: 'Wireshark Network Analysis Tool', path: '/documents/thoughtworks/wireshark-recommend'},
+                        {title: 'Wireshark Common Filter Conditions', path: '/documents/thoughtworks/wireshark-filtercondition'}
+                    ]
                 }, {
                     title: 'Block Chain',
                     path: '/documents/blockchain/',
@@ -516,11 +519,14 @@ module.exports = {
                     // {text: '公益', link: '/zh/documents/publicwelfare/'}
                 ],
                 sidebar: [{
-                    title: '前沿技术',
+                    title: '计算机科学与技术',
                     path: '/zh/documents/thoughtworks/',
                     collapsable: true,
                     sidebarDepth: 1,
-                    children: []
+                    children: [
+                        {title: 'Wireshark网络分析工具', path: '/zh/documents/thoughtworks/wireshark-recommend'},
+                        {title: 'Wireshark常用过滤条件', path: '/zh/documents/thoughtworks/wireshark-filtercondition'}
+                    ]
                 }, {
                     title: '区块链',
                     path: '/zh/documents/blockchain/',
@@ -847,7 +853,10 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        {title: 'Fury：一个基于JIT动态编译的高性能多语言原生序列化框架', path: '/zh/documents/others/serialize-fury'},
+                        {
+                            title: 'Fury：一个基于JIT动态编译的高性能多语言原生序列化框架',
+                            path: '/zh/documents/others/serialize-fury'
+                        },
                         {title: 'JProfiler分析dump文件（.hprof）', path: '/zh/documents/others/jprofiler-analysis'},
                         {title: 'Windows远程桌面——网络唤醒配置', path: '/zh/documents/others/wakeonline'},
                         {title: '跨域问题分析及解决', path: '/zh/documents/others/crossdomain'},
