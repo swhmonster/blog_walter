@@ -5,3 +5,8 @@
 - 学习笔记
 - 参与公益
 - 工具下载
+# 博客架构
+单体应用架构
+- nginx：前端框架采用vuepress
+- spring boot
+- mysql
